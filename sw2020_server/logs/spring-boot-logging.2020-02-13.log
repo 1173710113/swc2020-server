@@ -1,3 +1,4 @@
+
 2020-02-13 10:46:44.031 default [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.Demo1ApplicationTests], using SpringBootContextLoader
 2020-02-13 10:46:44.036 default [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.Demo1ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
 2020-02-13 10:46:44.037 default [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.Demo1ApplicationTests]: Demo1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
