@@ -1,0 +1,46 @@
+2020-02-13 19:21:05.856 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on Lenovo7000 with PID 125048 (F:\competition\software\swc2020-server\sw2020_server\target\classes started by xjy in F:\competition\software\swc2020-server\sw2020_server)
+2020-02-13 19:21:05.871 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-13 19:21:05.984 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-13 19:21:05.985 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-13 19:21:10.197 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-13 19:21:10.210 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-13 19:21:10.212 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-13 19:21:10.212 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 19:21:10.382 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-13 19:21:10.382 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4396 ms
+2020-02-13 19:21:11.319 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 19:21:11.684 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-13 19:21:11.721 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-13 19:21:11.748 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+2020-02-13 19:21:11.749 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-13 19:21:11.754 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+2020-02-13 19:21:11.755 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8082"]
+2020-02-13 19:21:11.761 default [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-13 19:21:11.763 default [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2020-02-13 19:21:11.768 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-13 19:31:55.464 default [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.Demo1ApplicationTests], using SpringBootContextLoader
+2020-02-13 19:31:55.475 default [main] INFO  o.s.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.Demo1ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-13 19:31:55.476 default [main] INFO  o.s.t.c.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.Demo1ApplicationTests]: Demo1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-13 19:31:55.749 default [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.Demo1Application for test class com.example.demo.Demo1ApplicationTests
+2020-02-13 19:31:55.964 default [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-02-13 19:31:55.996 default [main] INFO  o.s.b.t.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2fb0623e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@49b2a47d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5be1d0a4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@415b0b49, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d5620ce, org.springframework.test.context.transaction.TransactionalTestExecutionListener@311bf055, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@642a7222, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d322cad, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@21be3395, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f49f6af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@78452606, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@147e2ae7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@448c8166]
+2020-02-13 19:31:56.734 default [main] INFO  com.example.demo.Demo1ApplicationTests - Starting Demo1ApplicationTests on Lenovo7000 with PID 123656 (started by xjy in F:\competition\software\swc2020-server\sw2020_server)
+2020-02-13 19:31:56.735 default [main] INFO  com.example.demo.Demo1ApplicationTests - No active profile set, falling back to default profiles: default
+2020-02-13 19:32:00.925 default [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 19:32:02.021 default [main] INFO  com.example.demo.Demo1ApplicationTests - Started Demo1ApplicationTests in 5.931 seconds (JVM running for 8.739)
+2020-02-13 19:32:02.640 default [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
