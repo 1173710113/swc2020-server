@@ -28,9 +28,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-<<<<<<< HEAD
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-=======
->>>>>>> statistics
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
