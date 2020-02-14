@@ -1,0 +1,1185 @@
+2020-02-02 14:03:12.788 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:03:12.788 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:03:12.965 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:03:12.974 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:03:12.975 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:03:12.975 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:03:12.975 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:03:12.991 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:03:12.991 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 201 ms
+2020-02-02 14:03:13.075 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:03:13.127 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:03:13.136 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:03:13.138 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:03:13.138 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.375 seconds (JVM running for 85683.059)
+2020-02-02 14:03:13.139 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:07:24.754 default [Thread-221] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:07:25.000 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:07:25.000 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:07:25.167 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:07:25.179 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:07:25.180 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:07:25.180 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:07:25.180 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:07:25.196 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:07:25.196 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 195 ms
+2020-02-02 14:07:25.264 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:07:25.303 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:07:25.312 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:07:25.315 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:07:25.315 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.332 seconds (JVM running for 85935.236)
+2020-02-02 14:07:25.316 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:07:30.733 default [Thread-226] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:07:31.008 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:07:31.008 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:07:31.176 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:07:31.183 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:07:31.183 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:07:31.184 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:07:31.184 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:07:31.202 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:07:31.202 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 192 ms
+2020-02-02 14:07:31.275 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:07:31.315 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:07:31.328 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:07:31.331 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:07:31.331 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.339 seconds (JVM running for 85941.252)
+2020-02-02 14:07:31.332 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:09:43.261 default [Thread-231] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:09:43.516 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:09:43.516 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:09:43.690 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:09:43.698 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:09:43.698 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:09:43.698 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:09:43.698 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:09:43.717 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:09:43.717 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 200 ms
+2020-02-02 14:09:43.806 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:09:43.852 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:09:43.861 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:09:43.863 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:09:43.864 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.366 seconds (JVM running for 86073.785)
+2020-02-02 14:09:43.865 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:09:57.314 default [Thread-236] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:09:57.589 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:09:57.590 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:09:57.760 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:09:57.768 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:09:57.769 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:09:57.769 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:09:57.769 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:09:57.783 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:09:57.783 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 192 ms
+2020-02-02 14:09:57.860 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:09:57.911 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:09:57.921 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:09:57.924 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:09:57.924 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.353 seconds (JVM running for 86087.845)
+2020-02-02 14:09:57.925 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:10:00.325 default [Thread-241] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:10:00.629 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:10:00.629 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:10:00.819 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:10:00.825 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:10:00.826 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:10:00.826 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:10:00.826 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:10:00.838 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:10:00.838 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 208 ms
+2020-02-02 14:10:00.915 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:10:00.961 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:10:00.977 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:10:00.980 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:10:00.980 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.368 seconds (JVM running for 86090.901)
+2020-02-02 14:10:00.981 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:10:08.395 default [Thread-246] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:10:08.657 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:10:08.657 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:10:08.821 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:10:08.828 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:10:08.828 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:10:08.829 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:10:08.829 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:10:08.841 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:10:08.841 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 183 ms
+2020-02-02 14:10:08.916 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:10:08.956 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:10:08.963 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:10:08.966 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:10:08.966 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.326 seconds (JVM running for 86098.887)
+2020-02-02 14:10:08.967 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:10:14.309 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 14:10:14.310 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 14:10:14.313 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 14:10:14.315 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2020-02-02 14:10:14.347 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2020-02-02 14:10:14.810 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-02-02 14:10:43.324 default [http-nio-8082-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-02-02 14:10:45.035 default [http-nio-8082-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-02-02 14:12:20.588 default [http-nio-8082-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.NullPointerException]
+2020-02-02 14:14:37.600 default [Thread-251] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:14:37.600 default [Thread-251] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2020-02-02 14:14:37.614 default [Thread-251] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+2020-02-02 14:14:37.878 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:14:37.878 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:14:38.057 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:14:38.064 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:14:38.064 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:14:38.064 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:14:38.064 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:14:38.077 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:14:38.077 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 198 ms
+2020-02-02 14:14:38.154 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:14:38.196 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:14:38.204 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:14:38.207 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:14:38.207 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.345 seconds (JVM running for 86368.128)
+2020-02-02 14:14:38.208 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:14:40.282 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 14:14:40.283 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 14:14:40.285 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 14:14:40.286 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+2020-02-02 14:14:40.304 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+2020-02-02 14:16:28.286 default [Thread-256] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:16:28.286 default [Thread-256] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+2020-02-02 14:16:28.289 default [Thread-256] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+2020-02-02 14:16:28.553 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:16:28.553 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:16:28.720 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:16:28.728 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:16:28.729 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:16:28.729 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:16:28.729 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:16:28.742 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:16:28.742 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 187 ms
+2020-02-02 14:16:28.821 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:16:28.865 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:16:28.873 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:16:28.876 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:16:28.877 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.341 seconds (JVM running for 86478.798)
+2020-02-02 14:16:28.878 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:16:39.579 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 14:16:39.581 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 14:16:39.583 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 14:16:39.586 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+2020-02-02 14:16:39.605 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+2020-02-02 14:47:27.031 default [Thread-261] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:47:27.032 default [Thread-261] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+2020-02-02 14:47:27.041 default [Thread-261] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+2020-02-02 14:47:27.290 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:47:27.290 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:47:27.439 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:47:27.448 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:47:27.448 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:47:27.448 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:47:27.449 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:47:27.461 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:47:27.461 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 169 ms
+2020-02-02 14:47:27.530 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:47:27.570 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:47:27.578 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:47:27.581 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:47:27.581 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.309 seconds (JVM running for 88337.502)
+2020-02-02 14:47:27.582 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:48:34.235 default [Thread-266] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:48:34.502 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:48:34.503 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:48:34.662 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:48:34.671 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:48:34.671 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:48:34.672 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:48:34.672 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:48:34.685 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:48:34.685 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 181 ms
+2020-02-02 14:48:34.764 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:48:34.806 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:48:34.815 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:48:34.817 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:48:34.817 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.332 seconds (JVM running for 88404.738)
+2020-02-02 14:48:34.818 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:51:44.231 default [Thread-271] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:51:44.512 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:51:44.512 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:51:44.684 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:51:44.692 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:51:44.693 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:51:44.693 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:51:44.693 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:51:44.707 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:51:44.707 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 194 ms
+2020-02-02 14:51:44.777 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:51:44.816 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:51:44.825 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:51:44.827 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:51:44.828 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.333 seconds (JVM running for 88594.748)
+2020-02-02 14:51:44.829 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:52:32.417 default [Thread-276] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:52:32.676 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:52:32.676 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:52:32.861 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:52:32.869 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:52:32.870 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:52:32.870 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:52:32.870 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:52:32.883 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-11].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:52:32.883 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 205 ms
+2020-02-02 14:52:32.921 default [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+2020-02-02 14:52:32.921 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-02 14:52:32.925 default [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-02 14:52:32.926 default [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.Demo1Application.main(Demo1Application.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 61 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92$$FastClassBySpringCGLIB$$84f27d7c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 20; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:80)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:592)
+	... 75 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1923)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:865)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1718)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2883)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 78 common frames omitted
+2020-02-02 14:54:04.720 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:54:04.720 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:54:04.888 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:54:04.894 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:54:04.894 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:54:04.894 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:54:04.894 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:54:04.906 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-12].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:54:04.906 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 184 ms
+2020-02-02 14:54:04.937 default [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+2020-02-02 14:54:04.938 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-02 14:54:04.941 default [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-02 14:54:04.942 default [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.Demo1Application.main(Demo1Application.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 61 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92$$FastClassBySpringCGLIB$$84f27d7c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:80)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:592)
+	... 75 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1923)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:865)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1718)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2883)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 78 common frames omitted
+2020-02-02 14:55:59.818 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:55:59.818 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:55:59.978 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:55:59.986 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:55:59.986 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:55:59.986 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:55:59.986 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:55:59.999 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-13].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:55:59.999 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 179 ms
+2020-02-02 14:56:00.042 default [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+2020-02-02 14:56:00.043 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-02 14:56:00.046 default [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-02 14:56:00.047 default [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.example.demo.Demo1Application.main(Demo1Application.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassServiceImp': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseClassMapper' defined in file [E:\文件\2020_swcontest\sw2020_server\target\classes\com\example\demo\dao\CourseClassMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 61 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92$$FastClassBySpringCGLIB$$84f27d7c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$45a5dd92.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 21; columnNumber: 13; 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:80)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:592)
+	... 75 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型为 "resultMap" 的内容必须匹配 "(constructor?,id*,result*,association*,collection*,discriminator?)"。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1923)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:865)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1718)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2883)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 78 common frames omitted
+2020-02-02 14:56:42.667 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:56:42.668 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:56:42.840 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:56:42.854 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:56:42.855 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:56:42.855 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:56:42.855 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:56:42.870 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:56:42.870 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 200 ms
+2020-02-02 14:56:42.945 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:56:42.991 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:56:42.999 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:56:43.002 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:56:43.002 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.358 seconds (JVM running for 88892.923)
+2020-02-02 14:56:43.003 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:57:54.759 default [Thread-281] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:57:55.015 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 14:57:55.016 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 14:57:55.177 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 14:57:55.184 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 14:57:55.185 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:57:55.185 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 14:57:55.185 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 14:57:55.198 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 14:57:55.198 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 181 ms
+2020-02-02 14:57:55.270 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 14:57:55.312 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 14:57:55.322 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 14:57:55.324 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 14:57:55.325 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.327 seconds (JVM running for 88965.246)
+2020-02-02 14:57:55.325 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 14:58:00.997 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 14:58:00.998 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 14:58:01.000 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 14:58:01.002 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+2020-02-02 14:58:01.020 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+2020-02-02 14:58:01.031 default [http-nio-8082-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,List,String) or values (1,计算机网络,2/3,1,null). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:01:43.642 default [Thread-295] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:01:43.642 default [Thread-295] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+2020-02-02 15:01:43.653 default [Thread-295] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+2020-02-02 15:01:43.926 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 15:01:43.927 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 15:01:44.095 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 15:01:44.103 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 15:01:44.103 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:01:44.104 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 15:01:44.104 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 15:01:44.116 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 15:01:44.116 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 187 ms
+2020-02-02 15:01:44.187 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:01:44.230 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 15:01:44.240 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:01:44.250 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 15:01:44.251 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.341 seconds (JVM running for 89194.172)
+2020-02-02 15:01:44.251 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 15:01:48.634 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 15:01:48.635 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 15:01:48.638 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 15:01:48.639 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+2020-02-02 15:01:48.661 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+2020-02-02 15:02:52.950 default [Thread-300] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:02:52.950 default [Thread-300] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+2020-02-02 15:02:52.959 default [Thread-300] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+2020-02-02 15:02:53.220 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 15:02:53.220 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 15:02:53.387 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 15:02:53.395 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 15:02:53.395 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:02:53.396 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 15:02:53.396 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 15:02:53.408 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 15:02:53.408 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 187 ms
+2020-02-02 15:02:53.495 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:02:53.547 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 15:02:53.556 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:02:53.558 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 15:02:53.559 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.354 seconds (JVM running for 89263.48)
+2020-02-02 15:02:53.559 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 15:02:58.096 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 15:02:58.097 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 15:02:58.099 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 15:02:58.101 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+2020-02-02 15:02:58.125 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+2020-02-02 15:13:22.612 default [http-nio-8082-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:16:15.718 default [Thread-305] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:16:15.719 default [Thread-305] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+2020-02-02 15:16:15.729 default [Thread-305] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+2020-02-02 15:16:16.013 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 15:16:16.013 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 15:16:16.195 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 15:16:16.203 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 15:16:16.204 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:16:16.204 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 15:16:16.204 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 15:16:16.219 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 15:16:16.219 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 204 ms
+2020-02-02 15:16:16.297 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:16:16.347 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 15:16:16.358 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:16:16.361 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 15:16:16.361 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.368 seconds (JVM running for 90066.282)
+2020-02-02 15:16:16.362 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 15:16:20.740 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 15:16:20.742 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 15:16:20.744 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 15:16:20.745 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+2020-02-02 15:16:20.764 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+2020-02-02 15:16:21.233 default [http-nio-8082-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:21:00.314 default [Thread-310] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:21:00.315 default [Thread-310] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+2020-02-02 15:21:00.329 default [Thread-310] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+2020-02-02 15:21:00.585 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 15:21:00.586 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 15:21:00.762 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 15:21:00.770 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 15:21:00.771 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:21:00.771 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 15:21:00.771 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 15:21:00.784 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 15:21:00.785 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 197 ms
+2020-02-02 15:21:00.864 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:21:00.909 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 15:21:00.920 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:21:00.923 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 15:21:00.923 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.356 seconds (JVM running for 90350.844)
+2020-02-02 15:21:00.924 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 15:21:04.187 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 15:21:04.188 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 15:21:04.190 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 15:21:04.191 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+2020-02-02 15:21:04.207 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+2020-02-02 15:21:04.730 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:24:02.234 default [Thread-315] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:24:02.235 default [Thread-315] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+2020-02-02 15:24:02.243 default [Thread-315] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+2020-02-02 15:24:02.534 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 15:24:02.534 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 15:24:02.719 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 15:24:02.728 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 15:24:02.729 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:24:02.729 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 15:24:02.729 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 15:24:02.742 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 15:24:02.743 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 207 ms
+2020-02-02 15:24:02.822 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 15:24:02.865 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 15:24:02.874 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 15:24:02.876 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 15:24:02.876 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.36 seconds (JVM running for 90532.797)
+2020-02-02 15:24:02.876 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 15:25:01.735 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 15:25:01.736 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 15:25:01.739 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 15:25:01.742 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+2020-02-02 15:25:01.766 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+2020-02-02 15:25:02.370 default [http-nio-8082-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:42:05.645 default [http-nio-8082-exec-3] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-02 15:42:07.036 default [http-nio-8082-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:42:08.202 default [http-nio-8082-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:42:08.869 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 15:42:10.262 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-02 15:42:49.344 default [http-nio-8082-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 16:19:53.961 default [http-nio-8082-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 16:22:49.642 default [http-nio-8082-exec-6] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-02 16:33:35.253 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-02 18:30:25.065 default [http-nio-8082-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 18:51:49.710 default [Thread-320] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:51:49.710 default [Thread-320] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+2020-02-02 18:51:49.718 default [Thread-320] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+2020-02-02 18:51:50.011 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 18:51:50.012 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 18:51:50.195 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 18:51:50.207 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 18:51:50.207 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:51:50.207 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 18:51:50.207 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 18:51:50.238 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 18:51:50.238 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 224 ms
+2020-02-02 18:51:50.357 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:51:50.410 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 18:51:50.420 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:51:50.425 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 18:51:50.426 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.436 seconds (JVM running for 103000.346)
+2020-02-02 18:51:50.427 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 18:51:58.651 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 18:51:58.652 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 18:51:58.655 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 18:51:58.656 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+2020-02-02 18:51:58.684 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+2020-02-02 18:52:00.018 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 18:53:19.189 default [Thread-325] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:53:19.189 default [Thread-325] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown initiated...
+2020-02-02 18:53:19.209 default [Thread-325] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown completed.
+2020-02-02 18:53:19.469 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 18:53:19.469 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 18:53:19.639 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 18:53:19.651 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 18:53:19.652 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:53:19.652 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 18:53:19.652 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 18:53:19.668 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 18:53:19.668 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 198 ms
+2020-02-02 18:53:19.736 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:53:19.773 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 18:53:19.784 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:53:19.786 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 18:53:19.787 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.333 seconds (JVM running for 103089.708)
+2020-02-02 18:53:19.788 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 18:53:21.999 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 18:53:21.999 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 18:53:22.002 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 18:53:22.002 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Starting...
+2020-02-02 18:53:22.020 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Start completed.
+2020-02-02 18:53:22.756 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+		s.id as sentence_id,
+		s.content as sentence_content
+		FROM node_table n
+		L' at line 1
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT n *,   s.id as sentence_id,   s.content as sentence_content   FROM node_table n   LEFT JOIN sentence_table s ON   n.id = s.node   WHERE class=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+		s.id as sentence_id,
+		s.content as sentence_content
+		FROM node_table n
+		L' at line 1
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+		s.id as sentence_id,
+		s.content as sentence_content
+		FROM node_table n
+		L' at line 1]
+2020-02-02 18:53:49.346 default [Thread-330] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:53:49.347 default [Thread-330] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown initiated...
+2020-02-02 18:53:49.351 default [Thread-330] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown completed.
+2020-02-02 18:53:49.610 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 18:53:49.610 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 18:53:49.784 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 18:53:49.792 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 18:53:49.792 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:53:49.792 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 18:53:49.792 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 18:53:49.810 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 18:53:49.810 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 199 ms
+2020-02-02 18:53:49.893 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:53:49.944 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 18:53:49.953 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:53:49.955 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 18:53:49.956 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.361 seconds (JVM running for 103119.877)
+2020-02-02 18:53:49.957 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 18:53:52.467 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 18:53:52.469 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 18:53:52.471 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 18:53:52.472 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Starting...
+2020-02-02 18:53:52.489 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Start completed.
+2020-02-02 18:53:53.236 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 18:54:37.537 default [Thread-335] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:54:37.537 default [Thread-335] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown initiated...
+2020-02-02 18:54:37.548 default [Thread-335] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown completed.
+2020-02-02 18:54:37.817 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 18:54:37.817 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 18:54:37.986 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 18:54:37.996 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 18:54:37.996 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:54:37.996 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 18:54:37.996 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 18:54:38.017 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 18:54:38.017 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 198 ms
+2020-02-02 18:54:38.088 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:54:38.127 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 18:54:38.140 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:54:38.144 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 18:54:38.144 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.345 seconds (JVM running for 103168.065)
+2020-02-02 18:54:38.145 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 18:54:40.218 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 18:54:40.218 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 18:54:40.222 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-02 18:54:40.225 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Starting...
+2020-02-02 18:54:40.242 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Start completed.
+2020-02-02 18:54:41.022 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 18:55:30.755 default [Thread-340] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:55:30.755 default [Thread-340] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown initiated...
+2020-02-02 18:55:30.760 default [Thread-340] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown completed.
+2020-02-02 18:55:31.030 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 18:55:31.030 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 18:55:31.200 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 18:55:31.208 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 18:55:31.209 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:55:31.209 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 18:55:31.209 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 18:55:31.228 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 18:55:31.228 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 197 ms
+2020-02-02 18:55:31.297 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 18:55:31.338 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 18:55:31.346 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 18:55:31.349 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 18:55:31.349 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.336 seconds (JVM running for 103221.271)
+2020-02-02 18:55:31.350 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 18:55:34.460 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 18:55:34.460 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 18:55:34.462 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 18:55:34.464 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Starting...
+2020-02-02 18:55:34.480 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Start completed.
+2020-02-02 18:55:35.247 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: Error instantiating class com.example.demo.domain.KeyNode with invalid types (String,String,String,String,List) or values (1,计算机网络,2/3,1,1). Cause: java.lang.IllegalArgumentException: argument type mismatch]
+2020-02-02 19:13:13.041 default [Thread-345] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:13:13.042 default [Thread-345] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown initiated...
+2020-02-02 19:13:13.053 default [Thread-345] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown completed.
+2020-02-02 19:13:13.301 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:13:13.301 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:13:13.460 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:13:13.469 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:13:13.469 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:13:13.469 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:13:13.469 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:13:13.483 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:13:13.484 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 182 ms
+2020-02-02 19:13:13.567 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:13:13.604 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:13:13.611 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:13:13.614 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:13:13.615 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.331 seconds (JVM running for 104283.536)
+2020-02-02 19:13:13.615 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:13:16.712 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:13:16.713 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:13:16.716 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 19:13:16.717 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Starting...
+2020-02-02 19:13:16.735 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Start completed.
+2020-02-02 19:13:17.497 default [http-nio-8082-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve com.example.demo.dao.NodeMapper.queryNodeByClass
+### The error occurred while handling results
+### SQL: SELECT n.id, n.content, n.relate_node,n.class   FROM node_table n   WHERE n.class=?
+### Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4]
+2020-02-02 19:15:49.630 default [Thread-350] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:15:49.630 default [Thread-350] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown initiated...
+2020-02-02 19:15:49.640 default [Thread-350] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown completed.
+2020-02-02 19:15:49.894 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:15:49.894 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:15:50.051 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:15:50.060 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:15:50.061 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:15:50.061 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:15:50.061 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:15:50.075 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:15:50.075 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 179 ms
+2020-02-02 19:15:50.159 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:15:50.207 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:15:50.216 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:15:50.219 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:15:50.219 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.342 seconds (JVM running for 104440.141)
+2020-02-02 19:15:50.220 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:15:53.458 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:15:53.459 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:15:53.462 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-02 19:15:53.463 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Starting...
+2020-02-02 19:15:53.479 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Start completed.
+2020-02-02 19:15:54.026 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM node_table n
+		WHERE n.class='1'' at line 2
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT n.id, n.content, n.relate_node,n.class,   FROM node_table n   WHERE n.class=?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM node_table n
+		WHERE n.class='1'' at line 2
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM node_table n
+		WHERE n.class='1'' at line 2]
+2020-02-02 19:20:45.879 default [Thread-355] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:20:45.880 default [Thread-355] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Shutdown initiated...
+2020-02-02 19:20:45.891 default [Thread-355] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Shutdown completed.
+2020-02-02 19:20:46.149 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:20:46.149 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:20:46.307 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:20:46.315 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:20:46.315 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:20:46.315 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:20:46.316 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:20:46.330 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:20:46.331 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 180 ms
+2020-02-02 19:20:46.417 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:20:46.460 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:20:46.468 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:20:46.471 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:20:46.471 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.341 seconds (JVM running for 104736.393)
+2020-02-02 19:20:46.472 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:21:29.035 default [Thread-360] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:21:29.285 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:21:29.285 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:21:29.435 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:21:29.450 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:21:29.450 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:21:29.450 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:21:29.451 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:21:29.467 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:21:29.467 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 181 ms
+2020-02-02 19:21:29.543 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:21:29.581 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:21:29.589 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:21:29.592 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:21:29.592 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.323 seconds (JVM running for 104779.513)
+2020-02-02 19:21:29.593 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:21:45.049 default [Thread-365] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:21:45.306 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:21:45.306 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:21:45.463 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:21:45.471 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:21:45.471 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:21:45.472 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:21:45.472 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:21:45.490 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:21:45.490 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 182 ms
+2020-02-02 19:21:45.556 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:21:45.596 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:21:45.604 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:21:45.607 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:21:45.607 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.317 seconds (JVM running for 104795.528)
+2020-02-02 19:21:45.608 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:21:50.740 default [http-nio-8082-exec-2] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:21:50.741 default [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:21:50.743 default [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 19:21:50.744 default [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Starting...
+2020-02-02 19:21:50.760 default [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Start completed.
+2020-02-02 19:21:51.641 default [http-nio-8082-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve com.example.demo.dao.NodeMapper.queryNodeByClass
+### The error occurred while handling results
+### SQL: SELECT n.id, n.content, n.relate_node,n.class   FROM node_table as n   WHERE n.class=?
+### Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4]
+2020-02-02 19:23:37.555 default [Thread-370] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:23:37.555 default [Thread-370] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown initiated...
+2020-02-02 19:23:37.563 default [Thread-370] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown completed.
+2020-02-02 19:23:37.826 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:23:37.827 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:23:38.016 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:23:38.024 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:23:38.025 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:23:38.025 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:23:38.025 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:23:38.040 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:23:38.040 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 212 ms
+2020-02-02 19:23:38.111 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:23:38.152 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:23:38.160 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:23:38.163 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:23:38.164 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.354 seconds (JVM running for 104908.085)
+2020-02-02 19:23:38.165 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:23:40.992 default [http-nio-8082-exec-2] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:23:40.992 default [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:23:40.996 default [http-nio-8082-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-02 19:23:40.999 default [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Starting...
+2020-02-02 19:23:41.014 default [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Start completed.
+2020-02-02 19:23:41.541 default [http-nio-8082-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve com.example.demo.dao.NodeMapper.queryNodeByClass
+### The error occurred while handling results
+### SQL: SELECT n.id, n.content, n.relate_node,n.class   FROM node_table as n   WHERE n.class=?
+### Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4]
+2020-02-02 19:43:56.840 default [Thread-375] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:43:56.840 default [Thread-375] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Shutdown initiated...
+2020-02-02 19:43:56.849 default [Thread-375] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Shutdown completed.
+2020-02-02 19:43:57.107 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 19:43:57.107 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 19:43:57.261 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 19:43:57.270 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 19:43:57.271 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:43:57.271 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 19:43:57.271 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 19:43:57.283 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 19:43:57.283 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 175 ms
+2020-02-02 19:43:57.360 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 19:43:57.400 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 19:43:57.408 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 19:43:57.411 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 19:43:57.411 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.32 seconds (JVM running for 106127.332)
+2020-02-02 19:43:57.412 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 19:44:01.366 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 19:44:01.367 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 19:44:01.369 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2020-02-02 19:44:01.370 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Starting...
+2020-02-02 19:44:01.388 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Start completed.
+2020-02-02 19:44:01.975 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve com.example.demo.dao.NodeMapper.queryNodeByClass
+### The error occurred while handling results
+### SQL: SELECT n.id, n.content, n.relate_node,n.class   FROM node_table as n   WHERE n.class=?
+### Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4]
+2020-02-02 20:11:10.861 default [Thread-380] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 20:11:10.862 default [Thread-380] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Shutdown initiated...
+2020-02-02 20:11:10.873 default [Thread-380] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Shutdown completed.
+2020-02-02 20:11:11.132 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 20:11:11.133 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 20:11:11.294 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 20:11:11.301 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 20:11:11.302 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 20:11:11.302 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 20:11:11.302 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 20:11:11.314 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 20:11:11.314 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 179 ms
+2020-02-02 20:11:11.386 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 20:11:11.426 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 20:11:11.434 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 20:11:11.436 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 20:11:11.436 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.32 seconds (JVM running for 107761.357)
+2020-02-02 20:11:11.437 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 20:12:34.477 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 20:12:34.478 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 20:12:34.482 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-02 20:12:34.483 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Starting...
+2020-02-02 20:12:34.500 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Start completed.
+2020-02-02 20:12:35.204 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve com.example.demo.dao.NodeMapper.queryNodeByClass
+### The error occurred while handling results
+### SQL: SELECT n.id, n.content,   n.relate_node,n.class   FROM node_table as n   WHERE n.class=?
+### Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4]
+2020-02-02 21:04:41.427 default [Thread-385] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 21:04:41.428 default [Thread-385] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Shutdown initiated...
+2020-02-02 21:04:41.431 default [Thread-385] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Shutdown completed.
+2020-02-02 21:04:41.737 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 12972 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 21:04:41.738 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 21:04:41.932 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-02 21:04:41.938 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 21:04:41.938 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 21:04:41.938 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 21:04:41.938 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 21:04:41.957 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-14].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 21:04:41.957 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 216 ms
+2020-02-02 21:04:42.047 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 21:04:42.101 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 21:04:42.110 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 21:04:42.113 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 21:04:42.113 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.399 seconds (JVM running for 110972.035)
+2020-02-02 21:04:42.115 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-02 21:04:42.448 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-02 21:04:42.450 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 21:05:14.818 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 22304 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-02 21:05:14.820 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-02 21:05:14.855 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 21:05:14.856 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 21:05:15.642 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-02 21:05:15.649 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-02 21:05:15.649 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-02 21:05:15.649 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-02 21:05:15.713 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-02 21:05:15.714 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 858 ms
+2020-02-02 21:05:16.018 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 21:05:16.155 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-02 21:05:16.175 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-02 21:05:16.192 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-02 21:05:16.196 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 1.581 seconds (JVM running for 2.424)
+2020-02-02 21:06:11.183 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 21:06:11.184 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-02 21:06:11.191 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2020-02-02 21:06:11.249 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-02 21:06:11.516 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-02 21:06:12.413 default [http-nio-8082-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
+### The error may exist in file [E:\文件\2020_swcontest\sw2020_server\target\classes\mapper\NodeMapper.xml]
+### The error may involve com.example.demo.dao.NodeMapper.queryNodeByClass
+### The error occurred while handling results
+### SQL: SELECT n.id, n.content,   n.relate_node,n.class   FROM node_table as n   WHERE n.class=?
+### Cause: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4]
+2020-02-03 14:32:34.519 default [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16h30m52s772ms64µs200ns).
+2020-02-03 17:21:26.486 default [Thread-5] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-03 17:21:26.486 default [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-03 17:21:26.492 default [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
