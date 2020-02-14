@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.KeyGraphMapper">
+
+	<insert id="addNode" useGeneratedKeys="true" keyProperty="id">
+		INSERT
+		INTO node_table(content, class)
+		VALUES(#{content}, #{classId})
+	</insert>
+
+	<delete id="deleteNode">
+		DELETE FROM node_table
+		WHERE id=#{nodeId}
+	</delete>
+
+	<update id="updateNodeContent">
+		UPDATE node_table
+		SET content=#{newContent}
+		WHERE
+		id=#{nodeId}
+	</update>
+
+	<select id="queryNodeByClass" resultMap="node">
+		SELECT n.*
+		FROM
+		node_table as n
+		WHERE n.class=#{classId}
+	</select>
+
+	<insert id="addRelation">
+		INSERT INTO relation_table
+		VALUES(#{parentNode},
+		#{childNode})
+	</insert>
+
+	<delete id="deleteRelation">
+		DELETE FROM relation_table
+		WHERE parent=#{parentNode}
+		and child=#{childNode}
+	</delete>
+
+	<select id="queryRelationByNode" resultType="String">
+		SELECT child
+		FROM
+		relation_table
+		WHERE parent=#{nodeId}
+	</select>
+
+	<insert id="addSentence" useGeneratedKeys="true"
+		keyProperty="id">
+		INSERT INTO sentence_table(content, node)
+		VALUES(#{content}, #{nodeId})
+	</insert>
+
+	<delete id="deleteSentence">
+		DELETE FROM sentence_table
+		WHERE id=#{sentenceId}
+	</delete>
+
+	<select id="querySentenceByNode" resultMap="sentence">
+		SELECT s.id,
+		s.content, s.node
+		FROM sentence_table as s
+		WHERE s.node=#{nodeId}
+	</select>
+
+	<resultMap id="sentence" type="Sentence">
+		<id column="s.id" property="id" />
+		<result column="s.content" property="content" />
+		<result column="s.node" property="nodeId" />
+	</resultMap>
+
+	<resultMap id="node" type="Node">
+		<id column="n.id" property="id" />
+		<result column="n.content" property="content" />
+		<result column="n.class" property="classId" />
+	</resultMap>
+</mapper>
