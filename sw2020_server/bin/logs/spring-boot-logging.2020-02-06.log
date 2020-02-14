@@ -1,0 +1,27 @@
+2020-02-06 15:46:50.540 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 2028 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-06 15:46:50.541 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-06 15:46:50.927 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-06 15:46:50.937 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-06 15:46:50.937 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-06 15:46:50.938 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-06 15:46:50.938 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-06 15:46:50.956 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-06 15:46:50.956 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 412 ms
+2020-02-06 15:46:51.121 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-06 15:46:51.209 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-06 15:46:51.226 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-06 15:46:51.230 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-06 15:46:51.231 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.756 seconds (JVM running for 97175.606)
+2020-02-06 15:46:51.234 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-06 15:47:01.909 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-06 15:47:01.910 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-06 15:47:01.913 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-06 15:47:01.914 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-06 15:47:01.938 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-06 15:47:01.977 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-06 19:56:20.413 default [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1h21m47s928ms805µs700ns).
+2020-02-06 22:09:06.991 default [http-nio-8082-exec-7] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-06 22:14:22.959 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-06 22:14:22.962 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-06 22:14:22.962 default [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-06 22:14:22.972 default [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

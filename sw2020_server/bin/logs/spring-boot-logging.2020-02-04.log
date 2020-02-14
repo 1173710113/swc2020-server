@@ -1,0 +1,369 @@
+2020-02-04 16:18:29.564 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4288 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 16:18:29.564 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 16:18:29.753 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 16:18:29.761 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 16:18:29.762 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 16:18:29.763 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:18:29.763 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 16:18:29.778 default [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:18:29.778 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 213 ms
+2020-02-04 16:18:29.875 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:18:29.926 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:18:29.937 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 16:18:29.939 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 16:18:29.940 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.398 seconds (JVM running for 70443.166)
+2020-02-04 16:18:29.941 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 16:18:47.877 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:18:47.878 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:18:47.882 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-02-04 16:18:47.883 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2020-02-04 16:18:47.905 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2020-02-04 16:18:47.947 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 16:19:34.703 default [http-nio-8082-exec-6] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 16:19:56.060 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 16:22:12.417 default [http-nio-8082-exec-7] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 16:23:30.382 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 16:41:42.542 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:17:05.451 default [http-nio-8082-exec-7] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:18:20.710 default [http-nio-8082-exec-10] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:23:46.124 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 15272 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 17:23:46.127 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 17:23:46.180 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:23:46.181 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:23:46.905 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 13332 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 17:23:46.909 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 17:23:46.946 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:23:46.946 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:23:47.354 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 17:23:47.362 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:47.362 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:23:47.362 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 17:23:47.435 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:23:47.435 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1254 ms
+2020-02-04 17:23:47.820 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:23:47.977 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:23:47.989 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 17:23:47.996 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:47.997 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:23:47.997 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 17:23:48.003 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:48.025 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 17:23:48.029 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 2.215 seconds (JVM running for 3.546)
+2020-02-04 17:23:48.067 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:23:48.068 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1121 ms
+2020-02-04 17:23:48.415 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:23:48.563 default [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2020-02-04 17:23:48.583 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:48.593 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:48.593 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-04 17:23:48.598 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:48.598 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:23:48.600 default [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-04 17:23:48.603 default [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2020-02-04 17:23:48.610 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:24:02.748 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-04 17:24:02.754 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:24:27.831 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 11324 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 17:24:27.834 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 17:24:27.900 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:24:27.901 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:24:28.846 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 17:24:28.853 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:24:28.854 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:24:28.854 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 17:24:28.915 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:24:28.915 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1014 ms
+2020-02-04 17:24:29.229 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:24:29.379 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:24:29.401 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:24:29.420 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 17:24:29.423 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 1.878 seconds (JVM running for 2.781)
+2020-02-04 17:24:45.490 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:24:45.491 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:24:45.497 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2020-02-04 17:24:45.538 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:24:45.962 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:24:46.133 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:25:40.991 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:31:31.980 default [http-nio-8082-exec-7] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:34:48.192 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 17:36:05.830 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-04 17:36:05.835 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:36:05.836 default [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-04 17:36:05.858 default [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-04 17:59:04.693 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 17:59:04.709 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 17:59:04.740 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:59:04.740 default [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:59:05.709 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 17:59:05.724 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:59:05.724 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:59:05.724 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 17:59:05.786 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:59:05.786 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1046 ms
+2020-02-04 17:59:06.146 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:59:06.286 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:59:06.302 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 17:59:06.333 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 17:59:06.333 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 1.885 seconds (JVM running for 2.855)
+2020-02-04 17:59:18.592 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:59:18.593 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:59:18.599 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2020-02-04 17:59:18.636 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:59:18.941 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:59:19.129 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:01:59.423 default [http-nio-8082-exec-6] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:05:17.597 default [http-nio-8082-exec-10] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:07:04.860 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:08:23.642 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:10:38.285 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:11:06.938 default [http-nio-8082-exec-5] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:12:25.266 default [http-nio-8082-exec-9] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:40:44.562 default [http-nio-8082-exec-5] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:42:53.357 default [http-nio-8082-exec-10] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:55:56.712 default [Thread-5] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 18:55:56.713 default [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-04 18:55:56.721 default [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-04 18:55:56.957 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 18:55:56.957 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 18:55:57.203 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 18:55:57.214 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 18:55:57.214 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 18:55:57.215 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 18:55:57.215 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 18:55:57.234 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 18:55:57.234 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 275 ms
+2020-02-04 18:55:57.396 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 18:55:57.469 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 18:55:57.483 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 18:55:57.486 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 18:55:57.486 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.549 seconds (JVM running for 3414.0)
+2020-02-04 18:55:57.488 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 18:56:30.006 default [Thread-8] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 18:56:30.238 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 18:56:30.238 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 18:56:30.407 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 18:56:30.414 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 18:56:30.414 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 18:56:30.415 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 18:56:30.415 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 18:56:30.430 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 18:56:30.430 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 189 ms
+2020-02-04 18:56:30.512 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 18:56:30.554 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 18:56:30.562 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 18:56:30.565 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 18:56:30.565 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.346 seconds (JVM running for 3447.079)
+2020-02-04 18:56:30.566 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 18:57:08.112 default [Thread-13] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 18:57:08.333 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 18:57:08.333 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 18:57:08.529 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 18:57:08.539 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 18:57:08.540 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 18:57:08.540 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 18:57:08.540 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 18:57:08.578 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 18:57:08.578 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 244 ms
+2020-02-04 18:57:08.672 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 18:57:08.717 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 18:57:08.729 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 18:57:08.732 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 18:57:08.733 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.418 seconds (JVM running for 3485.246)
+2020-02-04 18:57:08.734 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 18:57:17.133 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 18:57:17.134 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 18:57:17.137 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-04 18:57:17.138 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 18:57:17.139 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2020-02-04 18:57:17.158 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2020-02-04 18:58:18.620 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:01:23.090 default [Thread-18] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:01:23.090 default [Thread-18] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2020-02-04 19:01:23.099 default [Thread-18] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2020-02-04 19:01:23.343 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:01:23.343 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:01:23.509 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:01:23.517 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:01:23.518 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:01:23.518 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:01:23.518 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:01:23.529 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:01:23.529 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 184 ms
+2020-02-04 19:01:23.607 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:01:23.649 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:01:23.656 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:01:23.659 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:01:23.660 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.335 seconds (JVM running for 3740.173)
+2020-02-04 19:01:23.661 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:03:00.400 default [Thread-23] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:03:00.635 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:03:00.635 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:03:00.788 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:03:00.796 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:03:00.797 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:03:00.797 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:03:00.797 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:03:00.809 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:03:00.809 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 173 ms
+2020-02-04 19:03:00.886 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:03:00.930 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:03:00.940 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:03:00.943 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:03:00.943 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.326 seconds (JVM running for 3837.456)
+2020-02-04 19:03:00.944 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:03:50.512 default [Thread-28] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:03:50.756 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:03:50.756 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:03:50.913 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:03:50.920 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:03:50.921 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:03:50.921 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:03:50.921 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:03:50.932 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:03:50.932 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 175 ms
+2020-02-04 19:03:51.010 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:03:51.052 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:03:51.060 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:03:51.063 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:03:51.063 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.33 seconds (JVM running for 3887.576)
+2020-02-04 19:03:51.064 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:14:00.717 default [Thread-33] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:00.952 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:14:00.952 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:14:01.109 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:14:01.121 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:14:01.121 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:01.122 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:14:01.122 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:14:01.135 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:14:01.135 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 182 ms
+2020-02-04 19:14:01.227 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:01.277 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:14:01.290 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:01.293 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:14:01.294 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.361 seconds (JVM running for 4497.808)
+2020-02-04 19:14:01.295 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:14:13.730 default [Thread-38] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:14.001 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:14:14.002 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:14:14.187 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:14:14.199 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:14:14.199 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:14.200 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:14:14.200 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:14:14.213 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:14:14.213 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 210 ms
+2020-02-04 19:14:14.308 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:14.368 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:14:14.379 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:14.383 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:14:14.384 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.4 seconds (JVM running for 4510.897)
+2020-02-04 19:14:14.384 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:14:25.819 default [Thread-43] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:26.081 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:14:26.081 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:14:26.244 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:14:26.252 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:14:26.253 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:26.253 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:14:26.253 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:14:26.264 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:14:26.264 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 181 ms
+2020-02-04 19:14:26.335 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:26.378 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:14:26.386 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:26.389 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:14:26.389 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.325 seconds (JVM running for 4522.903)
+2020-02-04 19:14:26.390 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:14:51.876 default [Thread-48] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:52.154 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:14:52.154 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:14:52.324 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:14:52.331 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:14:52.331 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:52.332 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:14:52.332 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:14:52.344 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:14:52.344 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 189 ms
+2020-02-04 19:14:52.414 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:14:52.453 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:14:52.460 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:14:52.463 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:14:52.463 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.327 seconds (JVM running for 4548.977)
+2020-02-04 19:14:52.464 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:14:55.361 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 19:14:55.363 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 19:14:55.364 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2020-02-04 19:14:55.366 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:14:55.366 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2020-02-04 19:14:55.383 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2020-02-04 19:40:30.261 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:41:57.779 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:42:35.248 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:43:40.597 default [http-nio-8082-exec-5] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:52:46.001 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:53:04.900 default [http-nio-8082-exec-3] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:53:42.074 default [http-nio-8082-exec-6] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:54:08.944 default [http-nio-8082-exec-9] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:58:24.962 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:59:32.314 default [Thread-53] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:59:32.314 default [Thread-53] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2020-02-04 19:59:32.320 default [Thread-53] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2020-02-04 19:59:32.546 default [restartedMain] INFO  com.example.demo.Demo1Application - Starting Demo1Application on MSI with PID 4200 (started by msi-user in E:\文件\2020_swcontest\sw2020_server)
+2020-02-04 19:59:32.546 default [restartedMain] INFO  com.example.demo.Demo1Application - No active profile set, falling back to default profiles: default
+2020-02-04 19:59:32.701 default [restartedMain] WARN  org.apache.tomcat.util.modeler.Registry - The MBean registry cannot be disabled because it has already been initialised
+2020-02-04 19:59:32.708 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2020-02-04 19:59:32.708 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:59:32.709 default [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 19:59:32.709 default [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-04 19:59:32.721 default [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring embedded WebApplicationContext
+2020-02-04 19:59:32.722 default [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 175 ms
+2020-02-04 19:59:32.798 default [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 19:59:32.840 default [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 19:59:32.847 default [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2020-02-04 19:59:32.850 default [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path '/sw2020'
+2020-02-04 19:59:32.851 default [restartedMain] INFO  com.example.demo.Demo1Application - Started Demo1Application in 0.322 seconds (JVM running for 7229.365)
+2020-02-04 19:59:32.852 default [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-02-04 19:59:39.300 default [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/sw2020] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 19:59:39.301 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 19:59:39.305 default [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2020-02-04 19:59:39.306 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 19:59:39.307 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2020-02-04 19:59:39.320 default [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2020-02-04 20:03:03.983 default [http-nio-8082-exec-6] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:05:02.911 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:11:10.798 default [http-nio-8082-exec-2] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:11:46.880 default [http-nio-8082-exec-5] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:12:27.499 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:17:42.146 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:18:02.480 default [http-nio-8082-exec-10] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:18:32.211 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:21:01.754 default [http-nio-8082-exec-3] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:41:32.044 default [http-nio-8082-exec-1] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:42:17.062 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:43:16.822 default [http-nio-8082-exec-7] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:43:55.707 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:44:08.855 default [http-nio-8082-exec-6] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:44:10.479 default [http-nio-8082-exec-8] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:44:34.099 default [http-nio-8082-exec-10] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 20:58:18.368 default [http-nio-8082-exec-4] INFO  com.example.demo.controller.CourseController - Teacher:01 query course
+2020-02-04 21:04:37.605 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-02-04 21:04:37.607 default [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 21:04:37.607 default [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2020-02-04 21:04:37.616 default [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
