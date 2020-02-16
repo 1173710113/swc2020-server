@@ -38,7 +38,7 @@ class Extracter(threading.Thread):
         threading.Thread.__init__(self)
         self.tr4w = TextRank4Keyword()
         self.socket = socket
-        self.socket.settimeout(5)
+        self.socket.settimeout(0.5)
         self.recvsize = recvsize
         self.encoding = encoding
 
@@ -56,18 +56,30 @@ class Extracter(threading.Thread):
                     # 读取recvsize个字节
                     try:
                         rec = self.socket.recv(self.recvsize)
-                    except socket.timeout as exception:
                         if rec == lastRec:
                             flag = False
+                            print(flag)
+                            break
                         else:
                             flag = True
+                            print(flag)
+                        lastRec = rec
+                    except socket.timeout as exception:
+                        print("-----------------")
+                        print(lastRec)
+                        print(rec)
+                        print("-----------------")
+                        if rec == lastRec:
+                            flag = False
+                            print(flag)
+                            break
+                        else:
+                            flag = True
+                            print(flag)
                         lastRec = rec
                         pass
                     # 解码
                     msg += rec.decode(self.encoding)
-                    print(msg.encode())
-                    print(msg.strip().encode())
-                    print(msg.endswith('\n\n'))
                     # 文本接受是否完毕，因为python socket不能自己判断接收数据是否完毕，
                     # 所以需要自定义协议标志数据接受完毕
                     if msg.endswith('\n\n'):
@@ -75,8 +87,6 @@ class Extracter(threading.Thread):
                         break
                 if not flag:
                     continue
-                print("fucking")
-                print(msg)
                 commandLine = msg.split(" ")
                 retMsg = self.extractSent(commandLine[0], int(commandLine[1]))
                 print(retMsg)
