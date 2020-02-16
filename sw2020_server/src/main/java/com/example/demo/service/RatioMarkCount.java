@@ -53,6 +53,9 @@ public class RatioMarkCount implements MarkCount{
     }
     AlignResult alignResult = WavToTextUtil.getAignResult("./resource/audio/xwlb.wav");
     RatioMarkCount ratioMarkCount = new RatioMarkCount();
+    for (int i = 0; i < marks.size(); i++) {
+      System.out.println("marks: " + marks.get(i).time);
+    }
     List<EffectiveMarkRange> result = ratioMarkCount.countingEffectiveMark(alignResult, marks);
     for (int i = 0; i < result.size(); i++) {
       System.out.println("rangetext: " + result.get(i).getRangeText() + "marknum: " + result.get(i).getMarkNum());

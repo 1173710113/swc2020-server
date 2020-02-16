@@ -24,9 +24,6 @@ public class EffectiveMarkRange implements Comparable<EffectiveMarkRange>{
   }
   @Override
   public int compareTo(EffectiveMarkRange o) {
-    if (this.markNum >= o.markNum) {
-      return -1;
-    }
-    return 0;
+    return o.markNum - this.markNum;
   }
 }

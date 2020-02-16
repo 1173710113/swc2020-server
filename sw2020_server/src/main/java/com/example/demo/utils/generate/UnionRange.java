@@ -23,8 +23,6 @@ public class UnionRange extends GenerateRange{
       for (int i = 0; i < totalMark; i++) {
         if (start <= marks.get(i).time && marks.get(i).time <= end) {
           rangeMarkNum++;
-        } else {
-          break;
         }
       }
       if (rangeMarkNum > 0) {//和前面进行union
@@ -32,7 +30,7 @@ public class UnionRange extends GenerateRange{
           keyWordSentences = alignResult.getSentence(j) + alignResult.getSentence(j + 1) + alignResult.getSentence(j + 2);
           tempMarkNum = tempMarkNum + rangeMarkNum;
         } else {
-          int start_j = j - (backSentencesRange - 1);
+          int start_j = j - backSentencesRange;
           if (!keyWordSentences.contains(alignResult.getSentence(start_j))) {//判断是否为一组中的第一个，是则需将前3句加入
             keyWordSentences = keyWordSentences + alignResult.getSentence(start_j) + alignResult.getSentence(start_j + 1) + alignResult.getSentence(start_j + 2)
             + alignResult.getSentence(start_j + 3) + alignResult.getSentence(start_j + 4) + alignResult.getSentence(start_j + 5);
