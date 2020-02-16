@@ -1,0 +1,4 @@
+keywordExtractorServer = 127.0.0.1
+keywordExtractorServerPort = 12345
+keywordExtractorClient = 127.0.0.1
+keywordExtractorClientPort = 8888
