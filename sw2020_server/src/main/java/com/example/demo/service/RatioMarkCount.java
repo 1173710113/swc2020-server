@@ -1,10 +1,14 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.exception.TransferException;
+import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
 import com.example.demo.utils.generate.SeperateRange;
 import com.example.demo.utils.sort.MarkRangeSort;
@@ -29,12 +33,29 @@ public class RatioMarkCount implements MarkCount{
     Collections.sort(marks);
     List<EffectiveMarkRange> effectiveMarkRanges = generateRange.generateRange(alignResult, marks);
     //调用关键词方法
-    for (int i = 0; i < effectiveMarkRanges.size(); i++) {
-      keyWordMap.put(key, value)
-    }
+//    for (int i = 0; i < effectiveMarkRanges.size(); i++) {
+//      keyWordMap.put(key, value)
+//    }
     //基于ratio对于结果排序
     MarkRangeSort markRangeSort = new RatioSort();
     List<EffectiveMarkRange> sortedEffectiveMarkRanges = markRangeSort.rangeSort(effectiveMarkRanges);
+    return sortedEffectiveMarkRanges;
   }
   
+  public static void main(String[] args) throws TransferException {
+    Random random = new Random();
+    List<RecordMark> marks = new ArrayList<RecordMark>();
+    for (int i = 0; i < 30; i++) {
+      //77000
+      int ran = random.nextInt(77000) + 1;
+      RecordMark recordMark = new RecordMark(ran, "c");
+      marks.add(recordMark);
+    }
+    AlignResult alignResult = WavToTextUtil.getAignResult("./resource/audio/xwlb.wav");
+    RatioMarkCount ratioMarkCount = new RatioMarkCount();
+    List<EffectiveMarkRange> result = ratioMarkCount.countingEffectiveMark(alignResult, marks);
+    for (int i = 0; i < result.size(); i++) {
+      System.out.println("rangetext: " + result.get(i).getRangeText() + "marknum: " + result.get(i).getMarkNum());
+    }
+  }
 }
