@@ -1,45 +1,61 @@
 package com.example.demo.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.exception.TransferException;
+import com.example.demo.utils.WavToTextUtil;
+import com.example.demo.utils.generate.GenerateRange;
+import com.example.demo.utils.generate.SeperateRange;
+import com.example.demo.utils.sort.MarkRangeSort;
+import com.example.demo.utils.sort.RatioSort;
 import com.example.demo.domain.AlignResult;
+import com.example.demo.domain.EffectiveMarkRange;
 
 public class RatioMarkCount implements MarkCount{
-  private int backSentencesRange = 3;
-  private int sentencesRange = 3;
-  private double effectiveRatio = 0.3;
-  public void countingEffectiveMark(AlignResult alignResult, List<RecordMark> marks) {
-    int totalMark = marks.size();
-    String keyWordSentences;
-    Collections.sort(marks);
-    if (alignResult.getNumOfSentence() <= sentencesRange - 1) {
+  private double effectiveRatio = 0;//先得出全部的标记句子范围——6句
+  /**
+   * compute effective marks
+   * @param alignResult
+   * @param marks
+   */
+  public List<EffectiveMarkRange> countingEffectiveMark(AlignResult alignResult, List<RecordMark> marks) {
+    GenerateRange generateRange = new SeperateRange();
+    if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
       throw new RuntimeException("句子总数不足");
     }
-    for (int j = 0; j < alignResult.getNumOfSentence() - (sentencesRange - 1); j++) {
-      int start = alignResult.getBeginTime(j);
-      int end = alignResult.getEndTime(j + 2);
-      int rangeMarkNum = 0;
-      for (int i = 0; i < totalMark; i++) {
-        if (start <= marks.get(i).time && marks.get(i).time <= end) {
-          rangeMarkNum++;
-        } else {
-          break;
-        }
-      }
-      if (rangeMarkNum/totalMark > effectiveRatio) {
-        if (j <= backSentencesRange - 1) {//当在0，1，2句时无法回溯到前3句，则只返回markrange的本来三句
-          keyWordSentences = alignResult.getSentence(j) + alignResult.getSentence(j + 1) + alignResult.getSentence(j + 2);
-        } else {
-          int start_j = j - (backSentencesRange - 1);
-          keyWordSentences = alignResult.getSentence(start_j) + alignResult.getSentence(start_j + 1) + alignResult.getSentence(start_j + 2)
-                                  + alignResult.getSentence(start_j + 3) + alignResult.getSentence(start_j + 4) + alignResult.getSentence(start_j + 5);
-        }
-        //调用关键词方法
-      }
-    }
-    
-    
+    Map<EffectiveMarkRange, List<String>> keyWordMap = new HashMap<EffectiveMarkRange, List<String>>();
+    //生成句子范围
+    Collections.sort(marks);
+    List<EffectiveMarkRange> effectiveMarkRanges = generateRange.generateRange(alignResult, marks);
+    //调用关键词方法
+//    for (int i = 0; i < effectiveMarkRanges.size(); i++) {
+//      keyWordMap.put(key, value)
+//    }
+    //基于ratio对于结果排序
+    MarkRangeSort markRangeSort = new RatioSort();
+    List<EffectiveMarkRange> sortedEffectiveMarkRanges = markRangeSort.rangeSort(effectiveMarkRanges);
+    return sortedEffectiveMarkRanges;
   }
   
+  public static void main(String[] args) throws TransferException {
+    Random random = new Random();
+    List<RecordMark> marks = new ArrayList<RecordMark>();
+    for (int i = 0; i < 30; i++) {
+      //77000
+      int ran = random.nextInt(77000) + 1;
+      RecordMark recordMark = new RecordMark(ran, "c");
+      marks.add(recordMark);
+    }
+    AlignResult alignResult = WavToTextUtil.getAignResult("./resource/audio/xwlb.wav");
+    RatioMarkCount ratioMarkCount = new RatioMarkCount();
+    List<EffectiveMarkRange> result = ratioMarkCount.countingEffectiveMark(alignResult, marks);
+    for (int i = 0; i < result.size(); i++) {
+      System.out.println("rangetext: " + result.get(i).getRangeText() + "marknum: " + result.get(i).getMarkNum());
+    }
+  }
 }
