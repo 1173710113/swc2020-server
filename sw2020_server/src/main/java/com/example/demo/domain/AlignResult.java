@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 /* 表示语音转写的结果, 并带有对齐信息 */
 public class AlignResult {
 
-	private String name; // 标识名称
+	private String filePath; // 转写的音频文件路径
 
 	private String text; // 转写的总文本串, 编码为UTF-8
 	private List<String> sentences = new ArrayList<>(); // String的每个句子的开始位置
@@ -22,8 +22,8 @@ public class AlignResult {
 	 * 
 	 * @param msg 服务器返回的数据
 	 */
-	public AlignResult(String name, String msg) {
-		this.name = name;
+	public AlignResult(String filePath, String msg) {
+		this.filePath = filePath;
 
 		StringBuilder textBf = new StringBuilder();
 		Pattern pattern = Pattern
@@ -44,12 +44,12 @@ public class AlignResult {
 	}
 
 	/**
-	 * 获取结果的标识名称
+	 * 获取转写的文件路径
 	 * 
 	 * @return
 	 */
-	public String getName() {
-		return name;
+	public String getFilePath() {
+		return filePath;
 	}
 
 	/**

@@ -43,10 +43,8 @@ public class WavToTextUtil {
 		// 获取上传任务ID
 		String task_id = "";
 		HashMap<String, String> params = new HashMap<String, String>();
-		params.put("has_participle", "false");
+		params.put("has_participle", "false"); // 是否分词
 		params.put("has_seperate", "false");
-		// 合并后标准版开启电话版功能
-		// params.put("has_seperate", "true");
 		try {
 			// 上传音频文件
 			Message uploadMsg = lc.lfasrUpload(wavPath, type, params);
