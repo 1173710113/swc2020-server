@@ -13,6 +13,7 @@ import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
 import com.example.demo.utils.generate.SeperateRange;
+import com.example.demo.utils.generate.UnionRange;
 import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
 import com.example.demo.domain.AlignResult;
@@ -29,7 +30,7 @@ public class RatioMarkCount implements MarkCount{
    * @throws IOException 
    */
   public List<EffectiveMarkRange> countingEffectiveMark(AlignResult alignResult, List<RecordMark> marks) throws IOException {
-    GenerateRange generateRange = new SeperateRange();
+    GenerateRange generateRange = new UnionRange();
     if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
       throw new RuntimeException("句子总数不足");
     }
