@@ -38,7 +38,7 @@ class Extracter(threading.Thread):
         threading.Thread.__init__(self)
         self.tr4w = TextRank4Keyword()
         self.socket = socket
-        self.socket.settimeout(0.5)
+        self.socket.settimeout(0.25)
         self.recvsize = recvsize
         self.encoding = encoding
 
@@ -47,7 +47,6 @@ class Extracter(threading.Thread):
     def run(self):
         print("开启新线程.....")
         flag = True
-        lastRec = ""
         while(flag):
             try:
                 #接受数据
@@ -55,28 +54,20 @@ class Extracter(threading.Thread):
                 while True:
                     # 读取recvsize个字节
                     try:
+                        rec = None
                         rec = self.socket.recv(self.recvsize)
-                        if rec == lastRec:
+                        if rec is None:
                             flag = False
-                            print(flag)
                             break
                         else:
                             flag = True
-                            print(flag)
-                        lastRec = rec
                     except socket.timeout as exception:
-                        print("-----------------")
-                        print(lastRec)
-                        print(rec)
-                        print("-----------------")
-                        if rec == lastRec:
+                        if rec is None:
                             flag = False
-                            print(flag)
                             break
                         else:
                             flag = True
                             print(flag)
-                        lastRec = rec
                         pass
                     # 解码
                     msg += rec.decode(self.encoding)
