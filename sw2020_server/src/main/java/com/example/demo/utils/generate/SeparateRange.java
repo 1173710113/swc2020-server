@@ -6,7 +6,7 @@ import com.example.demo.domain.AlignResult;
 import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.RecordMark;
 
-public class SeperateRange extends GenerateRange{
+public class SeparateRange extends GenerateRange{
   
   public List<EffectiveMarkRange> generateRange(AlignResult alignResult, List<RecordMark> marks) {
     int totalMark = marks.size();
