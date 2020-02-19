@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.example.demo.service;
+package com.example.demo.service.Imp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ import com.example.demo.domain.Course;
 import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
+import com.example.demo.service.CourseService;
 import com.example.demo.utils.CodeUtil;
 import com.example.demo.utils.ValidateUtil;
 import com.example.demo.vo.TeacherCourse;
