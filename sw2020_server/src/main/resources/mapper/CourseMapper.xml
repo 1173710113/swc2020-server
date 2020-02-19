@@ -15,6 +15,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		DELETE FROM course_table
 		WHERE id=#{id}
 	</delete>
+	<select id="queryCourseTeacher">
+		SELECT teacher
+		FROM course_table
+		WHERE id=#{courseId}
+	</select>
 	<select id="queryCourseByStudentId" resultMap="course">
 		SELECT
 		cs.course as

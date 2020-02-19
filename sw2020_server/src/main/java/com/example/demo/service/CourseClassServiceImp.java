@@ -13,6 +13,13 @@ public class CourseClassServiceImp implements CourseClassService{
 
 	@Autowired
 	CourseClassMapper mapper;
+	
+	@Override
+	public CourseClass addClass(CourseClass courseClass) {
+		mapper.addClass(courseClass);
+		return courseClass;
+	}
+	
 	@Override
 	public List<CourseClass> queryClassByCourse(String courseId) {
 		return mapper.queryClassByCourse(courseId);

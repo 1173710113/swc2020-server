@@ -5,8 +5,6 @@ package com.example.demo.controller;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,22 +13,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.domain.Course;
-import com.example.demo.domain.TeacherCourse;
 import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
+import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.CourseService;
+import com.example.demo.vo.TeacherCourse;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
  * @author msi-user
  *
  */
+@Slf4j
 @Controller
 @RequestMapping("/course")
 public class CourseController {
-	private final static Logger logger = LoggerFactory.getLogger(CourseController.class);
 	
-
 	@Autowired
 	CourseService courseService;
 
@@ -53,14 +53,15 @@ public class CourseController {
 	@RequestMapping("/query/teacher")
 	@ResponseBody
 	public List<TeacherCourse> queryCourseByTeacherId(String id) {
-		logger.info("Teacher:" + id + " query course");
+		log.info("Teacher:" + id + " query course");
 		return courseService.queryCourseByTeacherId(id);
 	}
 	
 	@RequestMapping("/enroll")
 	@ResponseBody
 	public MyResult enroll(String code, String studentId) throws MyException {
-		return courseService.enroll(code, studentId);
+		courseService.enroll(code, studentId);
+		return MyResultGenerator.successResult(null);
 	}
 	
 	@RequestMapping("/drop/{studentId}/{courseId}")

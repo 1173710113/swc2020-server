@@ -11,12 +11,12 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.CourseMapper;
 import com.example.demo.domain.Course;
-import com.example.demo.domain.TeacherCourse;
 import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.utils.CodeUtil;
 import com.example.demo.utils.ValidateUtil;
+import com.example.demo.vo.TeacherCourse;
 
 /**
  * @author msi-user
@@ -76,7 +76,7 @@ public class CourseServiceImp implements CourseService {
 	}
 
 	@Override
-	public MyResult enroll(String code, String studentId) throws MyException {
+	public void enroll(String code, String studentId) throws MyException {
 		String course = courseMapper.queryCode(code);
 		//若选课码错误
 		if(ValidateUtil.isEmpty(course)) {
@@ -95,7 +95,6 @@ public class CourseServiceImp implements CourseService {
 		}
 		courseMapper.enroll(studentId, course);
 		courseMapper.updateCourseCountPlus(course);
-		return MyResultGenerator.successResult(null);
 	}
 
 	@Override
@@ -110,6 +109,17 @@ public class CourseServiceImp implements CourseService {
 		courseMapper.dropCourse(studentId, courseId);
 		courseMapper.updateCourseCountMinus(courseId);
 		return "success";
+	}
+
+	@Override
+	public String isStudentEnrollClass(String studentId, String courseId) throws MyException {
+		String courseTemp = courseMapper.isStudentInCourse(studentId, courseId);
+		if(courseTemp == null) {
+			throw new MyException("未加入课程");
+		} else {
+			String teacherId = courseMapper.queryCourseTeacher(courseId);
+			return teacherId;
+		}
 	}
 
 }

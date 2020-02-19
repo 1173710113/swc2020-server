@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.example.demo.domain.CourseClass;
-import com.example.demo.domain.CourseClassVar1;
+import com.example.demo.vo.CourseClassVar1;
 
 public class WrapUtil {
 

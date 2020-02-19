@@ -16,7 +16,6 @@ public class CROSConfiguration extends WebMvcConfigurerAdapter{
 			.allowedOrigins("http://192.168.0.100:10011")
 			.allowedHeaders("*")
 			.allowCredentials(true);
-		
 	}
 
 }

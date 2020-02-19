@@ -28,6 +28,8 @@ public interface CourseMapper {
 	 * @param id is the id of course.
 	 */
 	public void deleteCourse(@Param("id") String id);
+	
+	public String queryCourseTeacher(String courseId);
 
 	/**
 	 * 
