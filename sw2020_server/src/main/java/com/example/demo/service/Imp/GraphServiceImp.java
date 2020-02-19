@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.dao.KeyGraphMapper;
 import com.example.demo.domain.Node;
 import com.example.demo.service.GraphService;
-import com.example.demo.domain.KeyGraph;
+import com.example.demo.vo.KeyGraph;
 
 @Service
 public class GraphServiceImp implements GraphService{

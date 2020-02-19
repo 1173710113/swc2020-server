@@ -11,6 +11,9 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.dao.RecordMarkMapper;
 import com.example.demo.domain.AlignResult;
 import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.RecordMark;
@@ -38,6 +41,15 @@ public class RatioMarkCount implements MarkCount {
 	private List<EffectiveMarkRange> markedRanges = new ArrayList<>();
 	// 记录每个关键词的标记次数
 	private Map<String, Integer> markedNumOfKeyWord = new HashMap<>();
+	
+	private String classId;
+	
+	@Autowired
+	private RecordMarkMapper recordMarkMapper;
+	
+	public void setClassId(String classId) {
+		this.classId = classId;
+	}
 
 	@Override
 	public void initialize(AlignResult alignResult, List<RecordMark> marks) throws IOException {
@@ -134,6 +146,7 @@ public class RatioMarkCount implements MarkCount {
 
 	public static void main(String[] args) throws IOException {
 		Random random = new Random();
+		//List<RecordMark> marks = recordMarkMapper.queryRecordMarkById(classId) //从数据库读取recordMark
 		List<RecordMark> marks = new ArrayList<RecordMark>();
 		for (int i = 0; i < 30; i++) {
 			// 77000
