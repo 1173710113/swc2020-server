@@ -45,7 +45,7 @@ public class WebSocketController {
 		this.userId = userId;
 		this.session = session;
 		// 教师使用
-		if (type.equals("0")) {
+		if (type.equals("teacher")) {
 			if (teacherWebSocketMap.containsKey(userId)) {
 				teacherWebSocketMap.remove(userId);
 				teacherWebSocketMap.put(userId, this);
@@ -56,7 +56,7 @@ public class WebSocketController {
 			}
 		}
 		// 学生使用
-		else if (type.equals("1")) {
+		else if (type.equals("student")) {
 			String teacherId = courseMap.get(courseId);
 			if (teacherId == null) {
 				throw new MyException("老师未开课");
