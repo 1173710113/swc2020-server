@@ -37,7 +37,8 @@ public class CourseServiceImp implements CourseService {
 		//若选课码没有被占用
 		if(result == null) {
 			courseMapper.addCourse(course);
-			courseMapper.addCode(course.getId(), code, course.getStartTime());
+			CourseCode courseCode = new CourseCode(code, course.getId(), course.getStartTime());
+			courseMapper.addCode(courseCode);
 		}
 	}
 

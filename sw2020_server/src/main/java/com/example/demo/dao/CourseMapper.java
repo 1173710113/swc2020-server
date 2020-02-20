@@ -109,17 +109,33 @@ public interface CourseMapper {
 	public void updateCourseCountMinus(String courseId);
 
 	/**
-	 * 获得课程的最大课程
-	 * @param courseId
-	 * @return
+	 * 获得课程的最大容量
+	 * @param courseId 课程id
+	 * @return 课程的容量
 	 */
 	public int queryCourseMaxVol(String courseId);
 
+	/**
+	 * 获得课程的选课人数
+ 	 * @param courseId 课程id
+	 * @return 课程的选课人数
+	 */
 	public int queryCourseRealVol(String courseId);
 
 	public String isStudentInCourse(String studentId, String courseId);
 
+	/**
+	 * 退选课程
+	 * @param studentId 退选学生的id
+	 * @param courseId 退选课程的id
+	 */
 	public void dropCourse(String studentId, String courseId);
 
-	public void addCode(String courseId, String code, String dueTime);
+	/**
+	 * 添加选课码
+	 * @param courseId 课程的id
+	 * @param code 选课码
+	 * @param dueTime 选课码失效时间
+	 */
+	public void addCode(CourseCode Code);
 }

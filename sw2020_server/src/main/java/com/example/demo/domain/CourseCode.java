@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class CourseCode {
-	String code;
-	String courseId;
-	Date dueDate;
+	String code; //选课码
+	String courseId; //选课码对应的课程id
+	Date dueTime; //选课码失效日期
 }
