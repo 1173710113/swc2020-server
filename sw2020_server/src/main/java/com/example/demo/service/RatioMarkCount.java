@@ -169,5 +169,4 @@ public class RatioMarkCount implements MarkCount {
 		System.out.println(ratioMarkCount.getAllKeyWords());
 
 	}
-
 }
