@@ -27,6 +27,13 @@ public interface RecordMarkMapper {
 	public void deleteRecordMark(String recordMarkId);
 	
 	/**
+	 * 更新录音标记的标记内容
+	 * @param recordMarkId 要更新的录音标记的id
+	 * @param newMark 新的标记内容
+	 */
+	public void updateRecordMark(String recordMarkId, String newMark);
+	
+	/**
 	 * 搜索关于指定课堂的所有录音标记
 	 * @param classId 指定课堂的id
 	 * @return 该课堂的所有录音标记

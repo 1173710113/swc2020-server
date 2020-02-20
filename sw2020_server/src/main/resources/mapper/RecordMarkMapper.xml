@@ -15,6 +15,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	WHERE id=#{recordMarkId}
 </delete>
 
+<update id="updateRecordMark">
+	UPDATE recordmark_table
+	SET mark=#{newMark}
+	WHERE id=#{recordMark}
+</update>
+
 <select id="queryRecordMarkByClass" resultMap="recordmark">
 	SELECT * 
 	FROM recordmark_table

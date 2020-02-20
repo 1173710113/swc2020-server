@@ -11,18 +11,19 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.CourseMapper;
 import com.example.demo.domain.Course;
+import com.example.demo.domain.CourseCode;
 import com.example.demo.exception.MyException;
-import com.example.demo.exception.MyResult;
-import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.CourseService;
 import com.example.demo.utils.CodeUtil;
 import com.example.demo.utils.ValidateUtil;
-import com.example.demo.vo.TeacherCourse;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author msi-user
  *
  */
+@Slf4j
 @Service
 public class CourseServiceImp implements CourseService {
 
@@ -32,9 +33,9 @@ public class CourseServiceImp implements CourseService {
 	@Override
 	public void addCourse(Course course) {
 		String code = CodeUtil.createData();
-		String result = courseMapper.queryCode(code);
+		CourseCode result = courseMapper.queryCode(code);
 		//若选课码没有被占用
-		if(ValidateUtil.isEmpty(result)) {
+		if(result == null) {
 			courseMapper.addCourse(course);
 			courseMapper.addCode(course.getId(), code, course.getStartTime());
 		}
@@ -54,20 +55,10 @@ public class CourseServiceImp implements CourseService {
 	}
 
 	@Override
-	public List<TeacherCourse> queryCourseByTeacherId(String teacherId) {
-		List<Course> courseList = new ArrayList<>();
-		List<TeacherCourse> teacherCourseList = new ArrayList<>();
-		courseList.addAll(courseMapper.queryCourseByTeacherId(teacherId));
-		for(int i = 0; i< courseList.size(); i++) {
-			TeacherCourse course = new TeacherCourse(courseList.get(i));
-			String code = courseMapper.queryCodeByCourse(courseList.get(i).getId());
-			if(code == null) {
-				code = "";
-			}
-			course.setCode(code);
-			teacherCourseList.add(course);
-		}
-		return teacherCourseList;
+	public List<Course> queryCourseByTeacherId(String teacherId) {
+		List<Course> courseList = courseMapper.queryCourseByTeacherId(teacherId);
+		log.info(String.format("Teacher{%s} find %d course", teacherId, courseList.size()));
+		return courseList;
 	}
 
 	@Override
@@ -78,11 +69,12 @@ public class CourseServiceImp implements CourseService {
 
 	@Override
 	public void enroll(String code, String studentId) throws MyException {
-		String course = courseMapper.queryCode(code);
+		CourseCode courseCode = courseMapper.queryCode(code);
 		//若选课码错误
-		if(ValidateUtil.isEmpty(course)) {
+		if(courseCode == null) {
 			throw new MyException("选课码错误");
 		}
+		String course = courseCode.getCourseId();
 		int real = courseMapper.queryCourseRealVol(course);
 		int max = courseMapper.queryCourseMaxVol(course);
 		//如果课程已满
@@ -121,6 +113,12 @@ public class CourseServiceImp implements CourseService {
 			String teacherId = courseMapper.queryCourseTeacher(courseId);
 			return teacherId;
 		}
+	}
+
+	@Override
+	public CourseCode queryCode(String courseId) {
+		
+		return courseMapper.queryCodeByCourse(courseId);
 	}
 
 }

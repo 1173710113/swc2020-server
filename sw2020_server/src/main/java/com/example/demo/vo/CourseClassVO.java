@@ -1,6 +1,6 @@
 package com.example.demo.vo;
 
-public class CourseClassVar1 {
+public class CourseClassVO {
 
 	private String id;
 	private String name;
@@ -17,7 +17,7 @@ public class CourseClassVar1 {
 	 * @param day
 	 * @param classId
 	 */
-	public CourseClassVar1(String id, String name, int year, int month, int day, String course) {
+	public CourseClassVO(String id, String name, int year, int month, int day, String course) {
 		super();
 		this.id = id;
 		this.name = name;

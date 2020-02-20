@@ -15,59 +15,38 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		DELETE FROM course_table
 		WHERE id=#{id}
 	</delete>
+	<select id="queryCourse">
+		SELECT
+	</select>
 	<select id="queryCourseTeacher">
 		SELECT teacher
 		FROM course_table
 		WHERE id=#{courseId}
 	</select>
 	<select id="queryCourseByStudentId" resultMap="course">
-		SELECT
-		cs.course as
-		id,
-		c.name as name,
-		c.teacher as teacher_id,
-		u.name as teacher_name,
-		c.max_vol as max_vol,
-		c.destination as destination,
-		c.start_time as
-		start_time,
-		c.end_time as end_time,
-		c.real_vol as real_vol
-		FROM
-		user_table u,course_student cs,course_table c
+		SELECT *
+		FROM course_table, course_student
 		WHERE
-		cs.student=#{student_id} and c.id=cs.course and u.id=c.teacher
+		student=#{studentId} and id=course
 	</select>
+	
 	<select id="queryCourseByTeacherId" resultMap="course">
-		SELECT
-		c.id as id,
-		c.name as name,
-		u.id as teacher_id,
-		u.name as teacher_name,
-		c.max_vol as
-		max_vol,
-		c.destination as destination,
-		c.start_time as
-		start_time,
-		c.end_time as end_time,
-		c.real_vol as real_vol
-		FROM
-		user_table
-		u,course_table c
-		WHERE c.teacher=#{teacher_id} and
-		u.id=#{teacher_id}
+		SELECT *
+		FROM course_table
+		WHERE teacher=#{teacherId}
 	</select>
+	
 	<resultMap type="Course" id="course">
 		<id column="id" property="id" />
 		<result column="name" property="name" />
 		<result column="teacher_id" property="teacherId" />
-		<result column="teacher_name" property="teacherName" />
 		<result column="max_vol" property="maxVol" />
 		<result column="destination" property="destination" />
 		<result column="start_time" property="startTime" />
 		<result column="end_time" property="endTime" />
 		<result column="real_vol" property="realVol" />
 	</resultMap>
+	
 	<select id="getStudentByCourse" resultType="String">
 		SELECT
 		student
@@ -76,19 +55,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE course={courseId}
 	</select>
 
-	<select id="queryCode" resultType="String">
-		SELECT course_id
+	<select id="queryCode" resultType="courseCode">
+		SELECT *
 		FROM
 		enroll_table
-		WHERE code=#{code}
+		WHERE
+		code=#{code}
 	</select>
 
-	<select id="queryCodeByCourse" resultType="String">
-		SELECT code
+	<select id="queryCodeByCourse" resultType="courseCode">
+		SELECT *
 		FROM
 		enroll_table
-		WHERE course_id=#{course_id}
+		WHERE course_id=#{courseId}
 	</select>
+
+	<resultMap type="CourseCode" id="courseCode">
+		<id column="code" property="code" />
+		<result column="course_id" property="courseId" />
+		<result column="due_time" property="dueTime" />
+	</resultMap>
 
 	<insert id="enroll">
 		INSERT INTO course_student
@@ -100,7 +86,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		UPDATE course_table
 		SET real_vol = real_vol + 1
 		WHERE
-		id=#{course_id}
+		id=#{courseId}
 	</update>
 
 
@@ -108,40 +94,40 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		UPDATE course_table
 		SET real_vol = real_vol - 1
 		WHERE
-		id=#{course_id}
+		id=#{courseId}
 	</update>
 
 	<select id="queryCourseRealVol" resultType="int">
 		SELECT real_vol
 		FROM
 		course_table
-		WHERE id=#{course_id}
+		WHERE id=#{courseId}
 	</select>
 
 	<select id="queryCourseMaxVol" resultType="int">
 		SELECT max_vol
 		FROM
 		course_table
-		WHERE id=#{course_id}
+		WHERE id=#{courseId}
 	</select>
 
 	<select id="isStudentInCourse" resultType="String">
 		SELECT course
 		FROM
 		course_student
-		WHERE course=#{course_id} and student=#{student_id}
+		WHERE course=#{courseId} and student=#{studentId}
 	</select>
 
 	<delete id="dropCourse">
 		DELETE FROM course_student
-		WHERE student=#{student_id}
-		and course=#{course_id}
+		WHERE student=#{studentId}
+		and course=#{courseId}
 	</delete>
 
 	<insert id="addCode">
 		INSERT INTO enroll_table
-		VALUES(#{code}, #{course_id},
-		#{due_time})
+		VALUES(#{code}, #{courseId},
+		#{dueTime})
 	</insert>
 
 </mapper>

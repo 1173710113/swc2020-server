@@ -20,7 +20,6 @@ public class Course implements Serializable {
 	private String id; // 课程id
 	private String name; // 课程名
 	private String teacherId; // 授课教师id
-	private String teacherName; // 授课教师名字
 	private int maxVol; // 课程最大容量
 	private String destination; // 授课地点
 	private String startTime; // 课程开始时间
