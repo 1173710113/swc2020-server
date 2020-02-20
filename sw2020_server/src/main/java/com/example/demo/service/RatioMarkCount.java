@@ -69,10 +69,10 @@ public class RatioMarkCount implements MarkCount {
 			for (String keyWord : entry.getValue()) {
 				if (rangesOfKeywordMap.containsKey(keyWord)) {
 					rangesOfKeywordMap.get(keyWord).add(entry.getKey());
-					markedNumOfKeyWord.put(keyWord, markedNumOfKeyWord.get(keyWord) + 1);
+					markedNumOfKeyWord.put(keyWord, markedNumOfKeyWord.get(keyWord) + entry.getKey().getMarkNum());
 				} else {
 					rangesOfKeywordMap.put(keyWord, new HashSet<>());
-					markedNumOfKeyWord.put(keyWord, 1);
+					markedNumOfKeyWord.put(keyWord, entry.getKey().getMarkNum());
 				}
 			}
 		}
@@ -164,6 +164,9 @@ public class RatioMarkCount implements MarkCount {
 			System.out.println("keyword: " + ratioMarkCount.keyWordsOfRangeMap.get(screenRes.get(i)));
 			System.out.println();
 		}
+
+		System.out.println("所有关键词:");
+		System.out.println(ratioMarkCount.getAllKeyWords());
 
 	}
 
