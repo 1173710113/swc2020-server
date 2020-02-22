@@ -20,7 +20,11 @@ import com.example.demo.utils.generate.GenerateRange;
 import com.example.demo.utils.generate.SeparateRange;
 import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
-
+/**
+ * 按照接口规定，可以按策略模式调用不同的实现方法以完成对于标记功能的service所需要的基本功能
+ * @author 50136
+ *
+ */
 public class RatioMarkCount implements MarkCount {
 //	private double effectiveRatio = 0;// 先得出全部的标记句子范围——6句
 	private static final int MAX_KEYWORD = 5;
@@ -141,6 +145,7 @@ public class RatioMarkCount implements MarkCount {
 			RecordMark recordMark = new RecordMark(ran, "c");
 			marks.add(recordMark);
 		}
+		
 		AlignResult alignResult = WavToTextUtil.getAignResult("./resource/audio/xwlb.wav");
 		RatioMarkCount ratioMarkCount = new RatioMarkCount();
 		for (int i = 0; i < marks.size(); i++) {
