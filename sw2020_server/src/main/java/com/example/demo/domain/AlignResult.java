@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/* 表示语音转写的结果, 并带有对齐信息 */
+/**
+ * 表示语音转写的结果, 并带有对齐信息
+ * 
+ * @author xjy
+ */
 public class AlignResult {
 
 	private String filePath; // 转写的音频文件路径
@@ -26,23 +30,25 @@ public class AlignResult {
 		this.filePath = filePath;
 
 		StringBuilder textBf = new StringBuilder();
+		// 匹配每句话的正则表达式
 		Pattern pattern = Pattern
 				.compile("\"bg\":\"(\\d+)\",\"ed\":\"(\\d+)\",\"onebest\":\"(.*?)\",\"speaker\":\"(\\d+)\""
 						+ ",\"wordsResultList\":\\[(.*?)\\]\\}");
+		// 匹配一句话中的分词信息的正则表达式
 		Pattern wordsPat = Pattern.compile(
 				"\"alternativeList\":\\[\\],\"wc\":\".*?\",\"wordBg\":\".*?\",\"wordEd\":\".*?\",\"wordsName\":\"(.*?)\",\"wp\":\"(.*?)\"");
 		Matcher m = pattern.matcher(msg);
 
-		while (m.find()) {
-			int beginTime = Integer.parseInt(m.group(1));
-			int endTime = Integer.parseInt(m.group(2));
+		while (m.find()) { // 匹配每一句话
+			int beginTime = Integer.parseInt(m.group(1)); // 句子开始时间
+			int endTime = Integer.parseInt(m.group(2)); // 结束时间
 			StringBuilder sentence = new StringBuilder();
-			String words = m.group(5);
+			String words = m.group(5); // 分词信息
 			Matcher wordsMac = wordsPat.matcher(words);
-			while (wordsMac.find()) {
-				String wordsName = wordsMac.group(1);
-				String wp = wordsMac.group(2);
-				if (!wp.equals("s")) {
+			while (wordsMac.find()) { // 匹配每个分词项
+				String wordsName = wordsMac.group(1); // 分词内容
+				String wp = wordsMac.group(2); // 词性
+				if (!wp.equals("s")) { // 去除语气词
 					sentence.append(wordsName);
 				}
 			}

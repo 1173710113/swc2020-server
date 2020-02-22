@@ -11,6 +11,12 @@ import com.iflytek.msp.cpdb.lfasr.model.LfasrType;
 import com.iflytek.msp.cpdb.lfasr.model.Message;
 import com.iflytek.msp.cpdb.lfasr.model.ProgressStatus;
 
+/**
+ * 调用语音转写服务，获取转写结果
+ * 
+ * @author xjy
+ *
+ */
 public class WavToTextUtil {
 
 	/*
