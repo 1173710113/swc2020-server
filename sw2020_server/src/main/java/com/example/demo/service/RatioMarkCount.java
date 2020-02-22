@@ -25,7 +25,7 @@ import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
 
 public class RatioMarkCount implements MarkCount {
-//	private double effectiveRatio = 0;// 先得出全部的标记句子范围——6句
+    //	private double effectiveRatio = 0;// 先得出全部的标记句子范围——6句
 	private static final int MAX_KEYWORD = 5;
 
 	// 有效范围和关键词之间的关系
