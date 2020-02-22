@@ -33,6 +33,6 @@ public class ConfigReaderSimple implements Configreader {
      * 直接返回值
      */
     public String readItem(String itemName) {
-        return configs.get(itemName);
+        return configs.getOrDefault(itemName, null);
     }
 }

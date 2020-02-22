@@ -11,6 +11,12 @@ import com.iflytek.msp.cpdb.lfasr.model.LfasrType;
 import com.iflytek.msp.cpdb.lfasr.model.Message;
 import com.iflytek.msp.cpdb.lfasr.model.ProgressStatus;
 
+/**
+ * 调用语音转写服务，获取转写结果
+ * 
+ * @author xjy
+ *
+ */
 public class WavToTextUtil {
 
 	/*
@@ -43,7 +49,7 @@ public class WavToTextUtil {
 		// 获取上传任务ID
 		String task_id = "";
 		HashMap<String, String> params = new HashMap<String, String>();
-		params.put("has_participle", "false"); // 是否分词
+		params.put("has_participle", "true"); // 是否分词
 		params.put("has_seperate", "false");
 		try {
 			// 上传音频文件
@@ -132,25 +138,25 @@ public class WavToTextUtil {
 	}
 
 	// .....Test....
-//	public static void main(String[] args) {
-//
-//		String msg = "";
-//		try {
-//			msg = getMessage("./resource/audio/xwlb.wav");
-//			System.out.println(msg);
-//		} catch (TransferException e) {
-//			e.printStackTrace();
-//		}
-//
-//		AlignResult ar = new AlignResult("xwlb", msg);
-//
-//		for (int i = 0; i < ar.getNumOfSentence(); i++) {
-//			System.out.println("begin: " + ar.getBeginTime(i));
-//			System.out.println("end: " + ar.getEndTime(i));
-//			System.out.println(ar.getSentence(i));
-//		}
-//
-//		System.out.println("The text is: " + ar.getText());
-//
-//	}
+	public static void main(String[] args) {
+
+		String msg = "";
+		try {
+			msg = getMessage("./resource/audio/xwlb.wav");
+			System.out.println(msg);
+		} catch (TransferException e) {
+			e.printStackTrace();
+		}
+
+		AlignResult ar = new AlignResult("xwlb", msg);
+
+		for (int i = 0; i < ar.getNumOfSentence(); i++) {
+			System.out.println("begin: " + ar.getBeginTime(i));
+			System.out.println("end: " + ar.getEndTime(i));
+			System.out.println(ar.getSentence(i));
+		}
+
+		System.out.println("The text is: " + ar.getText());
+
+	}
 }

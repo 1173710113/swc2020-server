@@ -6,7 +6,11 @@ import java.util.List;
 import com.example.demo.domain.AlignResult;
 import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.RecordMark;
-
+/**
+ * 该接口规定了对于标记功能的service所需要的基本功能
+ * @author 50136
+ *
+ */
 public interface MarkCount {
 
 	/**
@@ -29,7 +33,7 @@ public interface MarkCount {
 	 * 获取关键词被标记的次数<BR>
 	 * 注：调用此方法之前必须先调用initialize方法
 	 * 
-	 * @param keyWord 关键词。 要求keyWord ∈ this.getAllKeyWords()
+	 * @param keyWord 关键词。要求keyWord ∈ this.getAllKeyWords()
 	 * @return keyWord被标记的次数
 	 */
 	public int getMarkedNumOfKeyWord(String keyWord);
