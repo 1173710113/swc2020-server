@@ -3,8 +3,8 @@ package com.example.demo.utils.generate;
 import java.util.ArrayList;
 import java.util.List;
 import com.example.demo.domain.AlignResult;
-import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.vo.EffectiveMarkRangeVO;
 /**
  * 该类作为GenerateRange的实现类，根据所有标记的数据统计产生有效标记的句子范围，各句子范围间可能有重复句子，各范围长短一致
  * 
@@ -12,11 +12,11 @@ import com.example.demo.domain.RecordMark;
  */
 public class SeparateRange extends GenerateRange{
   
-  public List<EffectiveMarkRange> generateRange(AlignResult alignResult, List<RecordMark> marks) {
+  public List<EffectiveMarkRangeVO> generateRange(AlignResult alignResult, List<RecordMark> marks) {
     // 标记总数
     int totalMark = marks.size();
     // list记录有效的mark对应的句子范围
-    List<EffectiveMarkRange> markRanges = new ArrayList<EffectiveMarkRange>();
+    List<EffectiveMarkRangeVO> markRanges = new ArrayList<EffectiveMarkRangeVO>();
     
     for (int j = 0; j < alignResult.getNumOfSentence() - (sentencesRange - 1); j = j + sentencesRange) {//直接跳到下一个range
       String keyWordSentences;
@@ -24,7 +24,7 @@ public class SeparateRange extends GenerateRange{
       int end = alignResult.getEndTime(j + 2);
       int rangeMarkNum = 0;
       for (int i = 0; i < totalMark; i++) {//统计mark数量
-        if (start <= marks.get(i).time && marks.get(i).time <= end) {
+        if (start <= marks.get(i).getTime() && marks.get(i).getTime() <= end) {
           rangeMarkNum++;
         }
       }
@@ -36,7 +36,7 @@ public class SeparateRange extends GenerateRange{
         keyWordSentences = alignResult.getSentence(start_j) + alignResult.getSentence(start_j + 1) + alignResult.getSentence(start_j + 2)
                                 + alignResult.getSentence(start_j + 3) + alignResult.getSentence(start_j + 4) + alignResult.getSentence(start_j + 5);
       }
-      EffectiveMarkRange effectiveMarkRange = new EffectiveMarkRange(keyWordSentences, rangeMarkNum);
+      EffectiveMarkRangeVO effectiveMarkRange = new EffectiveMarkRangeVO(keyWordSentences, rangeMarkNum);
       markRanges.add(effectiveMarkRange);
     }
     

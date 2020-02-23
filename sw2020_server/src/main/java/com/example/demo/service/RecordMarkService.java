@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.demo.domain.RecordMarkPO;
+import com.example.demo.domain.RecordMark;
 
 /**
  * 
@@ -16,7 +16,7 @@ public interface RecordMarkService {
 	 * 
 	 * @param recordMark
 	 */
-	public RecordMarkPO addRecordMark(RecordMarkPO recordMark);
+	public RecordMark addRecordMark(RecordMark recordMark);
 
 	/**
 	 * 删除录音标记
@@ -31,5 +31,5 @@ public interface RecordMarkService {
 	 * @param classId 指定课堂的id
 	 * @return
 	 */
-	public List<RecordMarkPO> queryRecordMarkByClass(String classId);
+	public List<RecordMark> queryRecordMarkByClass(String classId);
 }

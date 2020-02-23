@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.demo.domain.RecordMarkPO;
+import com.example.demo.domain.RecordMark;
 
 /**
  * 
@@ -18,7 +18,7 @@ public interface RecordMarkMapper {
 	 * 向数据库添加录音标记
 	 * @param recordMark
 	 */
-	public void addRecordMark(RecordMarkPO recordMark);
+	public void addRecordMark(RecordMark recordMark);
 	
 	/**
 	 * 从数据库删除指定录音标记
@@ -36,7 +36,7 @@ public interface RecordMarkMapper {
 	/**
 	 * 搜索关于指定课堂的所有录音标记
 	 * @param classId 指定课堂的id
-	 * @return 该课堂的所有录音标记
+	 * @return 该课堂的所有录音标记，按照标记时间从小到大
 	 */
-	public List<RecordMarkPO> queryRecordMarkByClass(String classId);
+	public List<RecordMark> queryRecordMarkByClass(String classId);
 }

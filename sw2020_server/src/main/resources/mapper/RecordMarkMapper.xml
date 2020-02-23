@@ -24,10 +24,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <select id="queryRecordMarkByClass" resultMap="recordmark">
 	SELECT * 
 	FROM recordmark_table
-	WHERE class=#{classId}
+	WHERE class=#{classId} 
+	ORDER BY time
 </select>
 
-<resultMap id="recordmark" type="RecordMarkPO">
+<resultMap id="recordmark" type="RecordMark">
 	<id column="id" property="id"/>
 	<result column="time" property="time"/>
 	<result column="mark" property="mark"/>

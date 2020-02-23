@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.RecordMarkMapper;
-import com.example.demo.domain.RecordMarkPO;
+import com.example.demo.domain.RecordMark;
 import com.example.demo.service.RecordMarkService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +19,7 @@ public class RecordMarkServiceImp implements RecordMarkService {
 	RecordMarkMapper recordMarkMapper;
 
 	@Override
-	public RecordMarkPO addRecordMark(RecordMarkPO recordMark) {
+	public RecordMark addRecordMark(RecordMark recordMark) {
 		recordMarkMapper.addRecordMark(recordMark);
 		return recordMark;
 	}
@@ -31,7 +31,7 @@ public class RecordMarkServiceImp implements RecordMarkService {
 	}
 
 	@Override
-	public List<RecordMarkPO> queryRecordMarkByClass(String classId) {
+	public List<RecordMark> queryRecordMarkByClass(String classId) {
 		return recordMarkMapper.queryRecordMarkByClass(classId);
 	}
 

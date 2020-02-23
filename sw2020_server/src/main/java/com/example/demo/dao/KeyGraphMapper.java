@@ -21,6 +21,7 @@ public interface KeyGraphMapper {
 	 */
 	public void addNode(Node node);
 	
+	
 	/**
 	 * 从数据库中删除节点
 	 * @param nodeId 需要删除的节点id

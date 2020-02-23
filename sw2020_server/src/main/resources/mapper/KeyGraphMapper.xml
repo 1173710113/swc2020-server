@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="addNode" useGeneratedKeys="true" keyProperty="id">
 		INSERT
 		INTO node_table(content, class)
-		VALUES(#{content}, #{classId})
+		VALUES(#{content}, #{count}, #{classId})
 	</insert>
 
 	<delete id="deleteNode">
@@ -76,6 +76,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap id="node" type="Node">
 		<id column="n.id" property="id" />
 		<result column="n.content" property="content" />
+		<result column="n.count" property="count"/>
 		<result column="n.class" property="classId" />
 	</resultMap>
 </mapper>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
-import com.example.demo.domain.RecordMarkPO;
+import com.example.demo.domain.RecordMark;
 import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.RecordMarkService;
@@ -24,7 +24,7 @@ public class RecordMarkController {
 	
 	@ResponseBody
 	@RequestMapping("/add")
-	public MyResult addRecordMark(@RequestBody RecordMarkPO recordMark) {
+	public MyResult addRecordMark(@RequestBody RecordMark recordMark) {
 		log.info("try to add remark:" + JSON.toJSONString(recordMark));
 		return MyResultGenerator.successResult(recordMarkService.addRecordMark(recordMark));
 	}
