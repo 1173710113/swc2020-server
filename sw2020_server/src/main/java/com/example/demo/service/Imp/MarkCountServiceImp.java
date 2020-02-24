@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,29 +83,29 @@ public class MarkCountServiceImp implements MarkCountService {
 		for (EffectiveMarkRangeVO markRangeTemp : markedRanges) {
 			EffectiveMarkRange markRange = new EffectiveMarkRange(null, markRangeTemp.getText(),
 					markRangeTemp.getCount(), classId);
-			
-			//向数据库添加标记块
+
+			// 向数据库添加标记块
 			markRangeMapper.addMarkRange(markRange);
-			
-			//抽取标记块的关键词
+
+			// 抽取标记块的关键词
 			KeywordExtractor keywordExtractor = new KeywordExtractor();
 			List<String> keyWordList = keywordExtractor.keywordExtract(markRangeTemp.getText(),
 					markRangeConfig.getMaxKeyword());
 			keywordExtractor.close();
-			
-			//将关键词添加进数据库
+
+			// 将关键词添加进数据库
 			for (String keyWordTemp : keyWordList) {
-				//查询数据库中是否已存在
+				// 查询数据库中是否已存在
 				KeyWord keyWord = keyWordMapper.queryKeyWordByTextAndClass(keyWordTemp, classId);
-				
-				//不存在
+
+				// 不存在
 				if (keyWord == null) {
-					//添加关键词
+					// 添加关键词
 					keyWord = new KeyWord(null, keyWordTemp, 0, classId);
 					keyWordMapper.addKeyWord(keyWord);
 				}
-				
-				//添加标记块与关键词的联系，并将关键词的count++
+
+				// 添加标记块与关键词的联系，并将关键词的count++
 				keyWordMarkRangeMapper.adRelation(keyWord.getId(), markRange.getId());
 				keyWordMapper.updateKeyWordCountPlus(keyWord.getId());
 			}
@@ -118,8 +119,8 @@ public class MarkCountServiceImp implements MarkCountService {
 			set.retainAll(markRangeMapper.queryMarkRangeByClassAndText(classId, keyWordText));
 		}
 		List<EffectiveMarkRange> res = new ArrayList<EffectiveMarkRange>(set);
-		Collections.sort(res, new Comparator<EffectiveMarkRange>(){
-			
+		Collections.sort(res, new Comparator<EffectiveMarkRange>() {
+
 			public int compare(EffectiveMarkRange o1, EffectiveMarkRange o2) {
 				return o2.getCount() - o1.getCount();
 			}
@@ -138,41 +139,5 @@ public class MarkCountServiceImp implements MarkCountService {
 		List<KeyWord> list = keyWordMapper.queryKeyWordByClass(classId);
 		return list;
 	}
-
-	/*
-	 * public static void main(String[] args) throws IOException { Random random =
-	 * new Random(); //List<RecordMark> marks =
-	 * recordMarkMapper.queryRecordMarkById(classId) //从数据库读取recordMark
-	 * List<RecordMark> marks = new ArrayList<RecordMark>(); for (int i = 0; i < 30;
-	 * i++) { // 77000 int ran = random.nextInt(77000) + 1; RecordMark recordMark =
-	 * new RecordMark(ran, "c"); marks.add(recordMark); }
-	 * 
-	 * AlignResult alignResult =
-	 * WavToTextUtil.getAignResult("./resource/audio/xwlb.wav"); MarkCountServiceImp
-	 * ratioMarkCount = new MarkCountServiceImp(); for (int i = 0; i < marks.size();
-	 * i++) { System.out.println("marks: " + marks.get(i).time); }
-	 * 
-	 * ratioMarkCount.initialize(alignResult, marks); List<EffectiveMarkRangeVO>
-	 * result = ratioMarkCount.getMarkedRanges(); for (int i = 0; i < result.size();
-	 * i++) { System.out.println("rangetext: " + result.get(i).getRangeText());
-	 * System.out.println("marknum: " + result.get(i).getMarkNum());
-	 * System.out.println("keyword: " +
-	 * ratioMarkCount.keyWordsOfRangeMap.get(result.get(i))); System.out.println();
-	 * }
-	 * 
-	 * List<EffectiveMarkRangeVO> screenRes =
-	 * ratioMarkCount.getMarkedRanges(Arrays.asList("习近平"));
-	 * System.out.println("筛选后："); for (int i = 0; i < screenRes.size(); i++) {
-	 * System.out.println("rangetext: " + screenRes.get(i).getRangeText());
-	 * System.out.println("marknum: " + screenRes.get(i).getMarkNum());
-	 * System.out.println("keyword: " +
-	 * ratioMarkCount.keyWordsOfRangeMap.get(screenRes.get(i)));
-	 * System.out.println(); }
-	 * 
-	 * System.out.println("所有关键词:");
-	 * System.out.println(ratioMarkCount.getAllKeyWords());
-	 * 
-	 * }
-	 */
 
 }
