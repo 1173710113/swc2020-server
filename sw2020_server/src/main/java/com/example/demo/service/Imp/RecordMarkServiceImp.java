@@ -35,4 +35,10 @@ public class RecordMarkServiceImp implements RecordMarkService {
 		return recordMarkMapper.queryRecordMarkByClass(classId);
 	}
 
+	@Override
+	public List<RecordMark> queryRecordMarkByClassAndUser(String classId, String userId) {
+		List<RecordMark> list = recordMarkMapper.queryRecordMarkByClassAndUser(classId, userId);
+		return list;
+	}
+
 }

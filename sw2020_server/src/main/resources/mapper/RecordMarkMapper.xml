@@ -28,6 +28,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	ORDER BY time
 </select>
 
+<select id="queryRecordMarkByClassAndUser" resultMap="recordmark">
+	SELECT *
+	FROM recordmark_table
+	WHERE class=#{classId} AND user=#{userId}
+	ORDER BY time
+</select>
+
 <resultMap id="recordmark" type="RecordMark">
 	<id column="id" property="id"/>
 	<result column="time" property="time"/>

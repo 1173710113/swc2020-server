@@ -1,22 +1,23 @@
 package com.example.demo.service.Imp;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Random;
 import java.util.Set;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.InitBinder;
 
+import com.alibaba.fastjson.JSON;
+import com.example.demo.config.KeywordExtractorConfiguration;
 import com.example.demo.config.MarkRangeConfiguration;
-import com.example.demo.dao.KeyGraphMapper;
 import com.example.demo.dao.KeyWordMapper;
 import com.example.demo.dao.KeyWordMarkRangeRelationMapper;
 import com.example.demo.dao.MarkRangeMapper;
@@ -26,6 +27,7 @@ import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.KeyWord;
 import com.example.demo.domain.RecordMark;
 import com.example.demo.service.MarkCountService;
+import com.example.demo.utils.CorrespondUtil;
 import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
@@ -34,6 +36,8 @@ import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
 import com.example.demo.vo.EffectiveMarkRangeVO;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 按照接口规定，可以按策略模式调用不同的实现方法以完成对于标记功能的service所需要的基本功能
  * 
@@ -41,6 +45,7 @@ import com.example.demo.vo.EffectiveMarkRangeVO;
  *
  */
 @Service
+@Slf4j
 public class MarkCountServiceImp implements MarkCountService {
 
 	@Autowired
@@ -57,7 +62,10 @@ public class MarkCountServiceImp implements MarkCountService {
 
 	@Autowired
 	private KeyWordMarkRangeRelationMapper keyWordMarkRangeMapper;
-
+	
+	@Autowired
+	private KeywordExtractorConfiguration keywordExtractorConfig;
+	
 	@Override
 	public void initialize(String audioPath, String classId) throws IOException {
 		// 有效范围List
@@ -88,7 +96,7 @@ public class MarkCountServiceImp implements MarkCountService {
 			markRangeMapper.addMarkRange(markRange);
 
 			// 抽取标记块的关键词
-			KeywordExtractor keywordExtractor = new KeywordExtractor();
+			KeywordExtractor keywordExtractor  = new KeywordExtractor(keywordExtractorConfig);
 			List<String> keyWordList = keywordExtractor.keywordExtract(markRangeTemp.getText(),
 					markRangeConfig.getMaxKeyword());
 			keywordExtractor.close();
@@ -104,9 +112,11 @@ public class MarkCountServiceImp implements MarkCountService {
 					keyWord = new KeyWord(null, keyWordTemp, 0, classId);
 					keyWordMapper.addKeyWord(keyWord);
 				}
+				
+				log.info("keyword:" + JSON.toJSONString(keyWord));
 
 				// 添加标记块与关键词的联系，并将关键词的count++
-				keyWordMarkRangeMapper.adRelation(keyWord.getId(), markRange.getId());
+				keyWordMarkRangeMapper.addRelation(keyWord.getId(), markRange.getId());
 				keyWordMapper.updateKeyWordCountPlus(keyWord.getId());
 			}
 		}

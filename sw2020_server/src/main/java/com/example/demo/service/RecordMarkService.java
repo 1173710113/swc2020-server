@@ -32,4 +32,12 @@ public interface RecordMarkService {
 	 * @return
 	 */
 	public List<RecordMark> queryRecordMarkByClass(String classId);
+	
+	/**
+	 * 搜索指定课堂下指定用户的录音标记
+	 * @param classId 课堂id
+	 * @param userId 用户id
+	 * @return 录音标记的集合
+	 */
+	public List<RecordMark> queryRecordMarkByClassAndUser(String classId, String userId);
 }

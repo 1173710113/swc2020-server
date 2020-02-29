@@ -41,4 +41,12 @@ public class RecordMarkController {
 	public MyResult queryRecordMarkByClass(String classId) {
 		return MyResultGenerator.successResult(recordMarkService.queryRecordMarkByClass(classId));
 	}
+	
+	@ResponseBody
+	@RequestMapping("/query/class/user")
+	public MyResult queryRecordMarkByClassAndUser(String classId, String userId) {
+		return MyResultGenerator.successResult(recordMarkService.queryRecordMarkByClassAndUser(classId, userId));
+	}
+	
+	
 }

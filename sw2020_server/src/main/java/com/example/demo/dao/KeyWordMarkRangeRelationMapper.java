@@ -10,7 +10,7 @@ public interface KeyWordMarkRangeRelationMapper {
 	 * @param keyWordId 关键词的id
 	 * @param markRangeId 标记块的id
 	 */
-	public void adRelation(String keyWordId, String markRangeId);
+	public void addRelation(String keyWordId, String markRangeId);
 	
 	/**
 	 * 删除指定关键词和标记块的关系

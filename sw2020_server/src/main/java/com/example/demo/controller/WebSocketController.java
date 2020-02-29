@@ -86,11 +86,12 @@ public class WebSocketController {
 	 *
 	 * @param session
 	 * @param error
+	 * @throws MyException 
 	 */
 	@OnError
-	public void onError(Session session, Throwable error) {
+	public void onError(Session session, Throwable error) throws MyException {
 		log.error("用户错误:" + this.userId + ",原因:" + error.getMessage());
-		error.printStackTrace();
+		throw new MyException(error.getMessage());
 	}
 
 	@OnMessage

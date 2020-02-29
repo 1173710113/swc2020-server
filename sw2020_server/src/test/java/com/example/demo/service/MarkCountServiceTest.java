@@ -3,7 +3,6 @@ package com.example.demo.service;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.demo.dao.RecordMarkMapper;
 import com.example.demo.domain.EffectiveMarkRange;
-import com.example.demo.domain.RecordMark;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,9 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 @RunWith(SpringRunner.class)
 @Slf4j
 public class MarkCountServiceTest {
-
-	@Autowired
-	private RecordMarkMapper recordMarkMapper;
 	
 	@Autowired
 	private MarkCountService markCountService;
@@ -31,7 +25,6 @@ public class MarkCountServiceTest {
 	@Test
 	public void test() throws IOException {
 		String classId = "1";
-		String userId = "1173710113";
 		String path="./resource/audio/xwlb.wav";
 
 		markCountService.initialize(path, classId);
