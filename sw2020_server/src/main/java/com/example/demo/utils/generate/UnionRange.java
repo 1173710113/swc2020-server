@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties.Template;
 import com.example.demo.domain.AlignResult;
-import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.vo.EffectiveMarkRangeVO;
 /**
  * 该类作为GenerateRange的实现类，根据所有标记的数据统计产生有效标记的句子范围，各句子范围间没有重复句子，范围间长短不一
  * 
@@ -14,11 +14,11 @@ import com.example.demo.domain.RecordMark;
 public class UnionRange extends GenerateRange{
 
   @Override
-  public List<EffectiveMarkRange> generateRange(AlignResult alignResult, List<RecordMark> marks) {
+  public List<EffectiveMarkRangeVO> generateRange(AlignResult alignResult, List<RecordMark> marks) {
     // 标记总数
     int totalMark = marks.size();
     // list记录有效的mark对应的句子范围
-    List<EffectiveMarkRange> markRanges = new ArrayList<EffectiveMarkRange>();
+    List<EffectiveMarkRangeVO> markRanges = new ArrayList<EffectiveMarkRangeVO>();
     String keyWordSentences = null;
     int tempMarkNum = 0;
     
@@ -27,7 +27,7 @@ public class UnionRange extends GenerateRange{
       int end = alignResult.getEndTime(j + 2);
       int rangeMarkNum = 0;
       for (int i = 0; i < totalMark; i++) {//统计mark数量
-        if (start <= marks.get(i).time && marks.get(i).time <= end) {
+        if (start <= marks.get(i).getTime() && marks.get(i).getTime() <= end) {
           rangeMarkNum++;
         }
       }
@@ -47,7 +47,7 @@ public class UnionRange extends GenerateRange{
           tempMarkNum = tempMarkNum + rangeMarkNum;
         }
       } else {//该组内无mark则不和前面union，从而避开重复
-        EffectiveMarkRange effectiveMarkRange = new EffectiveMarkRange(keyWordSentences, tempMarkNum);
+        EffectiveMarkRangeVO effectiveMarkRange = new EffectiveMarkRangeVO(keyWordSentences, tempMarkNum);
         markRanges.add(effectiveMarkRange);
         keyWordSentences = null;
         tempMarkNum = 0;
@@ -55,7 +55,7 @@ public class UnionRange extends GenerateRange{
     }
     
     if (tempMarkNum > 0) {//最后一组range未加入
-      EffectiveMarkRange effectiveMarkRange = new EffectiveMarkRange(keyWordSentences, tempMarkNum);
+      EffectiveMarkRangeVO effectiveMarkRange = new EffectiveMarkRangeVO(keyWordSentences, tempMarkNum);
       markRanges.add(effectiveMarkRange);
     }
     return markRanges;

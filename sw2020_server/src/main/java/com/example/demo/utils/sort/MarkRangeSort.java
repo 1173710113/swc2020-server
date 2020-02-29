@@ -1,7 +1,8 @@
 package com.example.demo.utils.sort;
 
 import java.util.List;
-import com.example.demo.domain.EffectiveMarkRange;
+
+import com.example.demo.vo.EffectiveMarkRangeVO;
 /**
  * 规定了对于range进行重要度排序的工具类的基本方法
  * @author 50136
@@ -13,5 +14,5 @@ public interface MarkRangeSort {
    * @param effectiveMarkRanges
    * @return
    */
-  public List<EffectiveMarkRange> rangeSort(List<EffectiveMarkRange> effectiveMarkRanges);
+  public List<EffectiveMarkRangeVO> rangeSort(List<EffectiveMarkRangeVO> effectiveMarkRanges);
 }

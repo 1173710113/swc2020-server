@@ -5,6 +5,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.example.demo.dao.CourseClassMapper">
 
+<insert id="addClass" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO class_table(name, time, course)
+	VALUES(#{name}, #{time}, #{course})
+</insert>
+
+
 <select id="queryClassByCourse" resultMap="class">
 	SELECT *
 	FROM class_table

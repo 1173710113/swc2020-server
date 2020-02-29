@@ -2,36 +2,18 @@ package com.example.demo.domain;
 
 import java.util.Arrays;
 
-public class EffectiveMarkRange implements Comparable<EffectiveMarkRange> {
-	private String rangeText; // 标记块的文本部分
-	private int markNum; // 标记次数
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-	public EffectiveMarkRange(String rangeText, int markNum) {
-		super();
-		this.rangeText = rangeText;
-		this.markNum = markNum;
-	}
-
-	public String getRangeText() {
-		return rangeText;
-	}
-
-	public void setRangeText(String rangeText) {
-		this.rangeText = rangeText;
-	}
-
-	public int getMarkNum() {
-		return markNum;
-	}
-
-	public void setMarkNum(int markNum) {
-		this.markNum = markNum;
-	}
-
-	@Override
-	public int hashCode() {
-		return Arrays.hashCode(new int[] { rangeText.hashCode(), Integer.hashCode(markNum) });
-	}
+@Getter
+@Setter
+@AllArgsConstructor
+public class EffectiveMarkRange {
+	private String id;//标记快id
+	private String text; // 标记块的文本部分
+	private int count; // 标记次数
+	private String classId;//标记快对应的课堂id
 
 	@Override
 	public boolean equals(Object obj) {
@@ -39,12 +21,13 @@ public class EffectiveMarkRange implements Comparable<EffectiveMarkRange> {
 			return false;
 		} else {
 			EffectiveMarkRange o = (EffectiveMarkRange) obj;
-			return this.rangeText.equals(o.rangeText) && this.markNum == o.markNum;
+			return this.id.equals(o.id);
 		}
 	}
-
+	
 	@Override
-	public int compareTo(EffectiveMarkRange o) {
-		return o.markNum - this.markNum;
+	public int hashCode() {
+		return id.hashCode();
 	}
+
 }

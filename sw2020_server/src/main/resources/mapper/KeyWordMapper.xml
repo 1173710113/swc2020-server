@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.KeyWordMapper">
+
+	<insert id="addKeyWord" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO keyword_table(text,classId)
+		VALUES(#{text},#{classId})
+	</insert>
+
+	<delete id="deleteKeyWord">
+		DELETE FORM keyword_table
+		WHERE id=#{id}
+	</delete>
+
+	<update id="updateKeyWordCountPlus">
+		UPDATE keyword_table
+		SET count=count+1
+		WHERE id=#{id}
+	</update>
+
+	<update id="updateKeyWordCountMinus">
+		UPDATE keyword_table
+		SET count=count-1
+		WHERE id=#{id}
+	</update>
+
+	<select id="queryKeyWord" resultMap="keyword">
+		SELECT *
+		FROM keyword_table
+		WHERE id=#{id}
+	</select>
+
+	<select id="queryKeyWordByTextAndClass" resultMap="keyword">
+		SELECT *
+		FROM
+		keyword_table
+		WHERE classId=#{classId} AND text=#{text}
+	</select>
+
+	<select id="queryKeyWordByClass">
+		SELECT *
+		FROM keyword_table
+		WHERE classId=#{classId}
+		ORDER BY count DESC
+	</select>
+
+	<resultMap type="KeyWord" id="keyword">
+		<id column="id" property="id" />
+		<result column="text" property="text" />
+		<result column="count" property="count" />
+		<result column="classId" property="classId" />
+	</resultMap>
+</mapper>

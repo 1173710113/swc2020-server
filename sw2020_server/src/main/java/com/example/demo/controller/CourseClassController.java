@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,15 @@ public class CourseClassController {
 
 	@Autowired
 	CourseClassService service;
+	
+	@ResponseBody
+	@RequestMapping("/add")
+	public MyResult addClass(String className, String courseId)
+	{
+		CourseClass courseClass = new CourseClass(null, className, new Date(), courseId);
+		return MyResultGenerator.successResult(service.addClass(courseClass));
+	}
+	
 	
 	@RequestMapping("/query")
 	@ResponseBody

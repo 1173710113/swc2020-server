@@ -27,7 +27,22 @@ public interface UserService{
 	 * @return null if user login fail, else return user
 	 * @throws MyException 
 	 */
-	public MyResult login(String id, String password) throws MyException;
+	public User login(String id, String password) throws MyException;
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 * @throws MyException
+	 */
+	public String getUserType(String id) throws MyException;
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public String getUserName(String id) throws MyException;
 
 	/**
 	 * 
