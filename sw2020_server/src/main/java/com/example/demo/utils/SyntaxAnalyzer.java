@@ -40,22 +40,28 @@ public class SyntaxAnalyzer {
     }
     List<JSONObject> nodes =
         JSON.parseArray(data.getJSONArray("dp").toJSONString(), JSONObject.class);
-    String relationships = "";
-    String fathers = "";
+    String relationships = "relations:";
+    String fathers = "parents:";
     for (JSONObject object : nodes) {
       relationships = relationships + "\t" + object.get("relate");
       fathers = fathers + "\t" + object.get("parent");
     }
     relationships = relationships + "\n";
-    String words = "";
+    String words = "tokens:\t";
+    String counts = "index:\t";
+    int i = 0;
     for (String word : tokens) {
+      counts = counts + "\t" + i;
+      i++;
       words = words + "\t" + word;
     }
     words = words + "\n";
     System.out.println(words);
+    System.out.println(counts);
     System.out.println(fathers);
     System.out.println(relationships);
     System.out.println("-------------------------------------------------------------");
+
     return "fuck";
   }
 }
