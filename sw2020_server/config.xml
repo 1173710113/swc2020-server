@@ -1,0 +1,6 @@
+keywordExtractorServer = 127.0.0.1
+keywordExtractorServerPort = 12345
+keywordExtractorClient = 127.0.0.1
+keywordExtractorClientPort = 8888
+APPID = 5e202b46
+LTPAPIKey = e7629c16783704d67f2bf2343c73ec45
