@@ -1,7 +1,6 @@
 package com.example.demo.service.Imp;
 
 import java.io.IOException;
-import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,11 +8,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.InitBinder;
 
 import com.alibaba.fastjson.JSON;
 import com.example.demo.config.KeywordExtractorConfiguration;
@@ -27,7 +23,6 @@ import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.KeyWord;
 import com.example.demo.domain.RecordMark;
 import com.example.demo.service.MarkCountService;
-import com.example.demo.utils.CorrespondUtil;
 import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
