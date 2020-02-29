@@ -6,7 +6,7 @@ package com.example.demo.service;
 import java.util.List;
 
 import com.example.demo.domain.Course;
-import com.example.demo.domain.TeacherCourse;
+import com.example.demo.domain.CourseCode;
 import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
 
@@ -40,12 +40,27 @@ public interface CourseService {
 	 * @param teacherId
 	 * @return
 	 */
-	public List<TeacherCourse> queryCourseByTeacherId(String teacherId);
+	public List<Course> queryCourseByTeacherId(String teacherId);
 
 	public List<String> getCourseStudent(String courseId);
+	
+	/**
+	 * 
+	 * @param studentId
+	 * @param courseId
+	 * @return 教师id
+	 */
+	public String isStudentEnrollClass(String studentId, String courseId) throws MyException;
 
-	public MyResult enroll(String code, String studentId) throws MyException;
+	public void enroll(String code, String studentId) throws MyException;
 
 	public String dropCourse(String studentId, String courseId);
+	
+	/**
+	 * 查询课程的选课码
+	 * @param courseId 课程id
+	 * @return 选课码
+	 */
+	public CourseCode queryCode(String courseId);
 
 }

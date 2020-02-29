@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.RecordMarkMapper">
+
+<insert id="addRecordMark" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO recordmark_table(time, mark, class, user)
+	VALUES(#{time}, #{mark}, #{classId}, #{userId})
+</insert>
+
+<delete id="deleteRecordMark">
+	DELETE FROM recordmark_table
+	WHERE id=#{recordMarkId}
+</delete>
+
+<update id="updateRecordMark">
+	UPDATE recordmark_table
+	SET mark=#{newMark}
+	WHERE id=#{recordMark}
+</update>
+
+<select id="queryRecordMarkByClass" resultMap="recordmark">
+	SELECT * 
+	FROM recordmark_table
+	WHERE class=#{classId} 
+	ORDER BY time
+</select>
+
+<select id="queryRecordMarkByClassAndUser" resultMap="recordmark">
+	SELECT *
+	FROM recordmark_table
+	WHERE class=#{classId} AND user=#{userId}
+	ORDER BY time
+</select>
+
+<resultMap id="recordmark" type="RecordMark">
+	<id column="id" property="id"/>
+	<result column="time" property="time"/>
+	<result column="mark" property="mark"/>
+	<result column="class" property="classId"/>
+	<result column="user" property="userId"/>
+</resultMap>
+
+</mapper>

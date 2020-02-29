@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.MarkRangeMapper">
+
+<insert id="addMarkRange" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO mark_range_table(text,count,class)
+	VALUES(#{text},#{count},#{classId})
+</insert>
+
+<delete id="deleteMarkRange">
+	DELETE FROM mark_range_table
+	WHERE id=#{id}
+</delete>
+
+<select id="queryMarkRange" resultMap="markRange">
+	SELECT *
+	FROM mark_range_table
+	WHERE id=#{id}
+</select>
+
+<select id="queryMarkRangeByClass" resultMap="markRange">
+	SELECT *
+	FROM mark_range_table
+	WHERE class=#{classId}
+	ORDER BY count DESC
+</select>
+
+<resultMap id="markRange" type="EffectiveMarkRange">
+	<id column="id" property="id"/>
+	<result column="text" property="text"/>
+	<result column="count" property="count"/>
+	<result column="class" property="classId"/>
+</resultMap>
+
+
+</mapper>

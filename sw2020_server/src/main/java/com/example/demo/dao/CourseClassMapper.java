@@ -16,6 +16,13 @@ import com.example.demo.domain.CourseClass;
 @Mapper
 public interface CourseClassMapper {
 
+	
+	/**
+	 * 
+	 * @param courseClass
+	 */
+	public void addClass(CourseClass courseClass);
+	
 	/**
 	 * 
 	 * @param courseId
