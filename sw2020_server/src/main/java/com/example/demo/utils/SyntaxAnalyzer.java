@@ -6,6 +6,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.utils.configReader.Configreader;
 
+/**
+ * 
+ * @author EvanClark
+ *
+ */
 public class SyntaxAnalyzer {
   private final LtpFetcher fetcher;
   private final Configreader configreader;
@@ -27,25 +32,30 @@ public class SyntaxAnalyzer {
     if (!data.containsKey("word")) {
       throw new IllegalArgumentException(response.getString("desc"));
     }
-    List<String> tokens = JSON.parseArray(data.getJSONArray("word").toJSONString(),String.class);
+    List<String> tokens = JSON.parseArray(data.getJSONArray("word").toJSONString(), String.class);
     response = JSONObject.parseObject(fetcher.fetch("dp", text));
     data = response.getJSONObject("data");
     if (!data.containsKey("dp")) {
       throw new IllegalArgumentException(response.getString("desc"));
     }
-    List<JSONObject> nodes = JSON.parseArray(data.getJSONArray("dp").toJSONString(),JSONObject.class);
+    List<JSONObject> nodes =
+        JSON.parseArray(data.getJSONArray("dp").toJSONString(), JSONObject.class);
     String relationships = "";
-    for(JSONObject object: nodes) {
+    String fathers = "";
+    for (JSONObject object : nodes) {
       relationships = relationships + "\t" + object.get("relate");
+      fathers = fathers + "\t" + object.get("parent");
     }
     relationships = relationships + "\n";
     String words = "";
-    for(String word: tokens) {
+    for (String word : tokens) {
       words = words + "\t" + word;
     }
     words = words + "\n";
     System.out.println(words);
+    System.out.println(fathers);
     System.out.println(relationships);
+    System.out.println("-------------------------------------------------------------");
     return "fuck";
   }
 }
