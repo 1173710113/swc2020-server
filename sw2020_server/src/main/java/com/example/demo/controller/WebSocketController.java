@@ -89,9 +89,8 @@ public class WebSocketController {
 	 * @throws MyException 
 	 */
 	@OnError
-	public void onError(Session session, Throwable error) throws MyException {
+	public void onError(Session session, Throwable error) {
 		log.error("用户错误:" + this.userId + ",原因:" + error.getMessage());
-		throw new MyException(error.getMessage());
 	}
 
 	@OnMessage
