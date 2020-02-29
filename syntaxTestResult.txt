@@ -1,0 +1,135 @@
+tokens:		请	自班	同学	星期五	在	体育馆	集合	。
+index:		0	1	2	3	4	5	6	7
+parents:	-1	2	0	6	6	4	0	0
+relations:	HED	ATT	DBL	ADV	ADV	POB	VOB	WP
+-------------------------------------------------------------
+tokens:		明天	下午	1点	交	实验3	，	交	到	正心	12	，	迟到	1	秒钟	直接	0	分	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17
+parents:	1	2	3	-1	3	3	3	6	9	7	6	3	13	16	16	16	11	3
+relations:	ATT	ATT	ADV	HED	VOB	WP	COO	CMP	ATT	POB	WP	COO	ATT	ATT	ATT	ATT	VOB	WP
+-------------------------------------------------------------
+tokens:		这里	为什么	要	引入	字符串表	，	留给	同学	们	课下	思考	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11
+parents:	3	3	3	-1	3	3	3	6	7	10	6	3
+relations:	SBV	ADV	ADV	HED	VOB	WP	COO	DBL	RAD	ADV	VOB	WP
+-------------------------------------------------------------
+tokens:		大家	可以	课后	想想	如何	求解	这	句	话	的	文法	。	想到	之后	下	节课	进行	交流
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17
+parents:	3	3	3	-1	5	3	7	8	10	8	5	3	3	14	12	14	14	16
+relations:	SBV	ADV	ADV	HED	ADV	VOB	ATT	ATT	ATT	RAD	VOB	WP	COO	ADV	VOB	VOB	COO	VOB
+-------------------------------------------------------------
+tokens:		噢	这个	教室	太	垃圾	了	。	下周四	时	的	上课	地点	改	为	诚意	233	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16
+parents:	4	2	4	4	-1	4	4	8	11	8	11	12	4	12	15	13	4
+relations:	ADV	ATT	SBV	ADV	HED	RAD	WP	ATT	ATT	RAD	ATT	SBV	COO	CMP	ATT	VOB	WP
+-------------------------------------------------------------
+tokens:		下周一	的	时候	大家	不要	忘记	。	我们	要	到	实验室	做	编译器	的	实验
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+parents:	2	0	5	5	5	-1	5	11	11	11	9	5	11	11	11
+relations:	ATT	RAD	ADV	SBV	ADV	HED	WP	SBV	ADV	ADV	POB	VOB	VOB	RAD	VOB
+-------------------------------------------------------------
+tokens:		12月	21	号	大家	都	放假	一	天	。
+index:		0	1	2	3	4	5	6	7	8
+parents:	2	2	5	5	5	-1	7	5	5
+relations:	ATT	ATT	ADV	SBV	ADV	HED	ATT	CMP	WP
+-------------------------------------------------------------
+tokens:		钟哥	太	强	了	，	今天	晚上	是	被	钟哥	统治	的	一	日	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+parents:	2	2	-1	2	2	6	7	2	10	8	13	10	13	7	2
+relations:	SBV	ADV	HED	RAD	WP	ATT	ADV	COO	ADV	POB	ATT	RAD	ATT	VOB	WP
+-------------------------------------------------------------
+tokens:		大家	明天	能	交	作业	吗	？	不能	的	话	可以	推迟	到	下周一	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+parents:	3	3	3	-1	3	3	3	9	7	11	11	3	11	12	3
+relations:	SBV	ADV	ADV	HED	VOB	RAD	WP	ATT	RAD	SBV	ADV	COO	CMP	POB	WP
+-------------------------------------------------------------
+tokens:		上次	的	作业	判	完	了	，	下午	就	可以	去	领	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12
+parents:	2	0	3	-1	3	3	3	11	9	11	11	3	3
+relations:	ATT	RAD	SBV	HED	CMP	RAD	WP	ADV	ADV	ADV	ADV	COO	WP
+-------------------------------------------------------------
+tokens:		下周	讲	编译	系统	第三	节	，	同学	们	提前	预习	一下	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12
+parents:	1	-1	3	5	5	1	1	9	7	1	9	10	1
+relations:	ADV	HED	ATT	ATT	ATT	VOB	WP	SBV	RAD	COO	VOB	CMP	WP
+-------------------------------------------------------------
+tokens:		讯飞	官方	太	拉	了	。塞尔	实验室	下周	准备	推翻	讯	飞	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12
+parents:	1	3	3	-1	3	6	3	8	3	8	9	10	3
+relations:	ATT	SBV	ADV	HED	RAD	ATT	VOB	ADV	COO	VOB	VOB	VOB	WP
+-------------------------------------------------------------
+tokens:		1999年	，	世界	上	最	强	的	钟哥	诞生	了	。	世界	从此	陷入	了	钟哥	的	通知	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18
+parents:	8	0	3	5	5	7	5	8	-1	8	8	13	13	8	13	17	15	13	8
+relations:	ADV	WP	ATT	ADV	ADV	ATT	RAD	SBV	HED	RAD	WP	SBV	ADV	COO	RAD	ATT	RAD	VOB	WP
+-------------------------------------------------------------
+tokens:		我	懒得	配	虚拟	环境	了	，	他妈的	，	明天	同学	们	直接	pip	安装	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+parents:	2	2	-1	4	2	2	2	14	7	14	14	10	14	14	2	2
+relations:	SBV	ADV	HED	ATT	VOB	RAD	WP	ADV	WP	ADV	SBV	RAD	ADV	ADV	COO	WP
+-------------------------------------------------------------
+tokens:		我	不	知道	为什么	这个	东西	存在	，	噢噢	想	起来	了	是	昨天	用	错	了	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17
+parents:	2	2	-1	6	5	6	2	2	9	2	9	9	9	14	12	14	14	2
+relations:	SBV	ADV	HED	ADV	ATT	SBV	VOB	WP	ADV	COO	CMP	RAD	VOB	ADV	VOB	CMP	RAD	WP
+-------------------------------------------------------------
+tokens:		看不到	这些	email	token	呀	，	让	钟哥	现在	联系	一下	马云	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12
+parents:	-1	2	3	0	0	0	0	6	9	6	9	9	0
+relations:	HED	ATT	ATT	VOB	RAD	WP	COO	DBL	ADV	VOB	CMP	VOB	WP
+-------------------------------------------------------------
+tokens:		这	周	的	作业	就	是	回去	预习	第二	节	课	的	内容	。	下课	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+parents:	1	3	1	5	5	-1	5	6	9	10	12	10	7	5	5	5
+relations:	ATT	ATT	RAD	SBV	ADV	HED	VOB	COO	ATT	ATT	ATT	RAD	VOB	WP	COO	WP
+-------------------------------------------------------------
+tokens:		最后	10	分钟	我们	进行	一个	小测	，	现在	先	来	上课	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12
+parents:	2	2	4	4	-1	6	4	4	11	11	11	4	4
+relations:	ATT	ATT	ADV	SBV	HED	ATT	VOB	WP	ADV	ADV	ADV	COO	WP
+-------------------------------------------------------------
+tokens:		今天	看	了	你	的	画	，	水平	超过	我	了
+index:		0	1	2	3	4	5	6	7	8	9	10
+parents:	1	-1	1	5	3	1	1	8	1	8	8
+relations:	ADV	HED	RAD	ATT	RAD	VOB	WP	SBV	COO	VOB	RAD
+-------------------------------------------------------------
+tokens:		恰	见	他	的	助手	正在	纳闷	：	怎么	啦	，	老师	一向	提前	上班	，	今天	也许	被	领导	临时	通知	讲座	去	了	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20	21	22	23	24	25
+parents:	1	-1	4	2	6	6	1	6	13	8	8	13	13	6	13	13	21	21	21	18	21	13	21	21	23	1
+relations:	ADV	HED	ATT	RAD	SBV	ADV	VOB	WP	ADV	RAD	WP	SBV	ADV	VOB	VOB	WP	ADV	ADV	ADV	POB	ADV	COO	VOB	CMP	RAD	WP
+-------------------------------------------------------------
+tokens:		这	篇	论文	讲	的	内容	非常	之	好	，	留给	大家	回去	做	一个	论文	报告	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17
+parents:	1	2	3	5	3	8	8	6	-1	8	8	10	10	12	16	16	13	8
+relations:	ATT	ATT	SBV	ATT	RAD	SBV	ADV	RAD	HED	WP	COO	DBL	VOB	COO	ATT	ATT	VOB	WP
+-------------------------------------------------------------
+tokens:		大一	你	的	项目	在	后天	下午	1点	进行	全校	审核	，	请	准时	参加	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
+parents:	3	3	1	8	8	6	7	4	-1	10	8	8	8	14	12	8
+relations:	ATT	ATT	RAD	SBV	ADV	ATT	ATT	POB	HED	ATT	VOB	WP	COO	ADV	VOB	WP
+-------------------------------------------------------------
+tokens:		这么	捞	的	嘛	，	只能	上传	这么	点	。	所以	大家	回去	可以	想想	如何	直接	改进	这个	问题	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19	20
+parents:	1	-1	1	1	1	6	1	8	6	1	12	12	1	14	12	17	17	14	19	17	1
+relations:	ADV	HED	RAD	RAD	WP	ADV	COO	ATT	CMP	WP	ADV	SBV	COO	ADV	COO	ADV	ADV	VOB	ATT	VOB	WP
+-------------------------------------------------------------
+tokens:		由于	天气	的	问题	，	原	定于	今天	的	年级	大会	改	为了	后天	举行
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14
+parents:	6	3	1	0	0	6	-1	10	7	10	11	6	14	12	11
+relations:	ADV	ATT	RAD	POB	WP	ADV	HED	ATT	RAD	ATT	SBV	VOB	ADV	POB	COO
+-------------------------------------------------------------
+tokens:		扶贫	小组	的	活动	将	于	后天	早上	1点	举行	，	请	2	班	同学	参与	。
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16
+parents:	1	3	1	9	9	9	8	8	5	-1	9	9	13	14	11	11	9
+relations:	ATT	ATT	RAD	SBV	ADV	ADV	ATT	ATT	POB	HED	WP	COO	ATT	ATT	DBL	VOB	WP
+-------------------------------------------------------------
+tokens:		社会	实践	活动	的	截止	日期	是	后天	半夜	12点	。	大家	抓紧	时间
+index:		0	1	2	3	4	5	6	7	8	9	10	11	12	13
+parents:	1	2	5	2	5	6	-1	9	9	6	6	12	6	12
+relations:	ATT	ATT	ATT	RAD	ATT	SBV	HED	ATT	ATT	VOB	WP	SBV	COO	VOB
+-------------------------------------------------------------
+tokens:		请	自班	同学	星期五	在	体育馆	集合	。
+index:		0	1	2	3	4	5	6	7
+parents:	-1	2	0	6	6	4	0	0
+relations:	HED	ATT	DBL	ADV	ADV	POB	VOB	WP
+-------------------------------------------------------------
