@@ -24,8 +24,8 @@ public class KeywordExtractor {
   public KeywordExtractor() throws UnknownHostException, IOException {
     Configreader configreader = Configreader.reader("config.xml");
     connect =
-        new CorrespondUtil(InetAddress.getByName(configreader.readItem("keywordExtractorServer")),
-            InetAddress.getByName(configreader.readItem("keywordExtractorClient")),
+        new CorrespondUtil(InetAddress.getByName(configreader.readItem("keywordExtractorClient")),
+            InetAddress.getByName(configreader.readItem("keywordExtractorServer")),
             Integer.parseInt(configreader.readItem("keywordExtractorServerPort")),
             Integer.parseInt(configreader.readItem("keywordExtractorClientPort")));
   }

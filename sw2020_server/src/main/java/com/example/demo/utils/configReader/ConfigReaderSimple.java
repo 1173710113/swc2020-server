@@ -18,6 +18,7 @@ public class ConfigReaderSimple implements Configreader {
      */
     public ConfigReaderSimple(String filePath) throws FileNotFoundException {
         File file = new File(filePath);
+        try {
         InputStrategy ip = InputStrategy.input(file);
         String tmpConfig;
         configs = new HashMap<String, String>();
@@ -26,6 +27,9 @@ public class ConfigReaderSimple implements Configreader {
                 String[] oneConfig = tmpConfig.split(" = ");
                 configs.put(oneConfig[0], oneConfig[1]);
             }
+        }
+        } catch (FileNotFoundException e) {
+          throw new FileNotFoundException("No config file exists!");
         }
     }
     
