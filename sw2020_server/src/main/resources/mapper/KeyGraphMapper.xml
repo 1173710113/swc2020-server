@@ -76,7 +76,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap id="node" type="Node">
 		<id column="n.id" property="id" />
 		<result column="n.content" property="content" />
-		<result column="n.count" property="count"/>
 		<result column="n.class" property="classId" />
 	</resultMap>
 </mapper>
