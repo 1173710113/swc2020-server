@@ -7,6 +7,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.demo.utils.configReader.Configreader;
 
 /**
+ * 依存句法分析器，能够对length<=62的句子进行依存句法分析
  * 
  * @author EvanClark
  *
@@ -15,6 +16,11 @@ public class SyntaxAnalyzer {
   private final LtpFetcher fetcher;
   private final Configreader configreader;
 
+  /**
+   * 生成一个依存句法分析器的实例
+   * 
+   * @throws FileNotFoundException 当没有找到对应的配置文件，或者appid， apiKey
+   */
   public SyntaxAnalyzer() throws FileNotFoundException {
     configreader = Configreader.reader("config.xml");
     String appID = configreader.readItem("APPID");
@@ -26,6 +32,12 @@ public class SyntaxAnalyzer {
   }
 
 
+  /**
+   * 对输入文本进行依存句法分析
+   * @param text 需要进行依存句法分析的文本，length<=62
+   * @return 得到的依存句法分析结果
+   * @throws IllegalArgumentException 当输入的文本不满足讯飞云服务的要求
+   */
   public String analyze(String text) throws IllegalArgumentException {
     JSONObject response = JSONObject.parseObject(fetcher.fetch("cws", text));
     JSONObject data = response.getJSONObject("data");
@@ -46,7 +58,6 @@ public class SyntaxAnalyzer {
       relationships = relationships + "\t" + object.get("relate");
       fathers = fathers + "\t" + object.get("parent");
     }
-    relationships = relationships + "\n";
     String words = "tokens:\t";
     String counts = "index:\t";
     int i = 0;
@@ -55,7 +66,6 @@ public class SyntaxAnalyzer {
       i++;
       words = words + "\t" + word;
     }
-    words = words + "\n";
     System.out.println(words);
     System.out.println(counts);
     System.out.println(fathers);
