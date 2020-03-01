@@ -1,7 +1,5 @@
 package com.example.demo.domain;
 
-import java.util.Arrays;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

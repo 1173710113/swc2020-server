@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.AlignSentenceMapper">
+
+<insert id="addAlignSentence" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO 
+	align_sentence_table(text, start_time, end_time, class)
+	VALUES(#{text}, #{startTime}, #{endTime}, #{classId})
+</insert>
+
+<delete id="deleteAlignSentence">
+	DELETE FROM
+	align_sentence_table
+	WHERE id=#{id}
+</delete>
+
+<select id="queryAlignSentenceByClass" resultMap="alignSentence">
+	SELECT FROM 
+	align_sentence_table
+	WHERE class=#{classId}
+</select>
+
+<resultMap id="alignSentence" type="AlignSentence">
+	<id column="id" property="id"/>
+	<result column="text" property="text"/>
+	<result column="start_time" property="startTime"/>
+	<result column="end_time" property="endTime"/>
+	<result column="class" property="classId"/>
+</resultMap>
+
+<insert id="addAlignTotalText">
+	INSERT INTO 
+	align_total_text_table
+	VALUES(#{text}, #{classId})
+</insert>
+
+<select id="queryAlignTotalText">
+	SELECT FROM
+	align_total_text_table
+	where class=#{classId}
+</select>
+
+</mapper>

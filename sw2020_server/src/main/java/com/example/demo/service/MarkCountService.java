@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.KeyWord;
+import com.example.demo.exception.MyException;
 
 /**
  * 该接口规定了对于标记功能的service所需要的基本功能
@@ -19,8 +20,9 @@ public interface MarkCountService {
 	 * 
 	 * @param alignResult 转写对齐结果
 	 * @param marks       用户标记结果
+	 * @throws MyException 
 	 */
-	public void initialize(String audioPath, String classId) throws IOException;
+	public void initialize(String audioPath, String classId) throws IOException, MyException;
 
 	/**
 	 * 获取所有关键词(按被标记的次数从大到小排列) <BR>
