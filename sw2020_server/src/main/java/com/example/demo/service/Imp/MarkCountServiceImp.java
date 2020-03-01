@@ -26,7 +26,7 @@ import com.example.demo.service.MarkCountService;
 import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
-import com.example.demo.utils.generate.SeparateRange;
+import com.example.demo.utils.generate.UnionRange;
 import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
 import com.example.demo.vo.EffectiveMarkRangeVO;
@@ -57,17 +57,17 @@ public class MarkCountServiceImp implements MarkCountService {
 
 	@Autowired
 	private KeyWordMarkRangeRelationMapper keyWordMarkRangeMapper;
-	
+
 	@Autowired
 	private KeywordExtractorConfiguration keywordExtractorConfig;
-	
+
 	@Override
 	public void initialize(String audioPath, String classId) throws IOException {
 		// 有效范围List
 		List<EffectiveMarkRangeVO> markedRanges = new ArrayList<>();
 
 		AlignResult alignResult = WavToTextUtil.getAignResult(audioPath);
-		GenerateRange generateRange = new SeparateRange();
+		GenerateRange generateRange = new UnionRange();
 		if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
 			throw new RuntimeException("句子总数不足");
 		}
@@ -91,7 +91,7 @@ public class MarkCountServiceImp implements MarkCountService {
 			markRangeMapper.addMarkRange(markRange);
 
 			// 抽取标记块的关键词
-			KeywordExtractor keywordExtractor  = new KeywordExtractor(keywordExtractorConfig);
+			KeywordExtractor keywordExtractor = new KeywordExtractor(keywordExtractorConfig);
 			List<String> keyWordList = keywordExtractor.keywordExtract(markRangeTemp.getText(),
 					markRangeConfig.getMaxKeyword());
 			keywordExtractor.close();
@@ -107,7 +107,7 @@ public class MarkCountServiceImp implements MarkCountService {
 					keyWord = new KeyWord(null, keyWordTemp, 0, classId);
 					keyWordMapper.addKeyWord(keyWord);
 				}
-				
+
 				log.info("keyword:" + JSON.toJSONString(keyWord));
 
 				// 添加标记块与关键词的联系，并将关键词的count++
