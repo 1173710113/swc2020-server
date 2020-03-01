@@ -30,6 +30,7 @@ import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
 import com.example.demo.utils.generate.SeparateRange;
+import com.example.demo.utils.generate.UnionRange;
 import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
 import com.example.demo.vo.EffectiveMarkRangeVO;
@@ -73,7 +74,7 @@ public class MarkCountServiceImp implements MarkCountService {
 		List<EffectiveMarkRangeVO> markedRanges = new ArrayList<>();
 
 		AlignResult alignResult = WavToTextUtil.getAignResult(audioPath);
-		GenerateRange generateRange = new SeparateRange();
+		GenerateRange generateRange = new UnionRange();
 		if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
 			throw new MyException("句子总数不足");
 		}
