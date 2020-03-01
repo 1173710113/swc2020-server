@@ -33,6 +33,7 @@ public class UnionRange extends GenerateRange{
       }
       // 对于有效句子范围进行union统计，如：每3句为一组，考虑每组范围之间的重复，重复的放在一组中
       if (rangeMarkNum > 0) {//和前面进行union
+        
         if (j <= backSentencesRange - 1) {//例如：当在0，1，2句时无法回溯到前3句，则只返回markrange的本来三句
           keyWordSentences = alignResult.getSentence(j) + alignResult.getSentence(j + 1) + alignResult.getSentence(j + 2);
           tempMarkNum = tempMarkNum + rangeMarkNum;
