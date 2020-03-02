@@ -29,7 +29,6 @@ import com.example.demo.service.MarkCountService;
 import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
-import com.example.demo.utils.generate.SeparateRange;
 import com.example.demo.utils.generate.UnionRange;
 import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
@@ -61,7 +60,7 @@ public class MarkCountServiceImp implements MarkCountService {
 
 	@Autowired
 	private KeyWordMarkRangeRelationMapper keyWordMarkRangeMapper;
-	
+
 	@Autowired
 	private KeywordExtractorConfiguration keywordExtractorConfig;
 	
@@ -95,6 +94,9 @@ public class MarkCountServiceImp implements MarkCountService {
 		// 生成句子范围
 		markedRanges = generateRange.generateRange(alignResult, marks); // 生成所有块
 
+		for(EffectiveMarkRangeVO mark: markedRanges) {
+			log.info("markRange:" + JSON.toJSONString(mark));
+		}
 		// 基于ratio对于结果排序
 		MarkRangeSort markRangeSort = new RatioSort();
 		markedRanges = markRangeSort.rangeSort(markedRanges);
@@ -102,13 +104,13 @@ public class MarkCountServiceImp implements MarkCountService {
 		// 调用关键词方法，获取每个块的关键词列表
 		for (EffectiveMarkRangeVO markRangeTemp : markedRanges) {
 			EffectiveMarkRange markRange = new EffectiveMarkRange(null, markRangeTemp.getText(),
-					markRangeTemp.getCount(), classId);
+					markRangeTemp.getCount(), markRangeTemp.getStartTime(), markRangeTemp.getEndTime(), classId);
 
 			// 向数据库添加标记块
 			markRangeMapper.addMarkRange(markRange);
 
 			// 抽取标记块的关键词
-			KeywordExtractor keywordExtractor  = new KeywordExtractor(keywordExtractorConfig);
+			KeywordExtractor keywordExtractor = new KeywordExtractor(keywordExtractorConfig);
 			List<String> keyWordList = keywordExtractor.keywordExtract(markRangeTemp.getText(),
 					markRangeConfig.getMaxKeyword());
 			keywordExtractor.close();
@@ -124,7 +126,7 @@ public class MarkCountServiceImp implements MarkCountService {
 					keyWord = new KeyWord(null, keyWordTemp, 0, classId);
 					keyWordMapper.addKeyWord(keyWord);
 				}
-				
+
 				log.info("keyword:" + JSON.toJSONString(keyWord));
 
 				// 添加标记块与关键词的联系，并将关键词的count++
@@ -138,7 +140,14 @@ public class MarkCountServiceImp implements MarkCountService {
 	public List<EffectiveMarkRange> getMarkedRanges(String classId, List<String> screenKeyWords) {
 		Set<EffectiveMarkRange> set = new HashSet<>();
 		for (String keyWordText : screenKeyWords) {
-			set.retainAll(markRangeMapper.queryMarkRangeByClassAndText(classId, keyWordText));
+			KeyWord keyWord = keyWordMapper.queryKeyWordByTextAndClass(keyWordText, classId);
+			List<String> markRangeIdList = keyWordMarkRangeMapper.queryRelationByKeyword(keyWord.getId());
+			List<EffectiveMarkRange> list = new ArrayList<EffectiveMarkRange>();
+			for(String id: markRangeIdList)
+			{
+				list.add(markRangeMapper.queryMarkRange(id));
+			}
+			set.retainAll(list);
 		}
 		List<EffectiveMarkRange> res = new ArrayList<EffectiveMarkRange>(set);
 		Collections.sort(res, new Comparator<EffectiveMarkRange>() {

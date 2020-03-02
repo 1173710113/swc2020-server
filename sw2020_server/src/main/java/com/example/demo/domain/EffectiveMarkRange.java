@@ -11,6 +11,8 @@ public class EffectiveMarkRange {
 	private String id;//标记快id
 	private String text; // 标记块的文本部分
 	private int count; // 标记次数
+	private int startTime;//文本块在录音中的开始时间
+	private int endTime;//文本块在录音中的结束时间
 	private String classId;//标记快对应的课堂id
 
 	@Override

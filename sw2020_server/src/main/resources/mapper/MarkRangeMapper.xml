@@ -6,8 +6,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.example.demo.dao.MarkRangeMapper">
 
 <insert id="addMarkRange" useGeneratedKeys="true" keyProperty="id">
-	INSERT INTO mark_range_table(text,count,class)
-	VALUES(#{text},#{count},#{classId})
+	INSERT INTO mark_range_table(text,count,start_time, end_time, class)
+	VALUES(#{text},#{count},#{startTime}, #{endTime}, #{classId})
 </insert>
 
 <delete id="deleteMarkRange">
@@ -16,23 +16,25 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </delete>
 
 <select id="queryMarkRange" resultMap="markRange">
-	SELECT *
-	FROM mark_range_table
-	WHERE id=#{id}
+	SELECT m.*
+	FROM mark_range_table m
+	WHERE m.id=#{id}
 </select>
 
 <select id="queryMarkRangeByClass" resultMap="markRange">
-	SELECT *
-	FROM mark_range_table
-	WHERE class=#{classId}
-	ORDER BY count DESC
+	SELECT m.*
+	FROM mark_range_table m
+	WHERE m.class=#{classId}
+	ORDER BY m.count DESC
 </select>
 
 <resultMap id="markRange" type="EffectiveMarkRange">
-	<id column="id" property="id"/>
-	<result column="text" property="text"/>
-	<result column="count" property="count"/>
-	<result column="class" property="classId"/>
+	<id column="m.id" property="id"/>
+	<result column="m.text" property="text"/>
+	<result column="m.count" property="count"/>
+	<result column="m.start_time" property="startTime"/>
+	<result column="m.end_time" property="endTime"/>
+	<result column="m.class" property="classId"/>
 </resultMap>
 
 

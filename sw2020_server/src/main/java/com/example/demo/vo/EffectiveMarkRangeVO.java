@@ -12,6 +12,8 @@ import lombok.Setter;
 public class EffectiveMarkRangeVO implements Comparable<EffectiveMarkRangeVO> {
 	private String text; // 标记块的文本部分
 	private int count; // 标记次数
+	private int startTime;//文本块在录音中的开始时间
+	private int endTime;//文本块在录音中的结束时间
 
 	@Override
 	public int hashCode() {
