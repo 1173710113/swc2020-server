@@ -12,8 +12,8 @@ import com.example.demo.vo.EffectiveMarkRangeVO;
  * @author 50136
  */
 public abstract class GenerateRange {
-	public int backSentencesRange = 3;
-	public int sentencesRange = 3;
+	public int backSentencesRange = 1;
+	public int sentencesRange = 1;
 
 	// note: 必须满足： backSentencesRange <= sentencesRange
 
