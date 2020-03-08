@@ -8,12 +8,11 @@ import com.example.demo.utils.inputstrategy.InputStrategy;
 
 class SyntaxAnalyzerTest {
 
-  @Test
   void test() throws FileNotFoundException {
     SyntaxAnalyzer analyzer = new SyntaxAnalyzer();
-    analyzer.analyze("请自班同学星期五在体育馆集合。");
+    analyzer.analyze("这里为什么要引入字符串表，课下留给同学们思考。");
   }
-
+  
   @Test
   void testFile() throws FileNotFoundException {
     SyntaxAnalyzer analyzer = new SyntaxAnalyzer();
