@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.example.demo.domain.EffectiveMarkRange;
+import com.example.demo.exception.MyException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,10 +24,9 @@ public class MarkCountServiceTest {
 	private MarkCountService markCountService;
 	
 	@Test
-	public void test() throws IOException {
+	public void test() throws IOException, MyException {
 		String classId = "1";
 		String path="./resource/audio/xwlb.wav";
-
 		markCountService.initialize(path, classId);
 		List<EffectiveMarkRange> result = markCountService.getMarkedRanges(classId);
 		for (int i = 0; i < result.size(); i++) {

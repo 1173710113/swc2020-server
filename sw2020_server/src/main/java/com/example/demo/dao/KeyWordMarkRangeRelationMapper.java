@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -18,4 +20,11 @@ public interface KeyWordMarkRangeRelationMapper {
 	 * @param markRangeId 标记块的id
 	 */
 	public void deleteRelation(String keyWordId, String markRangeId);
+	
+	/**
+	 * 
+	 * @param keywordId
+	 * @return
+	 */
+	public List<String> queryRelationByKeyword(String keywordId);
 }

@@ -35,12 +35,4 @@ public interface MarkRangeMapper {
 	 */
 	public List<EffectiveMarkRange> queryMarkRangeByClass(String classId);
 	
-
-	/**
-	 * 
-	 * @param classId
-	 * @param keyWordText
-	 * @return
-	 */
-	public List<EffectiveMarkRange> queryMarkRangeByClassAndText(String classId, String keyWordText);
 }

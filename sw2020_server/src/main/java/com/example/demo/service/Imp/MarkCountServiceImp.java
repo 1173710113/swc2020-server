@@ -14,14 +14,17 @@ import org.springframework.stereotype.Service;
 import com.alibaba.fastjson.JSON;
 import com.example.demo.config.KeywordExtractorConfiguration;
 import com.example.demo.config.MarkRangeConfiguration;
+import com.example.demo.dao.AlignSentenceMapper;
 import com.example.demo.dao.KeyWordMapper;
 import com.example.demo.dao.KeyWordMarkRangeRelationMapper;
 import com.example.demo.dao.MarkRangeMapper;
 import com.example.demo.dao.RecordMarkMapper;
 import com.example.demo.domain.AlignResult;
+import com.example.demo.domain.AlignSentence;
 import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.KeyWord;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.exception.MyException;
 import com.example.demo.service.MarkCountService;
 import com.example.demo.utils.KeywordExtractor;
 import com.example.demo.utils.WavToTextUtil;
@@ -60,16 +63,29 @@ public class MarkCountServiceImp implements MarkCountService {
 
 	@Autowired
 	private KeywordExtractorConfiguration keywordExtractorConfig;
-
+	
+	@Autowired
+	private AlignSentenceMapper alignSentenceMapper;
+	
 	@Override
-	public void initialize(String audioPath, String classId) throws IOException {
+	public void initialize(String audioPath, String classId) throws IOException, MyException {
 		// 有效范围List
 		List<EffectiveMarkRangeVO> markedRanges = new ArrayList<>();
 
 		AlignResult alignResult = WavToTextUtil.getAignResult(audioPath);
 		GenerateRange generateRange = new UnionRange();
 		if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
-			throw new RuntimeException("句子总数不足");
+			throw new MyException("句子总数不足");
+		}
+		
+		//存储AlignResult
+		{
+			int num = alignResult.getNumOfSentence();
+			for(int i = 0; i < num; i++) {
+				AlignSentence alignSentence = new AlignSentence(null, alignResult.getSentence(i), alignResult.getBeginTime(i), alignResult.getEndTime(i), classId);
+				alignSentenceMapper.addAlignSentence(alignSentence);
+			}
+			alignSentenceMapper.addAlignTotalText(alignResult.getText(), classId);
 		}
 
 		// 检索所有标记，返回结果按时间从小到大
@@ -78,6 +94,9 @@ public class MarkCountServiceImp implements MarkCountService {
 		// 生成句子范围
 		markedRanges = generateRange.generateRange(alignResult, marks); // 生成所有块
 
+		for(EffectiveMarkRangeVO mark: markedRanges) {
+			log.info("markRange:" + JSON.toJSONString(mark));
+		}
 		// 基于ratio对于结果排序
 		MarkRangeSort markRangeSort = new RatioSort();
 		markedRanges = markRangeSort.rangeSort(markedRanges);
@@ -85,7 +104,7 @@ public class MarkCountServiceImp implements MarkCountService {
 		// 调用关键词方法，获取每个块的关键词列表
 		for (EffectiveMarkRangeVO markRangeTemp : markedRanges) {
 			EffectiveMarkRange markRange = new EffectiveMarkRange(null, markRangeTemp.getText(),
-					markRangeTemp.getCount(), classId);
+					markRangeTemp.getCount(), markRangeTemp.getStartTime(), markRangeTemp.getEndTime(), classId);
 
 			// 向数据库添加标记块
 			markRangeMapper.addMarkRange(markRange);
@@ -121,7 +140,14 @@ public class MarkCountServiceImp implements MarkCountService {
 	public List<EffectiveMarkRange> getMarkedRanges(String classId, List<String> screenKeyWords) {
 		Set<EffectiveMarkRange> set = new HashSet<>();
 		for (String keyWordText : screenKeyWords) {
-			set.retainAll(markRangeMapper.queryMarkRangeByClassAndText(classId, keyWordText));
+			KeyWord keyWord = keyWordMapper.queryKeyWordByTextAndClass(keyWordText, classId);
+			List<String> markRangeIdList = keyWordMarkRangeMapper.queryRelationByKeyword(keyWord.getId());
+			List<EffectiveMarkRange> list = new ArrayList<EffectiveMarkRange>();
+			for(String id: markRangeIdList)
+			{
+				list.add(markRangeMapper.queryMarkRange(id));
+			}
+			set.retainAll(list);
 		}
 		List<EffectiveMarkRange> res = new ArrayList<EffectiveMarkRange>(set);
 		Collections.sort(res, new Comparator<EffectiveMarkRange>() {

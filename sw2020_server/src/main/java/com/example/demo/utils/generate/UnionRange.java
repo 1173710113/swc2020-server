@@ -1,5 +1,8 @@
 package com.example.demo.utils.generate;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,7 +63,7 @@ public class UnionRange extends GenerateRange {
 					endTime = alignResult.getEndTime(k - 1);
 				}
 
-			} else {// 该组内无mark则不和前面union，从而避开重复
+			} else if (keyWordSentences.length() != 0) {// 该组内无mark则不和前面union，从而避开重复
 				EffectiveMarkRangeVO effectiveMarkRange = new EffectiveMarkRangeVO(keyWordSentences.toString(),
 						tempMarkNum, startTime, endTime);
 				markRanges.add(effectiveMarkRange);
@@ -75,6 +78,31 @@ public class UnionRange extends GenerateRange {
 			markRanges.add(effectiveMarkRange);
 		}
 		return markRanges;
+	}
+
+	// Test
+	public static void main(String[] args) throws IOException {
+		String msg = Files.readAllLines(new File("./resource/audio/test.txt").toPath()).get(0);
+		AlignResult ar = new AlignResult(" ", msg);
+		List<RecordMark> marks = new ArrayList<RecordMark>();
+		int step = 20000;
+		System.out.print("marks: ");
+		for (int i = 0; i < ar.getEndTime(ar.getNumOfSentence() - 1); i += step) {
+			marks.add(new RecordMark(" ", i, "c", " ", " "));
+			System.out.print(i + " ");
+		}
+		System.out.println();
+
+		UnionRange union = new UnionRange();
+		List<EffectiveMarkRangeVO> res = union.generateRange(ar, marks);
+
+		for (EffectiveMarkRangeVO emr : res) {
+			System.out.println(emr.getText());
+			System.out.println("start:" + emr.getStartTime());
+			System.out.println("end: " + emr.getEndTime());
+			System.out.println("count: " + emr.getCount());
+			System.out.println();
+		}
 	}
 
 }

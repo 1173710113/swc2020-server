@@ -40,7 +40,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE classId=#{classId} AND text=#{text}
 	</select>
 
-	<select id="queryKeyWordByClass">
+	<select id="queryKeyWordByClass" resultMap="keyword">
 		SELECT *
 		FROM keyword_table
 		WHERE classId=#{classId}
