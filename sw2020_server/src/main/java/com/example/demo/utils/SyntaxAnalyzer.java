@@ -103,11 +103,11 @@ public class SyntaxAnalyzer {
       i++;
       words = words + "\t" + word;
     }
-//    System.out.println(words);
-//    System.out.println(counts);
-//    System.out.println(fathers);
-//    System.out.println(relationships);
-//    System.out.println("-------------------------------------------------------------");
+    System.out.println(words);
+    System.out.println(counts);
+    System.out.println(fathers);
+    System.out.println(relationships);
+    System.out.println("-------------------------------------------------------------");
     
     List<Set<String>> resultList = new ArrayList<Set<String>>();
 //    Map<String, String> returnMap = new HashMap<String, String>();
