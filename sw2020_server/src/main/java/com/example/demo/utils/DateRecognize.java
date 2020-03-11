@@ -90,7 +90,7 @@ public class DateRecognize {
         return results;
       }
     }
-    //SBV类型含有关键词
+    //SBV和COO类型含有关键词
     if (analyzeList.get(3).size() > 0 && analyzeList.get(2).size() > 0) {
       for (String sbv: analyzeList.get(3)) {
         for (String coo: analyzeList.get(2)) {
@@ -99,6 +99,7 @@ public class DateRecognize {
         }
       }
     } 
+    //DBL和COO类型含有关键词
     if (analyzeList.get(1).size() > 0 && analyzeList.get(2).size() > 0) {
       for (String dbl: analyzeList.get(1)) {
         for (String coo: analyzeList.get(2)) {
