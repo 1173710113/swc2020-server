@@ -140,6 +140,7 @@ public class MarkCountServiceImp implements MarkCountService {
 	public List<EffectiveMarkRange> getMarkedRanges(String classId, List<String> screenKeyWords) {
 		Set<EffectiveMarkRange> set = new HashSet<>();
 		for (String keyWordText : screenKeyWords) {
+			log.info("搜索关键词："  + keyWordText);
 			KeyWord keyWord = keyWordMapper.queryKeyWordByTextAndClass(keyWordText, classId);
 			List<String> markRangeIdList = keyWordMarkRangeMapper.queryRelationByKeyword(keyWord.getId());
 			List<EffectiveMarkRange> list = new ArrayList<EffectiveMarkRange>();

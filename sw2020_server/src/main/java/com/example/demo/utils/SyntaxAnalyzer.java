@@ -7,11 +7,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.python.modules.itertools.starmap;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.utils.configReader.Configreader;
-import jnr.ffi.Struct.int16_t;
 
 /**
  * 依存句法分析器，能够对length<=62的句子进行依存句法分析

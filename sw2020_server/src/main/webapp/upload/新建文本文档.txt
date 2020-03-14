@@ -1,0 +1,13 @@
+
+    <qui-mask visible="{{visible}}" show-close="0" @qui-overlay-click="overlayClick">
+      <div class="dialog">
+        <text class="dialog-title">创建新课堂</text>
+        <div class="dialog-content">
+          <input type="text" placeholder="输入课堂名" value="{{className}}" onchange="bindClassName"></input>
+        </div>
+        <div class="dialog-btn">
+          <text onclick="clickDialogCancel">取消</text>
+          <text onclick="clickDialogConfirm">确定</text>
+        </div>
+      </div>
+    </qui-mask>

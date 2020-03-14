@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.ScheduleMapper">
+
+<insert id="addSchedule" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO schedule_table(date, content, class, course)
+	VALUES(#{date}, #{content}, #{classId}, #{courseId})
+</insert>
+
+<delete id="deleteSchedule">
+	DELETE FROM schedule_table
+	WHERE id=#{id}
+</delete>
+
+<select id="queryScheduleByCourse" resultMap="schedule">
+	SELECT *
+	FROM schedule_table
+	WHERE course=#{courseId}
+</select>
+
+<resultMap type="Schedule" id="schedule">
+	<id column="id" property="id"/>
+	<result column="date" property="date"/>
+	<result column="content" property="content"/>
+	<result column="class" property="classId"/>
+	<result column="course" property="courseId"/>
+</resultMap>
+
+</mapper>

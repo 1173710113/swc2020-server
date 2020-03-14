@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -51,7 +50,7 @@ public class CourseController {
 
 	@RequestMapping("/query/student")
 	@ResponseBody
-	public List<CourseVO> queryCourseByStudentId(String id) throws MyException {
+	public MyResult queryCourseByStudentId(String id) throws MyException {
 		log.info("Student:" + id + " query course");
 		List<Course> courseList = courseService.queryCourseByStudentId(id);
 		List<CourseVO> courseVOList = new ArrayList<>();
@@ -62,12 +61,12 @@ public class CourseController {
 			courseVO.setTeacherName(userService.getUserName(course.getTeacherId()));
 			courseVOList.add(courseVO);
 		}
-		return courseVOList;
+		return MyResultGenerator.successResult(courseVOList);
 	}
 	
 	@RequestMapping("/query/teacher")
 	@ResponseBody
-	public List<CourseVO> queryCourseByTeacherId(String id) throws MyException {
+	public MyResult queryCourseByTeacherId(String id) throws MyException {
 		log.info("Teacher:" + id + " query course");
 		List<Course> courseList = courseService.queryCourseByTeacherId(id);
 		List<CourseVO> courseVOList = new ArrayList<>();
@@ -78,7 +77,7 @@ public class CourseController {
 			courseVO.setTeacherName(userService.getUserName(course.getTeacherId()));
 			courseVOList.add(courseVO);
 		}
-		return courseVOList;
+		return MyResultGenerator.successResult(courseVOList);
 	}
 	
 	@RequestMapping("/enroll")
