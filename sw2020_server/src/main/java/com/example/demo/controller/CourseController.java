@@ -48,6 +48,14 @@ public class CourseController {
 		courseService.deleteCourse(courseId);
 	}
 
+	/**
+	 * 获得学生所上的所有课
+	 * 请求地址:http//服务器地址:8082/sw2020/course/query/student
+	 * 请求body中附加的字段id
+	 * @param id 用户id
+	 * @return 返回的消息体
+	 * @throws MyException
+	 */
 	@RequestMapping("/query/student")
 	@ResponseBody
 	public MyResult queryCourseByStudentId(String id) throws MyException {

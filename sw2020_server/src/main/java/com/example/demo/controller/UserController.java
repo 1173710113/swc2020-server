@@ -21,6 +21,14 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * 请求登入:http://服务器地址:8082/sw2020/user/login
+	 * 请求的body包含的字段id，password
+	 * @param id 用户名
+	 * @param password 密码
+	 * @return 成功的返回结果
+	 * @throws MyException 失败的返回结果
+	 */
 	@RequestMapping("/login")
 	@ResponseBody
 	public MyResult login(String id, String password) throws MyException {

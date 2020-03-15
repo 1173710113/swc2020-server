@@ -10,9 +10,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-import org.springframework.stereotype.Component;
 import com.alibaba.fastjson.JSONObject;
-import com.example.demo.config.KeywordExtractorConfiguration;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -40,7 +38,6 @@ public class CorrespondUtil {
   public CorrespondUtil(InetAddress clientAddress, InetAddress serverAddress, int serverPort,
       int clientPort) throws IOException {
     log.info("init correspond");
-
     this.socket = new Socket(serverAddress, serverPort);
     this.socket.setSoTimeout(TIMEOUT);
     OutputStream os = socket.getOutputStream();

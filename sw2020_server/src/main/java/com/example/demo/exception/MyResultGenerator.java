@@ -16,10 +16,21 @@ public final class MyResultGenerator {
 		return myResult;
 	}
 	
+	/**
+	 * 返回成功的消息体
+	 * @param result 附加到消息体中的返回对象
+	 * @return 成功的消息体
+	 */
 	public static MyResult successResult(Object result) {
 		return result(true, "", result, null);
 	}
 	
+	/**
+	 * 返回失败的消息体
+	 * @param msg 失败的消息
+	 * @param throwable 产生的异常
+	 * @return 失败的消息体
+	 */
 	public static MyResult errorResult(String msg, Throwable throwable) {
 		return result(false, msg, "", throwable);
 	}

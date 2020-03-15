@@ -24,6 +24,12 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @ServerEndpoint("/wsserver/{type}/{userId}/{courseId}")
 
+/**
+ * 上课和听课连接的websocket
+ * 地址:ws://wsserver/{type}/{uesrId}/{courseId}
+ * @author msi-user
+ *
+ */
 public class WebSocketController {
 
 	private final static ConcurrentHashMap<String, WebSocketController> teacherWebSocketMap = new ConcurrentHashMap<>();
@@ -39,6 +45,14 @@ public class WebSocketController {
 	private Session session;
 	
 
+	/**
+	 * 
+	 * @param session
+	 * @param type 用户类型
+	 * @param userId 用户名
+	 * @param courseId 课程id
+	 * @throws MyException
+	 */
 	@OnOpen
 	public void onOpen(Session session, @PathParam("type") String type, @PathParam("userId") String userId,
 			@PathParam("courseId") String courseId) throws MyException {

@@ -2,17 +2,33 @@ package com.example.demo.exception;
 
 import java.io.Serializable;
 
+/**
+ * 返回消息体
+ * @author msi-user
+ *
+ */
 public class MyResult implements Serializable{
 	
-	private MyResult() {}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private MyResult() {
+		
+	}
+	/**
+	 * 单例模式获取对象
+	 * @return
+	 */
 	public static MyResult newInstance() {
 		return new MyResult();
 	}
 	
-	private String msg;
-	private boolean flag;
-	private Object result;
-	private long time;
+	private String msg; //消息
+	private boolean flag; //成功的标志
+	private Object result; //返回的对象
+	private long time; //时间
 	/**
 	 * @return the msg
 	 */
