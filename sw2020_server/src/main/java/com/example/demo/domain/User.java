@@ -19,5 +19,4 @@ public class User {
 	private String type; // 用户角色
 	private String name; // 用户名字
 	private String sex; // 用户性别
-
 }

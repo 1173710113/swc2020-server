@@ -21,6 +21,12 @@ public class CourseClassController {
 	@Autowired
 	CourseClassService service;
 	
+	/**
+	 * 
+	 * @param className
+	 * @param courseId
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping("/add")
 	public MyResult addClass(String className, String courseId)

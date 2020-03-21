@@ -72,6 +72,14 @@ public class CourseController {
 		return MyResultGenerator.successResult(courseVOList);
 	}
 	
+	/**
+	 * 获得教师所上的所有课
+	 * 请求地址:http//服务器地址:8082/sw2020/course/query/teacher
+	 * 请求body中附加的字段id
+	 * @param id 用户id
+	 * @return 返回的消息体
+	 * @throws MyException
+	 */
 	@RequestMapping("/query/teacher")
 	@ResponseBody
 	public MyResult queryCourseByTeacherId(String id) throws MyException {

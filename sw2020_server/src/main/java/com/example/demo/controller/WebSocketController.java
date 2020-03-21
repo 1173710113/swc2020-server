@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 上课和听课连接的websocket
- * 地址:ws://wsserver/{type}/{uesrId}/{courseId}
+ * 地址:ws://服务器地址:8082/wsserver/{type}/{uesrId}/{courseId}
  * @author msi-user
  *
  */
