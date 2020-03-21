@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.PPTImgMapper">
+
+
+<insert id="addImg">
+	INSERT INTO ppt_img_table
+	VALUES(#{src}, #{classId})
+</insert>
+
+<select id="queryImgByClass" resultType="String">
+	SELECT src
+	FROM ppt_img_table
+	WHERE class=#{classId}
+	ORDER BY src 
+</select>
+</mapper>

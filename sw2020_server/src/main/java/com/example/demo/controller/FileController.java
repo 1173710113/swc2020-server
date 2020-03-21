@@ -19,6 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.demo.exception.MyResult;
+import com.example.demo.exception.MyResultGenerator;
+
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -32,7 +35,7 @@ public class FileController {
 
 	@RequestMapping("/upload")
 	@ResponseBody
-	public String upload(MultipartFile[] file, HttpServletRequest request) {
+	public MyResult upload(MultipartFile[] file, HttpServletRequest request) {
 		int length = file.length;
 		for (int i = 0; i < length; i++) {
 			MultipartFile currentFile = file[i];
@@ -50,11 +53,11 @@ public class FileController {
 			} catch (IllegalStateException | IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-				return "fail";
+				return MyResultGenerator.errorResult(e.getMessage(), e);
 			}
 		}
 
-		return "sucess";
+		return MyResultGenerator.successResult(null);
 	}
 
 	@RequestMapping("/download")

@@ -1,11 +1,17 @@
 package com.example.demo.controller;
 
 import java.io.File;
+import java.util.List;
 
 import org.jodconverter.DocumentConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.demo.exception.MyException;
+import com.example.demo.service.FileConvertService;
+import com.example.demo.service.PPTImgService;
 
 /**
  * 
@@ -18,6 +24,12 @@ public class PDFController {
 
 	@Autowired
 	private DocumentConverter converter;
+	
+	@Autowired
+	private FileConvertService service;
+	
+	@Autowired
+	private PPTImgService imgService;
 
 	@RequestMapping("/convert")
 	public void toPdfFile() {
@@ -41,5 +53,16 @@ public class PDFController {
 		}
 
 	}
+	
+	@ResponseBody
+	@RequestMapping("/convert/img")
+	 public List<String> pdfToImage() throws MyException {
+		String pdfPath = "src/main/resources/static/72.pdf";
+		List<String> imgPathList = service.pdfConvertToImg(pdfPath, "12");
+		imgService.addPPTImg(imgPathList, "12");
+		return imgPathList;
+		
+	}
+
 
 }
