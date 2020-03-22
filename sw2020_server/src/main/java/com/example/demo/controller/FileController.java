@@ -5,22 +5,26 @@ package com.example.demo.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.net.URLEncoder;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.demo.domain.MyFile;
+import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
+import com.example.demo.service.FileService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,33 +37,62 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/file")
 public class FileController {
 
-	@RequestMapping("/upload")
-	@ResponseBody
-	public MyResult upload(MultipartFile[] file, HttpServletRequest request) {
-		int length = file.length;
-		for (int i = 0; i < length; i++) {
-			MultipartFile currentFile = file[i];
-			String fileName = currentFile.getOriginalFilename();
-			String realPath = request.getSession().getServletContext().getRealPath("/upload/");
-			File targetFile = new File(realPath);
-			log.info(realPath);
-			// create folder if the directory is not exist
-			if (!targetFile.exists() && !targetFile.isDirectory()) {
-				targetFile.mkdirs();
-			}
-			File dir = new File(targetFile, fileName);
-			try {
-				currentFile.transferTo(dir);
-			} catch (IllegalStateException | IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				return MyResultGenerator.errorResult(e.getMessage(), e);
-			}
-		}
+	private static final String CLASSPPT = "classppt";
 
+	@Value("${file.ppt.folder}")
+	private String pptFolder;
+
+	@Value("${file.folder}")
+	private String fileFolder;
+
+	@Autowired
+	private FileService fileService;
+
+	/**
+	 * 
+	 * @param fileList
+	 * @param request
+	 * @param classId
+	 * @param type
+	 * @return
+	 * @throws MyException
+	 */
+	@RequestMapping("/upload/{type}")
+	@ResponseBody
+	public MyResult upload(MultipartFile[] fileList, String classId, @PathVariable("type") final String type)
+			throws MyException {
+		// 获得文件的存储位置
+		String fileFolder = "";
+		File targetFile = new File(fileFolder);
+		if (!targetFile.exists() && !targetFile.isDirectory()) {
+			targetFile.mkdirs();
+		}
+		switch (type) {
+		case CLASSPPT:
+			fileFolder = fileFolder + "/" + pptFolder + "/" + classId;
+			// 循环存储文件
+			int length = fileList.length;
+			for (int i = 0; i < length; i++) {
+				MultipartFile currentFile = fileList[i];
+				MyFile pptFile = fileService.storeFile(currentFile, fileFolder, classId);
+				MyFile pdfFile = fileService.pptConvertToPDF(pptFile.getFilePath(), classId);
+				fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
+			}
+			break;
+		default:
+			throw new MyException("文件存储异常");
+		}
 		return MyResultGenerator.successResult(null);
 	}
 
+	/**
+	 * 
+	 * @param fileName
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping("/download")
 	@ResponseBody
 	public String download(String fileName, HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -73,6 +106,12 @@ public class FileController {
 		ServletOutputStream out = response.getOutputStream();
 		FileCopyUtils.copy(stream, out);
 		return "success";
+	}
+	
+	@ResponseBody
+	@RequestMapping("/query/ppimg")
+	public MyResult queryPPTImg(String classId) {
+		return MyResultGenerator.successResult(fileService.queryPPTImgByClass(classId));
 	}
 
 }

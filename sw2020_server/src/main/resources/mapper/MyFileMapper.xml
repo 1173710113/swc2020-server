@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.MyFileMapper">
+
+<insert id="addMyFile" useGeneratedKeys="true" keyProperty="id">
+	INSERT INTO file_table(file_path, file_name, class)
+	VALUES(#{filePath}, #{fileName}, #{classId})
+</insert>
+
+<delete id="deleteMyFile">
+	DELETE FROM file_table
+	WHERE id=#{myFileId}
+</delete>
+
+<select id="queryMyFile" resultMap="myFile">
+	SELECT *
+	FROM file_table
+	WHERE id=#{myFileId}
+</select>
+
+<resultMap id="myFile" type="MyFile">
+	<id column="id" property="id"/>
+	<result column="file_path" property="filePath"/>
+	<result column="file_name" property="fileName"/>
+	<result column="class" property="classId"/>
+</resultMap>
+
+</mapper>
