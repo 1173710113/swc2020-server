@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import com.example.demo.domain.MyFile;
 
 /**
@@ -7,6 +9,7 @@ import com.example.demo.domain.MyFile;
  * @author msi-user
  *
  */
+@Mapper
 public interface MyFileMapper {
 	
 	/**

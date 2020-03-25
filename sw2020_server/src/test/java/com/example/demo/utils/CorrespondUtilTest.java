@@ -1,6 +1,5 @@
 package com.example.demo.utils;
 
-import static org.junit.jupiter.api.Assertions.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;

@@ -8,7 +8,6 @@ import java.util.List;
 import com.example.demo.domain.Course;
 import com.example.demo.domain.CourseCode;
 import com.example.demo.exception.MyException;
-import com.example.demo.exception.MyResult;
 
 /**
  * @author msi-user

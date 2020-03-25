@@ -5,7 +5,6 @@ package com.example.demo.service;
 
 import com.example.demo.domain.User;
 import com.example.demo.exception.MyException;
-import com.example.demo.exception.MyResult;
 
 /**
  * 用于处理用户注册、登入、更改用户信息的服务类

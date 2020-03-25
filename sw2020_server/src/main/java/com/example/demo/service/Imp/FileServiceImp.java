@@ -54,14 +54,14 @@ public class FileServiceImp implements FileService {
 		String fileName = file.getOriginalFilename();
 		File dir = new File(fileFolder + "/" + fileName);
 		try {
-			file.transferTo(dir);
+			file.transferTo(dir.getAbsoluteFile());
 			String filePath = dir.getPath();
 			log.info(filePath);
 			MyFile myFile = new  MyFile(null, filePath, fileName, classId);
 			myFileMapper.addMyFile(myFile);
 			return myFile;
 		} catch (IllegalStateException | IOException e) {
-			throw new MyException("文件存储异常");
+			throw new MyException("文件存储异常:" + e.toString());
 		}
 	}
 	
@@ -70,18 +70,21 @@ public class FileServiceImp implements FileService {
 	public MyFile pptConvertToPDF(String pptFilePath, String classId) throws MyException {
 		File pptFile = new File(pptFilePath);// 需要转换的文件
 		try {
-			File pdfFolder = new File(fileFolder + "/" + pdfStorageFolder);// 转换之后文件生成的地址
+			File pdfFolder = new File(fileFolder + "/" + pdfStorageFolder + "/" + classId);// 转换之后文件生成的地址
 			if (!pdfFolder.exists()) {
 				pdfFolder.mkdirs();
 			}
 			// 文件转化
-			File pdfFile = new File(pdfFolder.getPath() + "/" + pptFile.getName());
+			String pptFileName = pptFile.getName();
+			String pdfFileName = pptFileName.substring(0, pptFileName.indexOf('.')) + ".pdf";
+			File pdfFile = new File(pdfFolder.getPath() + "/" + pdfFileName);
+			log.info(pptFile.getPath() + " to " + pdfFile.getPath());
 			converter.convert(pptFile).to(pdfFile).execute();
 			MyFile myFile = new MyFile(null, pdfFile.getPath(), pdfFile.getName(), classId);
 			myFileMapper.addMyFile(myFile);
 			return myFile;
 		} catch (Exception e) {
-			throw new MyException("文件处理异常");
+			throw new MyException("文件处理异常:" +e.getMessage());
 		}
 	}
 

@@ -11,6 +11,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.jodconverter.DocumentConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -47,6 +48,9 @@ public class FileController {
 
 	@Autowired
 	private FileService fileService;
+	
+	@Autowired
+	private DocumentConverter converter;
 
 	/**
 	 * 
@@ -61,26 +65,25 @@ public class FileController {
 	@ResponseBody
 	public MyResult upload(MultipartFile[] fileList, String classId, @PathVariable("type") final String type)
 			throws MyException {
-		// 获得文件的存储位置
-		String fileFolder = "";
-		File targetFile = new File(fileFolder);
-		if (!targetFile.exists() && !targetFile.isDirectory()) {
-			targetFile.mkdirs();
-		}
+
 		switch (type) {
 		case CLASSPPT:
-			fileFolder = fileFolder + "/" + pptFolder + "/" + classId;
+			String folder = fileFolder + "/" + pptFolder + "/" + classId;
+			File targetFile = new File(folder);
+			if (!targetFile.exists() && !targetFile.isDirectory()) {
+				targetFile.mkdirs();
+			}
 			// 循环存储文件
 			int length = fileList.length;
 			for (int i = 0; i < length; i++) {
 				MultipartFile currentFile = fileList[i];
-				MyFile pptFile = fileService.storeFile(currentFile, fileFolder, classId);
+				MyFile pptFile = fileService.storeFile(currentFile, folder, classId);
 				MyFile pdfFile = fileService.pptConvertToPDF(pptFile.getFilePath(), classId);
 				fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
 			}
 			break;
 		default:
-			throw new MyException("文件存储异常");
+			throw new MyException("文件异常");
 		}
 		return MyResultGenerator.successResult(null);
 	}
@@ -109,9 +112,9 @@ public class FileController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("/query/ppimg")
+	@RequestMapping("/query/pptimg")
 	public MyResult queryPPTImg(String classId) {
 		return MyResultGenerator.successResult(fileService.queryPPTImgByClass(classId));
 	}
-
+	
 }

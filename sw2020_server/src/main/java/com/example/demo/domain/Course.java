@@ -18,6 +18,10 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Course implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id; // 课程id
 	private String name; // 课程名
 	private String teacherId; // 授课教师id
