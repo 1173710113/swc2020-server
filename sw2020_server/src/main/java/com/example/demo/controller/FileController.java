@@ -11,7 +11,6 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.jodconverter.DocumentConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -39,6 +38,7 @@ import lombok.extern.slf4j.Slf4j;
 public class FileController {
 
 	private static final String CLASSPPT = "classppt";
+	private static final String AUDIO = "audio";
 
 	@Value("${file.ppt.folder}")
 	private String pptFolder;
@@ -46,11 +46,11 @@ public class FileController {
 	@Value("${file.folder}")
 	private String fileFolder;
 
+	@Value("${file.audio.folder}")
+	private String audioFolder;
+
 	@Autowired
 	private FileService fileService;
-	
-	@Autowired
-	private DocumentConverter converter;
 
 	/**
 	 * 
@@ -65,23 +65,46 @@ public class FileController {
 	@ResponseBody
 	public MyResult upload(MultipartFile[] fileList, String classId, @PathVariable("type") final String type)
 			throws MyException {
-
+		String folder;
+		File targetFile;
+		int length;
 		switch (type) {
 		case CLASSPPT:
-			String folder = fileFolder + "/" + pptFolder + "/" + classId;
-			File targetFile = new File(folder);
+			folder = fileFolder + "/" + pptFolder + "/" + classId;
+			targetFile = new File(folder);
 			if (!targetFile.exists() && !targetFile.isDirectory()) {
 				targetFile.mkdirs();
 			}
 			// 循环存储文件
-			int length = fileList.length;
+			length = fileList.length;
 			for (int i = 0; i < length; i++) {
 				MultipartFile currentFile = fileList[i];
-				MyFile pptFile = fileService.storeFile(currentFile, folder, classId);
-				MyFile pdfFile = fileService.pptConvertToPDF(pptFile.getFilePath(), classId);
-				fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
+				try {
+					MyFile pptFile = fileService.storeFile(currentFile, folder, classId);
+					MyFile pdfFile = fileService.pptConvertToPDF(pptFile.getFilePath(), classId);
+					fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
+				} catch (Exception e) {
+					return MyResultGenerator.errorResult(e.getMessage(), e);
+				}
 			}
 			break;
+		case AUDIO:
+			folder = fileFolder + "/" + audioFolder + "/" + classId;
+			targetFile = new File(folder);
+			if (!targetFile.exists() && !targetFile.isDirectory()) {
+				targetFile.mkdirs();
+			}
+			// 循环存储文件
+		    length = fileList.length;
+			for (int i = 0; i < length; i++) {
+				MultipartFile currentFile = fileList[i];
+				try {
+					fileService.storeFile(currentFile, folder, classId);
+				} catch (Exception e) {
+					return MyResultGenerator.errorResult(e.getMessage(), e);
+				}
+			}
+
 		default:
 			throw new MyException("文件异常");
 		}
@@ -110,11 +133,11 @@ public class FileController {
 		FileCopyUtils.copy(stream, out);
 		return "success";
 	}
-	
+
 	@ResponseBody
 	@RequestMapping("/query/pptimg")
 	public MyResult queryPPTImg(String classId) {
 		return MyResultGenerator.successResult(fileService.queryPPTImgByClass(classId));
 	}
-	
+
 }
