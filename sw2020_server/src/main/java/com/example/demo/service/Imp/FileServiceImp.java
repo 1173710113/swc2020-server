@@ -20,7 +20,6 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.dao.MyFileMapper;
 import com.example.demo.dao.PPTImgMapper;
 import com.example.demo.domain.MyFile;
-import com.example.demo.exception.MyException;
 import com.example.demo.service.FileService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -60,7 +59,6 @@ public class FileServiceImp implements FileService {
 		String filePath = dir.getPath();
 		log.info(filePath);
 		MyFile myFile = new MyFile(null, filePath, fileName, classId);
-		myFileMapper.addMyFile(myFile);
 		return myFile;
 	}
 
@@ -78,7 +76,6 @@ public class FileServiceImp implements FileService {
 		log.info(pptFile.getPath() + " to " + pdfFile.getPath());
 		converter.convert(pptFile).to(pdfFile).execute();
 		MyFile myFile = new MyFile(null, pdfFile.getPath(), pdfFile.getName(), classId);
-		myFileMapper.addMyFile(myFile);
 		return myFile;
 	}
 
@@ -103,7 +100,6 @@ public class FileServiceImp implements FileService {
 				File dstFile = new File(filePath);
 				BufferedImage image = renderer.renderImageWithDPI(i, imgDpi);
 				ImageIO.write(image, "png", dstFile);
-				pptImgMapper.addImg(pptImgFolder + "/" + classId + "/" + fileName, classId);
 				imgPathList.add(pptImgFolder + "/" + classId + "/" + fileName);
 			}
 		} catch (Exception e) {
@@ -122,6 +118,16 @@ public class FileServiceImp implements FileService {
 	@Override
 	public List<String> queryPPTImgByClass(String classId) {
 		return pptImgMapper.queryImgByClass(classId);
+	}
+
+	@Override
+	public void addFileIndex(MyFile file) {
+		myFileMapper.addMyFile(file);
+	}
+	
+	@Override
+	public void addImgFileIndex(String imgFilePath, String classId) {
+		pptImgMapper.addImg(imgFilePath, classId);
 	}
 
 }

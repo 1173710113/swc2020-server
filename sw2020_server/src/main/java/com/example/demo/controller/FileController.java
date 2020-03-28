@@ -6,6 +6,7 @@ package com.example.demo.controller;
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.URLEncoder;
+import java.util.List;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -26,13 +27,10 @@ import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.FileService;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * @author msi-user
  *
  */
-@Slf4j
 @Controller
 @RequestMapping("/file")
 public class FileController {
@@ -59,56 +57,54 @@ public class FileController {
 	 * @param classId
 	 * @param type
 	 * @return
-	 * @throws MyException
+	 * @throws Exception
 	 */
 	@RequestMapping("/upload/{type}")
 	@ResponseBody
 	public MyResult upload(MultipartFile[] fileList, String classId, @PathVariable("type") final String type)
-			throws MyException {
-		String folder;
-		File targetFile;
-		int length;
-		switch (type) {
-		case CLASSPPT:
-			folder = fileFolder + "/" + pptFolder + "/" + classId;
-			targetFile = new File(folder);
-			if (!targetFile.exists() && !targetFile.isDirectory()) {
-				targetFile.mkdirs();
-			}
-			// 循环存储文件
-			length = fileList.length;
-			for (int i = 0; i < length; i++) {
-				MultipartFile currentFile = fileList[i];
-				try {
-					MyFile pptFile = fileService.storeFile(currentFile, folder, classId);
-					MyFile pdfFile = fileService.pptConvertToPDF(pptFile.getFilePath(), classId);
-					fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
-				} catch (Exception e) {
-					return MyResultGenerator.errorResult(e.getMessage(), e);
+			throws Exception {
+		String folder = getFileFolder(type) + "/" + classId;
+		makeFileDir(folder);
+		int length = fileList.length;
+		for (int i = 0; i < length; i++) {
+			MultipartFile currentFile = fileList[i];
+			MyFile file = fileService.storeFile(currentFile, folder, classId);
+			switch (type) {
+			case CLASSPPT:
+				fileService.addFileIndex(file);
+				MyFile pdfFile = fileService.pptConvertToPDF(file.getFilePath(), classId);
+				fileService.addFileIndex(pdfFile);
+				List<String> imgFileList = fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
+				for(String imgPath : imgFileList) {
+					fileService.addImgFileIndex(imgPath, classId);
 				}
+				break;
+			case AUDIO:
+				fileService.addFileIndex(file);
+				break;
+			default:
+				throw new MyException("文件位置异常");
 			}
-			break;
-		case AUDIO:
-			folder = fileFolder + "/" + audioFolder + "/" + classId;
-			targetFile = new File(folder);
-			if (!targetFile.exists() && !targetFile.isDirectory()) {
-				targetFile.mkdirs();
-			}
-			// 循环存储文件
-		    length = fileList.length;
-			for (int i = 0; i < length; i++) {
-				MultipartFile currentFile = fileList[i];
-				try {
-					fileService.storeFile(currentFile, folder, classId);
-				} catch (Exception e) {
-					return MyResultGenerator.errorResult(e.getMessage(), e);
-				}
-			}
-
-		default:
-			throw new MyException("文件异常");
 		}
 		return MyResultGenerator.successResult(null);
+	}
+
+	private String getFileFolder(String type) throws MyException {
+		switch (type) {
+		case CLASSPPT:
+			return fileFolder + "/" + pptFolder;
+		case AUDIO:
+			return fileFolder + "/" + audioFolder;
+		default:
+			throw new MyException("文件位置异常");
+		}
+	}
+
+	private void makeFileDir(String folder) {
+		File targetFile = new File(folder);
+		if (!targetFile.exists() && !targetFile.isDirectory()) {
+			targetFile.mkdirs();
+		}
 	}
 
 	/**

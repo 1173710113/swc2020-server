@@ -37,6 +37,10 @@ public interface FileService {
 	 */
 	public List<String> pdfConvertToImg(String pdfFilePath, String classId) throws Exception;
 	
+	public void addFileIndex(MyFile file);
+	
+	public void addImgFileIndex(String imgFilePath, String classId);
+	
 	
 	public List<String> queryPPTImgByClass(String classId);
 }

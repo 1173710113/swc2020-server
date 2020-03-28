@@ -9,9 +9,6 @@ import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.ScheduleService;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Controller
 @RequestMapping("/schedule")
 public class ScheduleController {
