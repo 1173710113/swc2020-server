@@ -13,11 +13,10 @@ import java.util.Scanner;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.demo.config.KeywordExtractorConfiguration;
+import com.example.demo.config.RelationConfiguration;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,21 +31,25 @@ public class RelationBuilder {
 	private Set<String> keywords;
 	private Map<String, List<String>> graph = new HashMap<>(); // 构建的图, 邻接表
 
-	@Value("${graph.server}")
-	private String server;
+//	@Value("${graph.server}")
+//	private String server;
+//
+//	@Value("${graph.client}")
+//	private String client;
+//
+//	@Value("${graph.server-port}")
+//	private String serverPort;
+//
+//	@Value("${graph.client-port}")
+//	private String clientPort;
 
-	@Value("${graph.client}")
-	private String client;
-
-	@Value("${graph.server-port}")
-	private String serverPort;
-
-	@Value("${graph.client-port}")
-	private String clientPort;
+	@Autowired
+	private RelationConfiguration relationConfig;
 
 	public RelationBuilder() throws UnknownHostException, IOException {
-		connect = new CorrespondUtil(InetAddress.getByName(client), InetAddress.getByName(server),
-				Integer.parseInt(serverPort), Integer.parseInt(clientPort));
+		connect = new CorrespondUtil(InetAddress.getByName(relationConfig.getServer()),
+				InetAddress.getByName(relationConfig.getClient()), relationConfig.getServerPort(),
+				relationConfig.getClientPort());
 	}
 
 	/**
@@ -103,7 +106,10 @@ public class RelationBuilder {
 	 * TEST
 	 * 
 	 * @param args
+	 * @throws IOException
+	 * @throws UnknownHostException
 	 */
+<<<<<<< HEAD
 	public static void main(String[] args) {
 	  try {
       RelationBuilder builder = new RelationBuilder();
@@ -121,5 +127,9 @@ public class RelationBuilder {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
+=======
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		new RelationBuilder();
+>>>>>>> 5daa438ec4618f1e4ba9f48f1b6e0cd01b34dfad
 	}
 }
