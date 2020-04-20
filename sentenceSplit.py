@@ -5,6 +5,7 @@ import gensim
 import json
 from textrank4zh import TextRank4Keyword
 from typing import List
+model = gensim.models.Word2Vec.load("wiki.zh.text.model")
 
 def main():
     # 创建服务器套接字
@@ -46,52 +47,50 @@ class Spliter(threading.Thread):
         self.recvsize = recvsize
         self.encoding = encoding
         self.TIMEOUTS = 5
-        print("beforefuck")
-        self.model = gensim.models.Word2Vec.load("wiki.zh.text.model")
-        print("fuck")
 
 
 
     def run(self):
         print("开启新线程.....")
         flag = True
-        i = 0 # counting for timeout times 
+        i = 0 # counting for timeout times
+        decodeFlag = True 
         while(flag):
+            print(i)
             try:
                 #接受数据
                 msg = ''
                 msgTot = bytes()
-                while True:
+                while (decodeFlag):
                     # 读取recvsize个字节
                     try:
                         rec = None
                         rec = self.socket.recv(self.recvsize)
+                        print(len(rec))
                         if rec is None:
-                            msgTot += rec
-                            flag = False
-                            break
-                        else:
                             i = 0
-                            flag = True
+                        else:
+                            msgTot += rec
                     except socket.timeout as exception:
+                        print(str(i) + "-----------")
                         if rec is None:
-                            flag = False
                             i += 1
                             if(i == self.TIMEOUTS):
-                                break
+                                decodeFlag = False
+                                flag = False
                         else:
                             msgTot += rec
-                            flag = True
-                            print(flag)
                         pass
                     # 解码
                     try:
-                        msg = msgTot.decode(self.encoding)
-                        # 文本接受是否完毕，因为python socket不能自己判断接收数据是否完毕，
-                        # 所以需要自定义协议标志数据接受完毕
-                        if msg.endswith('\n\n'):
-                            msg=msg[:-2]
-                            break
+                        if decodeFlag:
+                            msg = msgTot.decode(self.encoding)
+                            # 文本接受是否完毕，因为python socket不能自己判断接收数据是否完毕，
+                            # 所以需要自定义协议标志数据接受完毕
+                            if msg.endswith('\n\n'):
+                                msg=msg[:-2]
+                                decodeFlag = False
+                                break
                     except UnicodeError as unfinished:
                         pass
                 if not flag:
@@ -103,7 +102,7 @@ class Spliter(threading.Thread):
                 print("finished one fetch, waiting for the next call")
                 continue
             except Exception as identifier:
-                self.socket.send("500".encode(self.encoding))
+                #self.socket.send("500".encode(self.encoding))
                 print(identifier)
                 print("finished one fetch, waiting for the next call")
                 break
@@ -120,17 +119,17 @@ class Spliter(threading.Thread):
         for token in self.tr4w.words_no_filter:
             tokens.extend(token)
         # extend keywords using genomism
-        keywords.extend(synomnyons(keywords, synonyomsNum))
+        keywords.extend(self.synomnyons(keywords, synonyomsNum))
         ans = {}
         ans['tokens'] = tokens
         ans['keywords'] = keywords
         return json.dumps(ans).encode()
 
-    def synomnyons(self, keywords: List[str], sunonyomsNum: int)->List[str]:
+    def synomnyons(self, keywords: List[str], synonyomsNum: int)->List[str]:
         ans = []
         for keyword in keywords:
-            similar = self.modelmost_similar(keyword)
-            for i in range(0, min(len(similar), sunonyomsNum)):
+            similar = model.most_similar(keyword)
+            for i in range(0, min(len(similar), synonyomsNum)):
                 ans.append(similar[i][0])
         return ans
 
