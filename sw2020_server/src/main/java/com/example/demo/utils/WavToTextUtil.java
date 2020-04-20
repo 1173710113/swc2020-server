@@ -39,7 +39,7 @@ public class WavToTextUtil {
 		// 初始化LFASRClient实例
 		LfasrClientImp lc = null;
 		try {
-			lc = LfasrClientImp.initLfasrClient("5e476b22", "43a516319eb4c30d92d3b200d80f43bd");
+			lc = LfasrClientImp.initLfasrClient("5e9d9785", "592188a4f3196b42f1d4864f01375891");
 		} catch (LfasrException e) {
 			// 初始化异常，解析异常描述信息
 			Message initMsg = JSON.parseObject(e.getMessage(), Message.class);
