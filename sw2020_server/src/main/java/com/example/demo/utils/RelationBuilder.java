@@ -13,6 +13,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
@@ -31,13 +32,24 @@ public class RelationBuilder {
 	private Set<String> keywords;
 	private Map<String, List<String>> graph = new HashMap<>(); // 构建的图, 邻接表
 
+	@Value("${graph.server}")
+	private String server;
+
+	@Value("${graph.client}")
+	private String client;
+
+	@Value("${graph.server-port}")
+	private String serverPort;
+
+	@Value("${graph.client-port}")
+	private String clientPort;
+
 	@Autowired
 	private KeywordExtractorConfiguration keywordExtractorConfig;
 
 	public RelationBuilder() throws UnknownHostException, IOException {
-		connect = new CorrespondUtil(InetAddress.getByName(keywordExtractorConfig.getServer()),
-				InetAddress.getByName(keywordExtractorConfig.getClient()), keywordExtractorConfig.getServerPort(),
-				keywordExtractorConfig.getClientPort());
+		connect = new CorrespondUtil(InetAddress.getByName(client), InetAddress.getByName(server),
+				Integer.parseInt(serverPort), Integer.parseInt(clientPort));
 	}
 
 	/**
