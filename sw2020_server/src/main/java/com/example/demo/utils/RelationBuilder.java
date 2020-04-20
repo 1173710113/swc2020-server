@@ -20,7 +20,6 @@ import com.example.demo.config.GraphRelationConfiguration;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Service
 public class RelationBuilder {
 	private static final int maxKeywordNum = 10; // 关键词数量
 	private static final int maxSynonymNum = 3; // 每个关键词近义词数量
@@ -29,6 +28,8 @@ public class RelationBuilder {
 	private List<String> tokens;
 	private Set<String> keywords;
 	private Map<String, List<String>> graph = new HashMap<>(); // 构建的图, 邻接表
+	
+	
 
 //	@Value("${graph.server}")
 //	private String server;

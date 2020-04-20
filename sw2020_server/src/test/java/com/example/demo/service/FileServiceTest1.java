@@ -32,8 +32,4 @@ public class FileServiceTest1 {
 		MyFile file = mapper.queryMyFile("25");
 		fileService.convertAACToWAV(file);
 	}
-	
-	
-	
-
 }
