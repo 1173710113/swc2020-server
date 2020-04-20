@@ -44,9 +44,6 @@ public class RelationBuilder {
 	@Value("${graph.client-port}")
 	private String clientPort;
 
-	@Autowired
-	private KeywordExtractorConfiguration keywordExtractorConfig;
-
 	public RelationBuilder() throws UnknownHostException, IOException {
 		connect = new CorrespondUtil(InetAddress.getByName(client), InetAddress.getByName(server),
 				Integer.parseInt(serverPort), Integer.parseInt(clientPort));
