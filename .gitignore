@@ -4,3 +4,5 @@ test.txt
 *.pyc
 */audio
 *.code-workspace
+*.model
+*.npy
