@@ -12,7 +12,7 @@ def main():
     # 获取本地主机名称
     host = "127.0.0.1"#socket.gethostname()
     # 设置一个端口
-    port = 12345
+    port = 12344
     # 将套接字与本地主机和端口绑定
     serversocket.bind((host,port))
     # 设置监听最大连接数
