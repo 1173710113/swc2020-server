@@ -2,3 +2,5 @@
 out.txt
 test.txt
 *.pyc
+*/audio
+*.code-workspace

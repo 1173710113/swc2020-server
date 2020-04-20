@@ -25,7 +25,7 @@ public class TimeExtractResult {
 
 	private static SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
 	private static SimpleDateFormat dateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	private static SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
+//	private static SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
 	private List<String> analyzeList = new ArrayList<>();
 	
 	private List<Date> dateList = new ArrayList<>();
@@ -47,7 +47,7 @@ public class TimeExtractResult {
 			for (int j = 0; j < result.size(); j++) {
 				JSONObject oneTime = result.getJSONObject(j + "");
 				JSONObject resolution = oneTime.getJSONObject("resolution");
-				Date value, start, end;
+				Date value, end;
 				switch (resolution.getString("type")) {
 				case "date":
 					value = date.parse(resolution.getString("value"));
