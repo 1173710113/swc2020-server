@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.example.demo.domain.MyFile;
@@ -30,6 +32,13 @@ public interface MyFileMapper {
 	 * @return
 	 */
 	public MyFile queryMyFile(String myFileId);
+	
+	/**
+	 * 
+	 * @param classId
+	 * @return
+	 */
+	public List<MyFile> queryAudioFileByClass(String classId);
 	
 
 }

@@ -10,6 +10,8 @@ import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.UserService;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 用于与前端直接交互，处理前端数据返回服务层返回的数据
  * @author msi-user
@@ -17,6 +19,7 @@ import com.example.demo.service.UserService;
  */
 @Controller
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
 	@Autowired
 	private UserService userService;
@@ -32,6 +35,7 @@ public class UserController {
 	@RequestMapping("/login")
 	@ResponseBody
 	public MyResult login(String id, String password) throws MyException {
+		log.info("id:" + id + " password:" + password);
 		return MyResultGenerator.successResult(userService.login(id, password));
 	}
 }

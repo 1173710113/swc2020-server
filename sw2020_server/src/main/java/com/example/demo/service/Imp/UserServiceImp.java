@@ -40,24 +40,10 @@ public class UserServiceImp implements UserService{
 	}
 	
 	@Override
-	public String getUserType(String id) throws MyException{
-		User userTemp = mapper.queryUser(id);
-		if(userTemp != null) {
-			String type = userTemp.getType();
-			if(type == null) {
-				throw new MyException("系统异常");
-			}
-			return type;
-		} else {
-			throw new MyException("账号不存在");
-		}
-	}
-	
-	@Override
 	public String getUserName(String id) throws MyException {
 		User userTemp = mapper.queryUser(id);
 		if(userTemp == null) {
-			throw new MyException("账号不存在");
+			throw new MyException("账号:" + id + "不存在");
 		}
 		String name = userTemp.getName();
 		if(name == null) {
