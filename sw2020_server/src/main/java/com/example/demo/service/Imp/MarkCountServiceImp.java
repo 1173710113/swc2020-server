@@ -67,12 +67,15 @@ public class MarkCountServiceImp implements MarkCountService {
 	@Autowired
 	private AlignSentenceMapper alignSentenceMapper;
 	
+	@Autowired
+	private WavToTextUtil wavToTextUtil;
+	
 	@Override
 	public void initialize(String audioPath, String classId) throws IOException, MyException {
 		// 有效范围List
 		List<EffectiveMarkRangeVO> markedRanges = new ArrayList<>();
 
-		AlignResult alignResult = WavToTextUtil.getAignResult(audioPath);
+		AlignResult alignResult = wavToTextUtil.getAignResult(audioPath);
 		GenerateRange generateRange = new UnionRange();
 		if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
 			throw new MyException("句子总数不足");

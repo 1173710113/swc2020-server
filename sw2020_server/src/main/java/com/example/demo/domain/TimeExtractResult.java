@@ -27,20 +27,20 @@ public class TimeExtractResult {
 	private static SimpleDateFormat dateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	private static SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss");
 	private List<String> analyzeList = new ArrayList<>();
-
+	
 	private List<Date> dateList = new ArrayList<>();
 
 	/**
 	 * 根据时间抽取服务的结果, 获取一个本类对象
 	 * 
-	 * @param js 时间抽取服务的结果
+	 * @param jsonObject 时间抽取服务的结果
 	 * @throws ParseException
 	 */
-	public TimeExtractResult(JSONObject js) throws ParseException {
-		JSONObject analyze = js.getJSONObject("analyze");
+	public TimeExtractResult(JSONObject jsonObject) throws ParseException {
+		JSONObject analyze = jsonObject.getJSONObject("analyze");
 //		System.out.println(js.size());
-		for (int i = 0; i < js.size() - 1; i++) {
-			JSONObject oneAnalyze = js.getJSONObject(i + "");
+		for (int i = 0; i < jsonObject.size() - 1; i++) {
+			JSONObject oneAnalyze = jsonObject.getJSONObject(i + "");
 			JSONObject result = oneAnalyze.getJSONObject("result");
 
 			Date latestTime = new Date(0);

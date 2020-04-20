@@ -2,6 +2,8 @@ package com.example.demo.utils;
 
 import java.util.HashMap;
 
+import org.springframework.stereotype.Component;
+
 import com.alibaba.fastjson.JSON;
 import com.example.demo.domain.AlignResult;
 import com.example.demo.exception.TransferException;
@@ -17,16 +19,17 @@ import com.iflytek.msp.cpdb.lfasr.model.ProgressStatus;
  * @author xjy
  *
  */
+@Component
 public class WavToTextUtil {
 
 	/*
 	 * 转写类型选择：标准版和电话版(旧版本, 不建议使用)分别为： LfasrType.LFASR_STANDARD_RECORDED_AUDIO 和
 	 * LfasrType.LFASR_TELEPHONY_RECORDED_AUDIO
 	 */
-	private static final LfasrType type = LfasrType.LFASR_STANDARD_RECORDED_AUDIO;
+	private final LfasrType type = LfasrType.LFASR_STANDARD_RECORDED_AUDIO;
 
 	// 等待时长（秒）
-	private static int sleepSecond = 20;
+	private int sleepSecond = 20;
 
 	/**
 	 * 使用讯飞服务获取转写结果
@@ -35,7 +38,7 @@ public class WavToTextUtil {
 	 * @return
 	 * @throws TransferException
 	 */
-	private static String getMessage(String wavPath) throws TransferException {
+	public String getMessage(String wavPath) throws TransferException {
 		// 初始化LFASRClient实例
 		LfasrClientImp lc = null;
 		try {
@@ -133,30 +136,8 @@ public class WavToTextUtil {
 	 * @return 已对齐的转写结果
 	 * @throws TransferException 当服务器有问题、录音有问题等时候, 抛出该改转写异常, 包含任务id、错误码等
 	 */
-	public static AlignResult getAignResult(String wavPath) throws TransferException {
+	public AlignResult getAignResult(String wavPath) throws TransferException {
 		return new AlignResult(wavPath, getMessage(wavPath));
 	}
 
-	// .....Test....
-	public static void main(String[] args) {
-
-		String msg = "";
-		try {
-			msg = getMessage("./resource/audio/xwlb.wav");
-			System.out.println(msg);
-		} catch (TransferException e) {
-			e.printStackTrace();
-		}
-
-		AlignResult ar = new AlignResult("xwlb", msg);
-
-		for (int i = 0; i < ar.getNumOfSentence(); i++) {
-			System.out.println("begin: " + ar.getBeginTime(i));
-			System.out.println("end: " + ar.getEndTime(i));
-			System.out.println(ar.getSentence(i));
-		}
-
-		System.out.println("The text is: " + ar.getText());
-
-	}
 }

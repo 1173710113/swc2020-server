@@ -28,6 +28,8 @@ import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.FileService;
+import com.example.demo.service.WaveProcessService;
+import com.example.demo.utils.WavToTextUtil;
 
 /**
  * @author msi-user
@@ -60,6 +62,12 @@ public class FileController {
 
 	@Autowired
 	private FileService fileService;
+	
+	@Autowired
+	private WavToTextUtil wavToTextUtil;
+	
+	@Autowired
+	private WaveProcessService waveProcessService;
 
 	/**
 	 * 
@@ -118,7 +126,7 @@ public class FileController {
 		case AUDIOAAC:
 			return fileFolder + "/" + audioFolder;
 		case PPTIMAGE:
-			return fileFolder + " /" + pptImgFolder;
+			return fileFolder + "/" + pptImgFolder;
 		case NORMAL:
 			return fileFolder + "/" + normalFolder;
 		default:
@@ -167,7 +175,9 @@ public class FileController {
 	public MyResult mergeWAV(String classId) throws UnsupportedAudioFileException, IOException, MyException {
 		MyFile mergeFile = fileService.mergeWAV(classId);
 		fileService.addFileIndex(mergeFile);
-		return MyResultGenerator.successResult(mergeFile);
+		String text = waveProcessService.waveConvertToText(mergeFile.getFilePath());
+		waveProcessService.extractAlignResult(mergeFile.getFilePath(), text, classId);
+		return MyResultGenerator.successResult(null);
 	}
 	
 	
