@@ -1,5 +1,6 @@
 package com.example.demo.utils;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +51,7 @@ public class RelationBuilder {
 		tokens = revJS.getJSONArray("tokens").toJavaList(String.class);
 		keywords = new HashSet<>(revJS.getJSONArray("keywords").toJavaList(String.class));
 		for (String keyword : keywords) {
+		    System.out.print(keyword + " ");
 			graph.put(keyword, new ArrayList<>());
 		}
 	}
@@ -93,6 +96,21 @@ public class RelationBuilder {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+	  try {
+      RelationBuilder builder = new RelationBuilder();
+      File file = new File("G:\\My_Document\\2019.12.29_SWC\\swc2020-server");
+      Scanner s = new Scanner(file);
+      String s1 = "";
+      while(s.hasNextLine()) {
+        s1 = s.nextLine();
+      }
+      builder.request(s1);
+    } catch (UnknownHostException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
 	}
 }
