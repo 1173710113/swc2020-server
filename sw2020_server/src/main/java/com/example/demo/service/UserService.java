@@ -28,13 +28,6 @@ public interface UserService{
 	 */
 	public User login(String id, String password) throws MyException;
 	
-	/**
-	 * 
-	 * @param id
-	 * @return
-	 * @throws MyException
-	 */
-	public String getUserType(String id) throws MyException;
 	
 	/**
 	 * 

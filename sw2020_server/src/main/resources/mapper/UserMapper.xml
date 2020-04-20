@@ -7,8 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<insert id="addUser">
 		INSERT INTO user_table
-		VALUES(#{id}, #{password},
-		#{type}, #{name}, #{sex})
+		VALUES(#{id}, #{password}, #{name}, #{sex})
 	</insert>
 
 	<delete id="deleteUser">
@@ -33,7 +32,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<resultMap type="User" id="user">
 		<id column="id" property="id" />
 		<result column="password" property="password" />
-		<result column="type" property="type" />
 		<result column="name" property="name" />
 		<result column="sex" property="sex" />
 	</resultMap>

@@ -16,7 +16,6 @@ import lombok.Setter;
 public class User {
 	private String id; // 用户id
 	private String password; // 用户密码
-	private String type; // 用户角色
 	private String name; // 用户名字
 	private String sex; // 用户性别
 }
