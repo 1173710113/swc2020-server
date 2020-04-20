@@ -40,6 +40,8 @@ public class CorrespondUtil {
 	public CorrespondUtil(InetAddress clientAddress, InetAddress serverAddress, int serverPort, int clientPort)
 			throws IOException {
 		log.info("init correspond");
+		System.out.println(serverAddress.toString());
+		System.out.println(serverPort);
 		this.socket = new Socket(serverAddress, serverPort);
 		this.socket.setSoTimeout(TIMEOUT);
 		OutputStream os = socket.getOutputStream();
