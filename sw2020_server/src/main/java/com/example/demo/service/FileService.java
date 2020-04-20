@@ -3,6 +3,8 @@ package com.example.demo.service;
 import java.io.IOException;
 import java.util.List;
 
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 import org.jodconverter.office.OfficeException;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -43,4 +45,8 @@ public interface FileService {
 	
 	
 	public List<String> queryPPTImgByClass(String classId);
+	
+	public MyFile mergeWAV(String classId) throws UnsupportedAudioFileException, IOException, MyException;
+	
+	public MyFile convertAACToWAV(MyFile myFile) throws IOException, InterruptedException;
 }

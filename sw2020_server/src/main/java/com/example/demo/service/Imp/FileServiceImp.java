@@ -3,10 +3,18 @@ package com.example.demo.service.Imp;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.SequenceInputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.sound.sampled.AudioFileFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
@@ -20,6 +28,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.dao.MyFileMapper;
 import com.example.demo.dao.PPTImgMapper;
 import com.example.demo.domain.MyFile;
+import com.example.demo.exception.MyException;
 import com.example.demo.service.FileService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -43,6 +52,9 @@ public class FileServiceImp implements FileService {
 	@Value("${file.folder}")
 	private String fileFolder;
 
+	@Value("${file.audio.folder}")
+	private String audioFolder;
+
 	@Autowired
 	private MyFileMapper myFileMapper;
 
@@ -54,6 +66,7 @@ public class FileServiceImp implements FileService {
 			throws IllegalStateException, IOException {
 
 		String fileName = file.getOriginalFilename();
+		log.info(fileName);
 		File dir = new File(fileFolder + "/" + fileName);
 		file.transferTo(dir.getAbsoluteFile());
 		String filePath = dir.getPath();
@@ -124,10 +137,65 @@ public class FileServiceImp implements FileService {
 	public void addFileIndex(MyFile file) {
 		myFileMapper.addMyFile(file);
 	}
-	
+
 	@Override
 	public void addImgFileIndex(String imgFilePath, String classId) {
 		pptImgMapper.addImg(imgFilePath, classId);
+	}
+
+	@Override
+	public MyFile mergeWAV(String classId) throws UnsupportedAudioFileException, IOException, MyException {
+		List<MyFile> myFileList = myFileMapper.queryAudioFileByClass(classId);
+		List<File> fileList = new ArrayList<>();
+		for (MyFile myFile : myFileList) {
+			File file = new File(myFile.getFilePath());
+			fileList.add(file);
+		}
+		List<InputStream> inputList = new ArrayList<>();
+		int totalLength = 0;
+		AudioFileFormat audioFileFormat = AudioSystem.getAudioFileFormat(fileList.get(0));
+		for (File file : fileList) {
+			AudioFileFormat temp = AudioSystem.getAudioFileFormat(file);
+			if (!audioFileFormat.getFormat().matches(temp.getFormat())) {
+				throw new MyException("音频文件格式不匹配");
+			}
+			if (!audioFileFormat.getType().equals(temp.getType())) {
+				throw new MyException("音频文件类型不匹配");
+			}
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(file);
+			inputList.add(audioInputStream);
+			totalLength += audioInputStream.getFrameLength();
+		}
+		Enumeration<InputStream> enumeration = Collections.enumeration(inputList);
+		SequenceInputStream sequenceInputStream = new SequenceInputStream(enumeration);
+		if (totalLength > 0) {
+			File mergeFile = new File(fileFolder + "/" + audioFolder + "/" + classId + "/merge.wav");
+			AudioSystem.write(new AudioInputStream(sequenceInputStream, audioFileFormat.getFormat(), totalLength),
+					audioFileFormat.getType(), mergeFile);
+			MyFile mergeFileIndex = new MyFile(null, mergeFile.getPath(), mergeFile.getName(), classId);
+			return mergeFileIndex;
+		} else {
+			sequenceInputStream.close();
+			throw new MyException("录音合并出错");
+		}
+	}
+
+	@Override
+	public MyFile convertAACToWAV(MyFile myFile) throws IOException, InterruptedException {
+		String sourceFileName = myFile.getFileName();
+		String fileName = sourceFileName.substring(0, sourceFileName.lastIndexOf('.')) + ".wav";
+		log.info(fileName);
+		String sourceFilePath = myFile.getFilePath();
+		String filePath = sourceFilePath.substring(0, sourceFilePath.lastIndexOf('.')) + ".wav";
+		log.info(filePath);
+		File fileTarget = new File(filePath);
+		File fileSource = new File(myFile.getFilePath());
+		String cmd = "ffmpeg -i " + fileSource.getAbsolutePath() + " " + fileTarget.getAbsolutePath();
+		log.info(cmd);
+		Process process = Runtime.getRuntime().exec(cmd);
+		process.waitFor();
+		MyFile newFile = new MyFile(null, filePath, fileName, myFile.getClassId());
+		return newFile;
 	}
 
 }

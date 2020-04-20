@@ -5,12 +5,14 @@ package com.example.demo.controller;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,6 +39,9 @@ public class FileController {
 
 	private static final String CLASSPPT = "classppt";
 	private static final String AUDIO = "audio";
+	private static final String AUDIOAAC = "aac";
+	private static final String NORMAL = "normal";
+	private static final String PPTIMAGE = "pptimage";
 
 	@Value("${file.ppt.folder}")
 	private String pptFolder;
@@ -46,6 +51,12 @@ public class FileController {
 
 	@Value("${file.audio.folder}")
 	private String audioFolder;
+	
+	@Value("${file.normal.folder}")
+	private String normalFolder;
+	
+	@Value("${file.pptimg.folder}")
+	private String pptImgFolder;
 
 	@Autowired
 	private FileService fileService;
@@ -61,18 +72,15 @@ public class FileController {
 	 */
 	@RequestMapping("/upload/{type}")
 	@ResponseBody
-	public MyResult upload(MultipartFile[] fileList, String classId, @PathVariable("type") final String type)
+	public MyResult upload(MultipartFile file, String classId, @PathVariable("type") final String type)
 			throws Exception {
 		String folder = getFileFolder(type) + "/" + classId;
 		makeFileDir(folder);
-		int length = fileList.length;
-		for (int i = 0; i < length; i++) {
-			MultipartFile currentFile = fileList[i];
-			MyFile file = fileService.storeFile(currentFile, folder, classId);
+			MyFile fileIndex = fileService.storeFile(file,folder, classId);
 			switch (type) {
 			case CLASSPPT:
-				fileService.addFileIndex(file);
-				MyFile pdfFile = fileService.pptConvertToPDF(file.getFilePath(), classId);
+				fileService.addFileIndex(fileIndex);
+				MyFile pdfFile = fileService.pptConvertToPDF(fileIndex.getFilePath(), classId);
 				fileService.addFileIndex(pdfFile);
 				List<String> imgFileList = fileService.pdfConvertToImg(pdfFile.getFilePath(), classId);
 				for(String imgPath : imgFileList) {
@@ -80,12 +88,24 @@ public class FileController {
 				}
 				break;
 			case AUDIO:
-				fileService.addFileIndex(file);
+				fileService.addFileIndex(fileIndex);
+				break;
+			case NORMAL:
+				fileService.addFileIndex(fileIndex);
+				break;
+			case AUDIOAAC:
+				fileService.addFileIndex(fileIndex);
+				MyFile wavFile = fileService.convertAACToWAV(fileIndex);
+				fileService.addFileIndex(wavFile);
+				break;
+			case PPTIMAGE:
+				String fileName = fileIndex.getFileName();
+				fileService.addImgFileIndex(pptImgFolder + "/" + classId + "/" + fileName, classId);
 				break;
 			default:
-				throw new MyException("文件位置异常");
+				throw new MyException("文件类型异常:" + type);
 			}
-		}
+		
 		return MyResultGenerator.successResult(null);
 	}
 
@@ -95,8 +115,14 @@ public class FileController {
 			return fileFolder + "/" + pptFolder;
 		case AUDIO:
 			return fileFolder + "/" + audioFolder;
+		case AUDIOAAC:
+			return fileFolder + "/" + audioFolder;
+		case PPTIMAGE:
+			return fileFolder + " /" + pptImgFolder;
+		case NORMAL:
+			return fileFolder + "/" + normalFolder;
 		default:
-			throw new MyException("文件位置异常");
+			throw new MyException("文件位置异常:" + type);
 		}
 	}
 
@@ -135,5 +161,15 @@ public class FileController {
 	public MyResult queryPPTImg(String classId) {
 		return MyResultGenerator.successResult(fileService.queryPPTImgByClass(classId));
 	}
+	
+	@ResponseBody
+	@RequestMapping("/merge")
+	public MyResult mergeWAV(String classId) throws UnsupportedAudioFileException, IOException, MyException {
+		MyFile mergeFile = fileService.mergeWAV(classId);
+		fileService.addFileIndex(mergeFile);
+		return MyResultGenerator.successResult(mergeFile);
+	}
+	
+	
 
 }
