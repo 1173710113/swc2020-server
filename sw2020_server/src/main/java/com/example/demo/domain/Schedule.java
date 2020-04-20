@@ -15,5 +15,4 @@ public class Schedule {
 	private Date date;
 	private String content;
 	private String classId;
-	private String courseId;
 }

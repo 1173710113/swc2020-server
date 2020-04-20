@@ -18,8 +18,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </delete>
 
 <select id="queryAlignSentenceByClass" resultMap="alignSentence">
-	SELECT FROM 
-	align_sentence_table
+	SELECT *
+	FROM align_sentence_table
 	WHERE class=#{classId}
 </select>
 
