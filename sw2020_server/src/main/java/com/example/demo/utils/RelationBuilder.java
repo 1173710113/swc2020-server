@@ -16,8 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.demo.config.RelationConfiguration;
-
+import com.example.demo.config.GraphRelationConfiguration;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -43,10 +42,7 @@ public class RelationBuilder {
 //	@Value("${graph.client-port}")
 //	private String clientPort;
 
-	@Autowired
-	private RelationConfiguration relationConfig;
-
-	public RelationBuilder() throws UnknownHostException, IOException {
+	public RelationBuilder(GraphRelationConfiguration relationConfig) throws UnknownHostException, IOException {
 		connect = new CorrespondUtil(InetAddress.getByName(relationConfig.getServer()),
 				InetAddress.getByName(relationConfig.getClient()), relationConfig.getServerPort(),
 				relationConfig.getClientPort());
@@ -109,10 +105,9 @@ public class RelationBuilder {
 	 * @throws IOException
 	 * @throws UnknownHostException
 	 */
-<<<<<<< HEAD
 	public static void main(String[] args) {
 	  try {
-      RelationBuilder builder = new RelationBuilder();
+      RelationBuilder builder = new RelationBuilder(new GraphRelationConfiguration());
       File file = new File("G:\\My_Document\\2019.12.29_SWC\\swc2020-server");
       Scanner s = new Scanner(file);
       String s1 = "";
@@ -127,9 +122,5 @@ public class RelationBuilder {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-=======
-	public static void main(String[] args) throws UnknownHostException, IOException {
-		new RelationBuilder();
->>>>>>> 5daa438ec4618f1e4ba9f48f1b6e0cd01b34dfad
 	}
 }

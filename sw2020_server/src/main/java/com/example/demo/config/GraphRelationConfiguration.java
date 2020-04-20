@@ -10,8 +10,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Configuration
-@ConfigurationProperties(prefix = "graph")
-public class RelationConfiguration {
+@ConfigurationProperties(prefix = "graph.relation")
+public class GraphRelationConfiguration {
 	private String server;
 	private int serverPort;
 	private String client;
