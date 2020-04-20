@@ -12,11 +12,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.config.GraphRelationConfiguration;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -31,17 +29,22 @@ public class RelationBuilder {
 	
 	
 
-//	@Value("${graph.server}")
-//	private String server;
-//
-//	@Value("${graph.client}")
-//	private String client;
-//
-//	@Value("${graph.server-port}")
-//	private String serverPort;
-//
-//	@Value("${graph.client-port}")
-//	private String clientPort;
+	// @Value("${graph.server}")
+	// private String server;
+	//
+	// @Value("${graph.client}")
+	// private String client;
+	//
+	// @Value("${graph.server-port}")
+	// private String serverPort;
+	//
+	// @Value("${graph.client-port}")
+	// private String clientPort;
+
+	public RelationBuilder() throws UnknownHostException, IOException {
+		connect = new CorrespondUtil(InetAddress.getByName("localhost"), InetAddress.getByName("localhost"), 12344,
+				8888);
+	}
 
 	public RelationBuilder(GraphRelationConfiguration relationConfig) throws UnknownHostException, IOException {
 		connect = new CorrespondUtil(InetAddress.getByName(relationConfig.getServer()),
@@ -57,10 +60,11 @@ public class RelationBuilder {
 	 */
 	public void request(String text) throws IOException {
 		JSONObject revJS = connect.sendMsgGetKeywords(text, maxKeywordNum, maxSynonymNum);
-		tokens = revJS.getJSONArray("tokens").toJavaList(String.class);
-		keywords = new HashSet<>(revJS.getJSONArray("keywords").toJavaList(String.class));
+		List<String> tokens = JSONObject.parseArray(revJS.getJSONArray("tokens").toJSONString(), String.class);
+		Set<String> keywords = new HashSet<>(
+				JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
 		for (String keyword : keywords) {
-		    System.out.print(keyword + " ");
+			System.out.print(keyword + " ");
 			graph.put(keyword, new ArrayList<>());
 		}
 	}
@@ -97,5 +101,25 @@ public class RelationBuilder {
 	 */
 	public Set<String> getKeywordsSet() {
 		return keywords;
+	}
+
+	public static void main(String[] args) {
+
+		try {
+			RelationBuilder builder = new RelationBuilder();
+			File file = new File("G:\\My_Document\\2019.12.29_SWC\\swc2020-server\\test.txt");
+			Scanner s = new Scanner(file);
+			String s1 = "";
+			while (s.hasNextLine()) {
+				s1 = s.nextLine();
+			}
+			builder.request(s1);
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -23,22 +23,6 @@ class RelationBuilderTest {
   
   @Test
   void test() {
-    try {
-      RelationBuilder builder = new RelationBuilder(relationConfig);
-      File file = new File("G:\\My_Document\\2019.12.29_SWC\\swc2020-server");
-      Scanner s = new Scanner(file);
-      String s1 = "";
-      while (s.hasNextLine()) {
-        s1 = s.nextLine();
-      }
-      builder.request(s1);
-    } catch (UnknownHostException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
   }
 
 }
