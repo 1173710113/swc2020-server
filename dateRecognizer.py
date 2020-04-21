@@ -44,6 +44,7 @@ class DateRecognizer(threading.Thread):
         self.socket.settimeout(0.25)
         self.recvsize = recvsize
         self.encoding = encoding
+        self.TIMEOUTS = 5
 
     def dateRecognize(self, sentences):
         i = 0
@@ -75,52 +76,58 @@ class DateRecognizer(threading.Thread):
                     marks[i] = 1
                     results['analyze'][k - 1] = results['analyze'][k - 1] + sentences[i]
             i += 1
+        print(results)
         return json.dumps(results, ensure_ascii=False)
 
     def run(self):
         print("开启新线程.....")
-        flag = True
-        while(flag):
-            try:
-                # 接受数据
-                msg = ''
-                while True:
-                    # 读取recvsize个字节
-                    try:
-                        rec = None
-                        rec = self.socket.recv(self.recvsize)
-                        if rec is None:
-                            flag = False
+        i = 0 # counting for timeout times
+        decodeFlag = True 
+        print(i)
+        try:
+            #接受数据
+            msg = ''
+            msgTot = bytes()
+            while (decodeFlag):
+                # 读取recvsize个字节
+                try:
+                    rec = None
+                    rec = self.socket.recv(self.recvsize)
+                    print(len(rec))
+                    if rec is None:
+                        i = 0
+                    else:
+                        msgTot += rec
+                except socket.timeout as exception:
+                    print(str(i) + "-----------")
+                    if rec is None:
+                        i += 1
+                        if(i == self.TIMEOUTS):
+                            decodeFlag = False
+                    else:
+                        msgTot += rec
+                    pass
+                # 解码
+                try:
+                    if decodeFlag:
+                        msg = msgTot.decode(self.encoding)
+                        # 文本接受是否完毕，因为python socket不能自己判断接收数据是否完毕，
+                        # 所以需要自定义协议标志数据接受完毕
+                        if msg.endswith('\n\n'):
+                            msg=msg[:-2]
+                            decodeFlag = False
                             break
-                        else:
-                            flag = True
-                    except socket.timeout as exception:
-                        if rec is None:
-                            flag = False
-                            break
-                        else:
-                            flag = True
-                            print(flag)
-                        pass
-                    # 解码
-                    msg += rec.decode(self.encoding)
-                    # 文本接受是否完毕，因为python socket不能自己判断接收数据是否完毕，
-                    # 所以需要自定义协议标志数据接受完毕
-                    if msg.endswith('\n\n'):
-                        msg = msg[:-2]
-                        break
-                if not flag:
-                    continue
-                sentences = msg.strip(" ").split(" ")
-                retMsg = self.dateRecognize(sentences)
-                self.socket.send(retMsg.encode())
-                print("finished one fetch, waiting for the next call")
-                continue
-            except Exception as identifier:
-                self.socket.send("500".encode(self.encoding))
-                print(identifier)
-                print("finished one fetch, waiting for the next call")
-                break
+                except UnicodeError as unfinished:
+                    pass
+            print(msg)
+            sentences = msg.strip(" ").split(" ")
+            retMsg = self.dateRecognize(sentences)
+            self.socket.send(retMsg.encode())
+            print("finished one fetch, waiting for the next call")
+        except Exception as identifier:
+            self.socket.send("500".encode(self.encoding))
+            print(identifier)
+            print("finished one fetch, waiting for the next call")
         self.socket.close()
         print("任务结束.....")
         pass
