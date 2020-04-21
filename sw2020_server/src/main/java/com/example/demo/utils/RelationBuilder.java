@@ -14,7 +14,7 @@ import java.util.Set;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.config.GraphRelationConfiguration;
-import com.example.demo.domain.AlignResult;
+import com.example.demo.vo.AlignResult;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -26,16 +26,10 @@ public class RelationBuilder {
 	private CorrespondUtil connect;
 	private List<String> tokens;
 	private Set<String> keywords;
-<<<<<<< HEAD
 	private AlignResult ar;
 	private Map<String, Set<String>> graph = new HashMap<>(); // 构建的图, 邻接表
 	// 关键词映射到的句子的标号
 	private Map<String, List<Integer>> keywordMapSentences = new HashMap<String, List<Integer>>();
-=======
-	private Map<String, List<String>> graph = new HashMap<>(); // 构建的图, 邻接表
-	
-	
->>>>>>> dd384e6b9ee2304a194aed5acd0b50bbcdba9999
 
 	// @Value("${graph.server}")
 	// private String server;
@@ -68,9 +62,9 @@ public class RelationBuilder {
 		this.ar = ar;
 		String text = ar.getText();
 		JSONObject revJS = connect.sendMsgGetKeywords(text, maxKeywordNum, maxSynonymNum);
-		List<String> tokens = JSONObject.parseArray(revJS.getJSONArray("tokens").toJSONString(), String.class);
-		Set<String> keywords = new HashSet<>(
-				JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
+		tokens = JSONObject.parseArray(revJS.getJSONArray("tokens").toJSONString(), String.class);
+		keywords = new HashSet<>(JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
+
 	}
 
 	/**
@@ -126,14 +120,6 @@ public class RelationBuilder {
 		return keywords;
 	}
 
-	private List<String> getSentencesOfKeyword(String keyword) {
-		List<String> res = new ArrayList<String>();
-		for (Integer i : keywordMapSentences.get(keyword)) {
-			res.add(ar.getSentence(i));
-		}
-		return res;
-	}
-
 	public static void main(String[] args) throws IOException {
 
 //		try {
@@ -166,4 +152,11 @@ public class RelationBuilder {
 		}
 	}
 
+	private List<String> getSentencesOfKeyword(String keyword) {
+		List<String> res = new ArrayList<String>();
+		for (Integer i : keywordMapSentences.get(keyword)) {
+			res.add(ar.getSentence(i));
+		}
+		return res;
+	}
 }
