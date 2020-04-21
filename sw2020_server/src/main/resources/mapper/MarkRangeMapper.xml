@@ -28,6 +28,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	ORDER BY m.count DESC
 </select>
 
+<select id="queryMarkRangeByClassAndKeyword" resultMap="markRange">
+
+</select>
+
 <resultMap id="markRange" type="EffectiveMarkRange">
 	<id column="m.id" property="id"/>
 	<result column="m.text" property="text"/>
