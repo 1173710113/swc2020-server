@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.text.ParseException;
 import java.util.List;
 
 import javax.servlet.ServletOutputStream;
@@ -28,6 +29,8 @@ import com.example.demo.exception.MyException;
 import com.example.demo.exception.MyResult;
 import com.example.demo.exception.MyResultGenerator;
 import com.example.demo.service.FileService;
+import com.example.demo.service.MarkCountService;
+import com.example.demo.service.WaveProcessService;
 
 /**
  * @author msi-user
@@ -60,6 +63,12 @@ public class FileController {
 
 	@Autowired
 	private FileService fileService;
+	
+	@Autowired
+	private WaveProcessService waveProcessService;
+	
+	@Autowired
+	private MarkCountService markCountService;
 
 	/**
 	 * 
@@ -118,7 +127,7 @@ public class FileController {
 		case AUDIOAAC:
 			return fileFolder + "/" + audioFolder;
 		case PPTIMAGE:
-			return fileFolder + " /" + pptImgFolder;
+			return fileFolder + "/" + pptImgFolder;
 		case NORMAL:
 			return fileFolder + "/" + normalFolder;
 		default:
@@ -164,10 +173,14 @@ public class FileController {
 	
 	@ResponseBody
 	@RequestMapping("/merge")
-	public MyResult mergeWAV(String classId) throws UnsupportedAudioFileException, IOException, MyException {
+	public MyResult mergeWAV(String classId) throws UnsupportedAudioFileException, IOException, MyException, ParseException {
 		MyFile mergeFile = fileService.mergeWAV(classId);
 		fileService.addFileIndex(mergeFile);
-		return MyResultGenerator.successResult(mergeFile);
+		String text = waveProcessService.waveConvertToText(mergeFile.getFilePath());
+		waveProcessService.extractAlignResult(mergeFile.getFilePath(), text, classId);
+		waveProcessService.extractSchedule(classId);
+		markCountService.initialize(classId);
+		return MyResultGenerator.successResult(null);
 	}
 	
 	

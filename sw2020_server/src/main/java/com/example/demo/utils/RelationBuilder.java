@@ -26,10 +26,16 @@ public class RelationBuilder {
 	private CorrespondUtil connect;
 	private List<String> tokens;
 	private Set<String> keywords;
+<<<<<<< HEAD
 	private AlignResult ar;
 	private Map<String, Set<String>> graph = new HashMap<>(); // 构建的图, 邻接表
 	// 关键词映射到的句子的标号
 	private Map<String, List<Integer>> keywordMapSentences = new HashMap<String, List<Integer>>();
+=======
+	private Map<String, List<String>> graph = new HashMap<>(); // 构建的图, 邻接表
+	
+	
+>>>>>>> dd384e6b9ee2304a194aed5acd0b50bbcdba9999
 
 	// @Value("${graph.server}")
 	// private String server;

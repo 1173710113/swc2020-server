@@ -22,7 +22,7 @@ public interface MarkCountService {
 	 * @param marks       用户标记结果
 	 * @throws MyException 
 	 */
-	public void initialize(String audioPath, String classId) throws IOException, MyException;
+	public void initialize(String classId) throws IOException, MyException;
 
 	/**
 	 * 获取所有关键词(按被标记的次数从大到小排列) <BR>

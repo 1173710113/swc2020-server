@@ -6,8 +6,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.example.demo.dao.ScheduleMapper">
 
 <insert id="addSchedule" useGeneratedKeys="true" keyProperty="id">
-	INSERT INTO schedule_table(date, content, class, course)
-	VALUES(#{date}, #{content}, #{classId}, #{courseId})
+	INSERT INTO schedule_table(date, content, class)
+	VALUES(#{date}, #{content}, #{classId})
 </insert>
 
 <delete id="deleteSchedule">
@@ -26,7 +26,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<result column="date" property="date"/>
 	<result column="content" property="content"/>
 	<result column="class" property="classId"/>
-	<result column="course" property="courseId"/>
 </resultMap>
 
 </mapper>

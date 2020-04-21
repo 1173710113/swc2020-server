@@ -13,7 +13,7 @@ public class CROSConfiguration extends WebMvcConfigurerAdapter{
 		registry
 			.addMapping("/**")
 			.allowedMethods("*")
-			.allowedOrigins("http://192.168.0.100:10013")
+			.allowedOrigins("http://192.168.0.100:10014")
 			.allowedHeaders("*")
 			.allowCredentials(true);
 	}

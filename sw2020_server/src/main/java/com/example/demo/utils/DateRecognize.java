@@ -1,4 +1,5 @@
 package com.example.demo.utils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,10 +13,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import com.alibaba.fastjson.JSONObject;
-import com.example.demo.domain.TimeExtractResult;
 import com.example.demo.utils.SyntaxAnalyzer;
 import com.example.demo.utils.configReader.Configreader;
 import com.example.demo.utils.inputstrategy.InputStrategy;
+import com.example.demo.vo.TimeExtractResult;
+
 
 public class DateRecognize {
   
