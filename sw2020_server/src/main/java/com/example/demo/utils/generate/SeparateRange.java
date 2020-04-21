@@ -3,8 +3,8 @@ package com.example.demo.utils.generate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.domain.AlignResult;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.vo.AlignResult;
 import com.example.demo.vo.EffectiveMarkRangeVO;
 
 /**

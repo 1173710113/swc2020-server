@@ -19,7 +19,6 @@ import com.example.demo.dao.KeyWordMapper;
 import com.example.demo.dao.KeyWordMarkRangeRelationMapper;
 import com.example.demo.dao.MarkRangeMapper;
 import com.example.demo.dao.RecordMarkMapper;
-import com.example.demo.domain.AlignResult;
 import com.example.demo.domain.AlignSentence;
 import com.example.demo.domain.EffectiveMarkRange;
 import com.example.demo.domain.KeyWord;
@@ -27,9 +26,7 @@ import com.example.demo.domain.RecordMark;
 import com.example.demo.exception.MyException;
 import com.example.demo.service.MarkCountService;
 import com.example.demo.utils.KeywordExtractor;
-import com.example.demo.utils.WavToTextUtil;
 import com.example.demo.utils.generate.GenerateRange;
-import com.example.demo.utils.generate.UnionRange;
 import com.example.demo.utils.sort.MarkRangeSort;
 import com.example.demo.utils.sort.RatioSort;
 import com.example.demo.vo.EffectiveMarkRangeVO;
@@ -63,41 +60,38 @@ public class MarkCountServiceImp implements MarkCountService {
 
 	@Autowired
 	private KeywordExtractorConfiguration keywordExtractorConfig;
-	
+
 	@Autowired
 	private AlignSentenceMapper alignSentenceMapper;
-	
+
 	@Autowired
-	private WavToTextUtil wavToTextUtil;
-	
+	private GenerateRange generateRange;
+
 	@Override
-	public void initialize(String audioPath, String classId) throws IOException, MyException {
+	public void initialize(String classId) throws IOException, MyException {
 		// 有效范围List
 		List<EffectiveMarkRangeVO> markedRanges = new ArrayList<>();
 
-		AlignResult alignResult = wavToTextUtil.getAignResult(audioPath);
-		GenerateRange generateRange = new UnionRange();
-		if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
-			throw new MyException("句子总数不足");
-		}
-		
-		//存储AlignResult
-		{
-			int num = alignResult.getNumOfSentence();
-			for(int i = 0; i < num; i++) {
-				AlignSentence alignSentence = new AlignSentence(null, alignResult.getSentence(i), alignResult.getBeginTime(i), alignResult.getEndTime(i), classId);
-				alignSentenceMapper.addAlignSentence(alignSentence);
-			}
-			alignSentenceMapper.addAlignTotalText(alignResult.getText(), classId);
-		}
-
+		/*
+		 * AlignResult alignResult = wavToTextUtil.getAignResult(audioPath);
+		 * 
+		 * if (alignResult.getNumOfSentence() <= generateRange.sentencesRange - 1) {
+		 * throw new MyException("句子总数不足"); }
+		 * 
+		 * //存储AlignResult { int num = alignResult.getNumOfSentence(); for(int i = 0; i
+		 * < num; i++) { AlignSentence alignSentence = new AlignSentence(null,
+		 * alignResult.getSentence(i), alignResult.getBeginTime(i),
+		 * alignResult.getEndTime(i), classId);
+		 * alignSentenceMapper.addAlignSentence(alignSentence); }
+		 * alignSentenceMapper.addAlignTotalText(alignResult.getText(), classId); }
+		 */
 		// 检索所有标记，返回结果按时间从小到大
 		List<RecordMark> marks = recordMarkMapper.queryRecordMarkByClass(classId);
-
+		List<AlignSentence> alignSentences = alignSentenceMapper.queryAlignSentenceByClass(classId);
 		// 生成句子范围
-		markedRanges = generateRange.generateRange(alignResult, marks); // 生成所有块
+		markedRanges = generateRange.generateRange(alignSentences, marks); // 生成所有块
 
-		for(EffectiveMarkRangeVO mark: markedRanges) {
+		for (EffectiveMarkRangeVO mark : markedRanges) {
 			log.info("markRange:" + JSON.toJSONString(mark));
 		}
 		// 基于ratio对于结果排序
@@ -143,15 +137,16 @@ public class MarkCountServiceImp implements MarkCountService {
 	public List<EffectiveMarkRange> getMarkedRanges(String classId, List<String> screenKeyWords) {
 		Set<EffectiveMarkRange> set = new HashSet<>();
 		for (String keyWordText : screenKeyWords) {
-			log.info("搜索关键词："  + keyWordText);
+			log.info("搜索关键词：" + keyWordText);
 			KeyWord keyWord = keyWordMapper.queryKeyWordByTextAndClass(keyWordText, classId);
-			List<String> markRangeIdList = keyWordMarkRangeMapper.queryRelationByKeyword(keyWord.getId());
-			List<EffectiveMarkRange> list = new ArrayList<EffectiveMarkRange>();
-			for(String id: markRangeIdList)
-			{
-				list.add(markRangeMapper.queryMarkRange(id));
+			if (keyWord != null) {
+				List<String> markRangeIdList = keyWordMarkRangeMapper.queryRelationByKeyword(keyWord.getId());
+				List<EffectiveMarkRange> list = new ArrayList<EffectiveMarkRange>();
+				for (String id : markRangeIdList) {
+					list.add(markRangeMapper.queryMarkRange(id));
+				}
+				set.retainAll(list);
 			}
-			set.retainAll(list);
 		}
 		List<EffectiveMarkRange> res = new ArrayList<EffectiveMarkRange>(set);
 		Collections.sort(res, new Comparator<EffectiveMarkRange>() {

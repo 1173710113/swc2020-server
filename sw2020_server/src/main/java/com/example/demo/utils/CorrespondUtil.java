@@ -9,9 +9,7 @@ import java.io.PrintStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import com.alibaba.fastjson.JSONObject;
 
@@ -137,12 +135,12 @@ public class CorrespondUtil {
 		socket.close();
 	}
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		String test = "{\"tokens\": [\"111\", \"222\"], \"keywords\": [\"fff\", \"fefe\"]}";
 		JSONObject revJS = JSONObject.parseObject(test);
 		List<String> tokens = JSONObject.parseArray(revJS.getJSONArray("tokens").toJSONString(), String.class);
 		Set<String> keywords = new HashSet<>(
 				JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
 		System.out.println(tokens.get(0));
-	}
+	}*/
 }

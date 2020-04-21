@@ -25,9 +25,8 @@ public class MarkCountServiceTest {
 	
 	@Test
 	public void test() throws IOException, MyException {
-		String classId = "1";
-		String path="./resource/audio/xwlb.wav";
-		markCountService.initialize(path, classId);
+		String classId = "121";
+		markCountService.initialize(classId);
 		List<EffectiveMarkRange> result = markCountService.getMarkedRanges(classId);
 		for (int i = 0; i < result.size(); i++) {
 			System.out.println("rangetext: " + result.get(i).getText());
@@ -44,7 +43,6 @@ public class MarkCountServiceTest {
 			System.out.println("marknum: " + screenRes.get(i).getCount());
 			System.out.println();
 		}
-
 		System.out.println("所有关键词:");
 		System.out.println(markCountService.getAllKeyWords(classId));
 	}
