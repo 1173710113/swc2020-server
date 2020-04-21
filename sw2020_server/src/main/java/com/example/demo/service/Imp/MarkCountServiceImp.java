@@ -170,4 +170,10 @@ public class MarkCountServiceImp implements MarkCountService {
 		return list;
 	}
 
+	@Override
+	public List<EffectiveMarkRange> getMarkRangesContainsSpecificKeywrds(String classId, List<KeyWord> keyWords) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
