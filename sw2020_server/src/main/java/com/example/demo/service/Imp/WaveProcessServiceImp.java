@@ -188,15 +188,15 @@ public class WaveProcessServiceImp implements WaveProcessService {
 	public void extractSchedule(String classId) throws UnknownHostException, IOException, ParseException {
 		log.info("server:" + scheduleExtractorConfiguration.getServer() + " port:" + scheduleExtractorConfiguration.getServerPort());
 		log.info("client:" + scheduleExtractorConfiguration.getClient() + " port:" + scheduleExtractorConfiguration.getClientPort());
-		CorrespondUtil corres = new CorrespondUtil(InetAddress.getByName(scheduleExtractorConfiguration.getClient()),
-				InetAddress.getByName(scheduleExtractorConfiguration.getServer()),
-				scheduleExtractorConfiguration.getServerPort(), scheduleExtractorConfiguration.getClientPort());
-
 		List<String> list = new ArrayList<String>();
 		List<AlignSentence> alignSentences = alignSentenceMapper.queryAlignSentenceByClass(classId);
 		for(AlignSentence alignSentence : alignSentences) {
 			list.add(alignSentence.getText());
 		}
+		CorrespondUtil corres = new CorrespondUtil(InetAddress.getByName(scheduleExtractorConfiguration.getClient()),
+				InetAddress.getByName(scheduleExtractorConfiguration.getServer()),
+				scheduleExtractorConfiguration.getServerPort(), scheduleExtractorConfiguration.getClientPort());
+
 		log.info(JSON.toJSONString(list));
 		JSONObject jsonObject = corres.sendJson(list);
 		

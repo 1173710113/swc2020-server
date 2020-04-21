@@ -6,3 +6,4 @@ test.txt
 *.code-workspace
 *.model
 *.npy
+/sw2020_server/src/mian/resources/static/

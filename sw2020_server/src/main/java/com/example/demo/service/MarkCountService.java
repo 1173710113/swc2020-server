@@ -22,7 +22,7 @@ public interface MarkCountService {
 	 * @param marks       用户标记结果
 	 * @throws MyException 
 	 */
-	public void initialize(String audioPath, String classId) throws IOException, MyException;
+	public void initialize(String classId) throws IOException, MyException;
 
 	/**
 	 * 获取所有关键词(按被标记的次数从大到小排列) <BR>
@@ -50,5 +50,14 @@ public interface MarkCountService {
 	 * @return 含有指定筛选关键词的块的所有列表 (按被标记的次数从大到小排列)
 	 */
 	public List<EffectiveMarkRange> getMarkedRanges(String classId, List<String> screenKeyWords);
+	
+	/**
+	 * 
+	 * @param classId
+	 * @param keyWords
+	 * @return
+	 */
+	public List<EffectiveMarkRange> getMarkRangesContainsSpecificKeywrds(String classId, List<KeyWord> keyWords);
+	
 
 }

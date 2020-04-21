@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
+import java.text.ParseException;
 
 import javax.sound.sampled.UnsupportedAudioFileException;
 
@@ -22,7 +23,7 @@ public class FileControllerTest {
 	private FileController fileController;
 	
 	@Test
-	public void test() throws UnsupportedAudioFileException, IOException, MyException {
+	public void test() throws UnsupportedAudioFileException, IOException, MyException, ParseException {
 		fileController.mergeWAV("121");
 	}
 

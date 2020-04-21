@@ -2,8 +2,9 @@ package com.example.demo.utils.generate;
 
 import java.util.List;
 
-import com.example.demo.domain.AlignResult;
+import com.example.demo.domain.AlignSentence;
 import com.example.demo.domain.RecordMark;
+import com.example.demo.vo.AlignResult;
 import com.example.demo.vo.EffectiveMarkRangeVO;
 
 /**
@@ -23,7 +24,7 @@ public abstract class GenerateRange {
 	 * @param alignResult
 	 * @param marks       need to be sorted according to time
 	 */
-	public List<EffectiveMarkRangeVO> generateRange(AlignResult alignResult, List<RecordMark> marks) {
+	public List<EffectiveMarkRangeVO> generateRange(List<AlignSentence> alignSentences, List<RecordMark> marks) {
 		return null;
 	}
 }

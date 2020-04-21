@@ -1,4 +1,4 @@
-package com.example.demo.domain;
+package com.example.demo.vo;
 
 import java.io.File;
 import java.io.IOException;

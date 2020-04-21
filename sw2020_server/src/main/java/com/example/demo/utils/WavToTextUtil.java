@@ -5,8 +5,8 @@ import java.util.HashMap;
 import org.springframework.stereotype.Component;
 
 import com.alibaba.fastjson.JSON;
-import com.example.demo.domain.AlignResult;
 import com.example.demo.exception.TransferException;
+import com.example.demo.vo.AlignResult;
 import com.iflytek.msp.cpdb.lfasr.client.LfasrClientImp;
 import com.iflytek.msp.cpdb.lfasr.exception.LfasrException;
 import com.iflytek.msp.cpdb.lfasr.model.LfasrType;

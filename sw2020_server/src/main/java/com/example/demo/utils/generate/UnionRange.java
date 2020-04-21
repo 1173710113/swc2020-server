@@ -1,12 +1,11 @@
 package com.example.demo.utils.generate;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.domain.AlignResult;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.domain.AlignSentence;
 import com.example.demo.domain.RecordMark;
 import com.example.demo.vo.EffectiveMarkRangeVO;
 
@@ -15,11 +14,12 @@ import com.example.demo.vo.EffectiveMarkRangeVO;
  * 
  * @author 50136
  */
+@Component
 public class UnionRange extends GenerateRange {
 
 //	private static int GROUP_LEN = 3;
 	@Override
-	public List<EffectiveMarkRangeVO> generateRange(AlignResult alignResult, List<RecordMark> marks) {
+	public List<EffectiveMarkRangeVO> generateRange(List<AlignSentence> alignSentences, List<RecordMark> marks) {
 		// 标记总数
 		int totalMark = marks.size();
 		// list记录有效的mark对应的句子范围
@@ -29,9 +29,9 @@ public class UnionRange extends GenerateRange {
 		int startTime = 0;
 		int endTime = 0; // 记录markRange的开始和结束时间
 
-		for (int j = 0; j < alignResult.getNumOfSentence() - (sentencesRange - 1); j = j + sentencesRange) {// 直接跳到下一个range
-			int start = alignResult.getBeginTime(j);
-			int end = alignResult.getEndTime(j + sentencesRange - 1);
+		for (int j = 0; j < alignSentences.size() - (sentencesRange - 1); j = j + sentencesRange) {// 直接跳到下一个range
+			int start = alignSentences.get(j).getStartTime();
+			int end = alignSentences.get(j + sentencesRange - 1).getEndTime();
 			int rangeMarkNum = 0;
 			for (int i = 0; i < totalMark; i++) {// 统计mark数量
 				if (start <= marks.get(i).getTime() && marks.get(i).getTime() <= end) {
@@ -48,19 +48,19 @@ public class UnionRange extends GenerateRange {
 					if (j >= backSentencesRange) { // 如果不是第一组，往前回溯
 						k = j - backSentencesRange;
 					}
-					startTime = alignResult.getBeginTime(k);
+					startTime = alignSentences.get(k).getStartTime();
 
 					for (; k < j + sentencesRange; k++) {
-						keyWordSentences.append(alignResult.getSentence(k));
+						keyWordSentences.append(alignSentences.get(k).getText());
 					}
-					endTime = alignResult.getEndTime(k - 1);
+					endTime = alignSentences.get(k - 1).getEndTime();
 				} else {
 					int k;
 					for (k = j; k < j + sentencesRange; k++) {
-						keyWordSentences.append(alignResult.getSentence(k));
+						keyWordSentences.append(alignSentences.get(k).getText());
 					}
 
-					endTime = alignResult.getEndTime(k - 1);
+					endTime = alignSentences.get(k - 1).getEndTime();
 				}
 
 			} else if (keyWordSentences.length() != 0) {// 该组内无mark则不和前面union，从而避开重复
@@ -81,7 +81,7 @@ public class UnionRange extends GenerateRange {
 	}
 
 	// Test
-	public static void main(String[] args) throws IOException {
+	/*public static void main(String[] args) throws IOException {
 		String msg = Files.readAllLines(new File("./resource/audio/test.txt").toPath()).get(0);
 		AlignResult ar = new AlignResult(" ", msg);
 		List<RecordMark> marks = new ArrayList<RecordMark>();
@@ -103,6 +103,6 @@ public class UnionRange extends GenerateRange {
 			System.out.println("count: " + emr.getCount());
 			System.out.println();
 		}
-	}
+	}*/
 
 }

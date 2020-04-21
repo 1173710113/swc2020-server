@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "file.pdf.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'file.pdf.folder'"
+  },
+  {
+    "name": "file.pptimg.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'file.pptimg.folder'"
+  },
+  {
+    "name": "file.ppt.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'file.ppt.folder'"
+  },
+  {
+    "name": "file.audio.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'file.audio.folder'"
+  },
+  {
+    "name": "file.normal.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'file.normal.folder'"
+  },
+  {
+    "name": "file.pdf.convert.img.dpi",
+    "type": "java.lang.String",
+    "description": "A description for 'file.pdf.convert.img.dpi'"
+  },
+  {
+    "name": "file.folder",
+    "type": "java.lang.String",
+    "description": "A description for 'file.folder'"
+  }
+]}

@@ -9,7 +9,6 @@ import java.io.PrintStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import com.alibaba.fastjson.JSONObject;
@@ -136,7 +135,15 @@ public class CorrespondUtil {
     socket.close();
   }
 
-  public static void main(String[] args) {
+	/*public static void main(String[] args) {
+		String test = "{\"tokens\": [\"111\", \"222\"], \"keywords\": [\"fff\", \"fefe\"]}";
+		JSONObject revJS = JSONObject.parseObject(test);
+		List<String> tokens = JSONObject.parseArray(revJS.getJSONArray("tokens").toJSONString(), String.class);
+		Set<String> keywords = new HashSet<>(
+				JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
+		System.out.println(tokens.get(0));
+	}*/
+ /* public static void main(String[] args) {
     String test =
         "{\"同学你好！\",\"我是来自哈尔滨工业大学的聂兰顺，\",\"很高兴能够和大家一起学习计算机网络这个课程。\",\"我们这一章\",\"来一起学习应用层。\",\"我们已经知道 internet的话，整个是它的体系结构是符合TCPIp协议站的。\",\"应用层在什么地方？我们说它就在协议站的最上层。\",\"这一讲，\",\"或者说这一章我们会学习哪些内容呢？\",\"我们首先快速的带领大家来看一下，有一个全局的认识。\",\"首先我们会来学习\",\"网络应用的体系结构，\",\"我们来认识网络应用有哪几种体系结构，\",\"它和单机应用有哪些不一样的地方？\",\"第2个方面我们要来一起学习一下，一起来分析一下。\",\"网络应用对底层的，我们说对传输层、网络层、链路层以及物理层，\",\"由他们构成的网络基础设施，\",\"有哪些服务方面的需求，我们从可靠性带宽、\",\"食盐等方面进行分析。\",\"然后的话我们快速的看一下 internet的传输层提供了什么样的\",\"我们说传输服务模型，当然不是我们这一章的重点，\",\"我们在探索原理的时候会讲到，但在这里我们会先来宏观的看一下，\",\"然后的话我们这一章非常重要的，\",\"我们会和大家一起来具体的学习几个网络应用，特别是学习网络应用的核心，也就是应用层的协议。\",\"我们会学习web应用以及HTTP协议，\",\"我们会学习也没有应用，是一个典型的设计，多种应用层协议的这样一种应用，所以的话在这里面我们会看到有smtp协议、\",\"pop协议、mf协议等等。\",\"我们也会学习DNS。\",\"这个应用也许是大家比较陌生的，\",\"它是一种非常典型的在应用层实现网络核心功能的这样一种东西。\",\"另外我们也会学习p to p这个方面的应用。\",\"好，然后的话最后一个方面是我们如何来开发网络应用。\",\"所以我们会讲到扫黑的编程，也就是说我们如何利用扫黑的编程\",\"来开发简单的网络应用是我们要学习的。\",\"有了这样一个整个的学习过程之后，我们相信大家一我们对网络层\",\"对网络应用的构成，\",\"网络应用的协议，\",\"应该会有一个基本的认识和了解。\",\"另外我们也希望通过这样的学习，大家能够初步掌握构造网络应用的这种知识和技能。\",\"好，让我们一起开始这一章的学习。\"]"
             + "}";
@@ -146,5 +153,5 @@ public class CorrespondUtil {
     Set<String> keywords = new HashSet<>(
         JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
     System.out.println(tokens.get(0));
-  }
+  }*/
 }
