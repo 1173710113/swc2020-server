@@ -3,6 +3,7 @@ import socket
 import threading
 import gensim
 import json
+import jieba
 from textrank4zh import TextRank4Keyword
 from typing import List
 model = gensim.models.Word2Vec.load("wiki.zh.text.model")
@@ -108,11 +109,10 @@ class Spliter(threading.Thread):
         keywords = []
         for word in self.tr4w.get_keywords(keywordNum, word_min_len=1):
             keywords.append(word.word)
-        tokens = []
-        for token in self.tr4w.words_no_filter:
-            tokens.extend(token)
+        tokens = jieba.lcut(lines)
         # extend keywords using genomism
         keywords.extend(self.synomnyons(keywords, synonyomsNum))
+        kewords = list(set(kewords))
         ans = {}
         ans['tokens'] = tokens
         ans['keywords'] = keywords
