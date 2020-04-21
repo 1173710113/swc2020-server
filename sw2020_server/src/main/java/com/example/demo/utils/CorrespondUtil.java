@@ -142,6 +142,10 @@ public class CorrespondUtil {
 		Set<String> keywords = new HashSet<>(
 				JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
 		System.out.println(tokens.get(0));
+<<<<<<< HEAD
+
+	}
+=======
 	}*/
  /* public static void main(String[] args) {
     String test =
@@ -154,4 +158,5 @@ public class CorrespondUtil {
         JSONObject.parseArray(revJS.getJSONArray("keywords").toJSONString(), String.class));
     System.out.println(tokens.get(0));
   }*/
+>>>>>>> dd384e6b9ee2304a194aed5acd0b50bbcdba9999
 }
