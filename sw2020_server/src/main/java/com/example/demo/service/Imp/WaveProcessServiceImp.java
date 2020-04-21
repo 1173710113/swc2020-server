@@ -253,8 +253,11 @@ public class WaveProcessServiceImp implements WaveProcessService {
 				default:
 				}
 			}
+			
+			System.out.println(latestTime);
 			if(recognize(analyze.getString("" + i))) {
 				Schedule schedule = new Schedule(null, latestTime, analyze.getString("" + i), classId);
+				System.out.println(schedule.getDate());
 				scheduleMapper.addSchedule(schedule);
 			}
 		}
