@@ -121,10 +121,14 @@ class Spliter(threading.Thread):
     def synomnyons(self, keywords: List[str], synonyomsNum: int)->List[str]:
         ans = []
         for keyword in keywords:
-            similar = model.most_similar(keyword)
-            for i in range(0, min(len(similar), synonyomsNum)):
-                if similar[i][0] in keywords:
-                    ans.append(similar[i][0])
+            try:
+                similar = model.most_similar(keyword)
+                for i in range(0, min(len(similar), synonyomsNum)):
+                    if similar[i][0] in keywords:
+                        ans.append(similar[i][0])
+            except Exception as identifier:
+                print(identifier)
+                pass
         return ans
 
 if __name__ == '__main__':
