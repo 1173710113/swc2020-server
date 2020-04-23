@@ -68,9 +68,9 @@ class DateRecognizer(threading.Thread):
                 results[k] = tmpResult
                 results['analyze'][k] = sentence
                 marks[i] = 1
-                if(i > 0 and marks[i - 1] is 0):
-                    marks[i - 1] = 1
-                    results['analyze'][k] = sentences[i - 1] + results['analyze'][k]
+                #if(i > 0 and marks[i - 1] is 0):
+                    #marks[i - 1] = 1
+                    #results['analyze'][k] = sentences[i - 1] + results['analyze'][k]
                 k+=1
             #elif(i > 0 and marks[i - 1] is 1):
                 #    marks[i] = 1
