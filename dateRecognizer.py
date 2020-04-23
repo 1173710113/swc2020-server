@@ -72,9 +72,9 @@ class DateRecognizer(threading.Thread):
                     marks[i - 1] = 1
                     results['analyze'][k] = sentences[i - 1] + results['analyze'][k]
                 k+=1
-            elif(i > 0 and marks[i - 1] is 1):
-                    marks[i] = 1
-                    results['analyze'][k - 1] = results['analyze'][k - 1] + sentences[i]
+            #elif(i > 0 and marks[i - 1] is 1):
+                #    marks[i] = 1
+                #    results['analyze'][k - 1] = results['analyze'][k - 1] + sentences[i]
             i += 1
         print(results)
         return json.dumps(results, ensure_ascii=False)
